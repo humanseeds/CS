@@ -17,5 +17,9 @@ int main(void)
     {
         printf("Not agreed.\n");
     }
+    else if (c == 'N')
+    {
+        printf("Not agreed.\n);
+    }
 }
 
