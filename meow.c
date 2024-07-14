@@ -14,8 +14,5 @@ void meow(int n)
        printf("meow\n");
     }
 }
-void meow(int n)
-{
-    for (int i = 0; i < n; i++)
 }
 
