@@ -7,11 +7,11 @@ int main(void)
 
     if (c =='y')
     {
-        printf("Agreed./n")
+        printf("Agreed.\n")
     }
     else if (c == 'n')
     {
-        printf("Not agreed./n");
+        printf("Not agreed.\n");
     }
 
 
