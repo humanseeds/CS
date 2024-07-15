@@ -3,7 +3,8 @@
 
 int main(void)
 {
-    int n = get_int("Size: ");
+    int n;
+    do
     while (n < 1)
     {
         n = get_int("Size: ");
