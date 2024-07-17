@@ -1,4 +1,4 @@
-||Library catalog
+//Library catalog
 #include <stdio.h>
 
 int main(void)
