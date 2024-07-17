@@ -18,7 +18,7 @@ int main(void)
   // Int J determines the columns. Its the same
        for (int j = 0; j < n;  j++)
         {
-    // this IF condition controls the spacing and # placement.
+    // this IF condition controls the spacing and # placement. 
             if (j < n- i - 1 )
             {
                 printf(" ");
