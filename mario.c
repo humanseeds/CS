@@ -9,4 +9,5 @@ int main(void)
     {
         n = get_int("Height: ");
     }
+    printf("%i\n)
 }
