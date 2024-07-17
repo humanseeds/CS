@@ -1,30 +1,21 @@
-//Library catalog
-#include <stdio.h>
 #include <cs50.h>
+#include <stdio.h>
 
 int main(void)
 {
-   int n;
-   do
-//prompt height of pyramid with a positive integer
-   {
-         n = get_int("Height: ");
-   }
+    int n;
+    do
+    {
+        n = get_int("Size: ");
+    }
     while (n < 1);
 
-// print a pyramid based on height N. the rows and columns are equal in size to N. int I represents rows
     for (int i = 0; i < n; i++)
     {
-  // Int J determines the columns. Its the same
-       for (int j = 0; j <= n;  j++)
-         {
-                printf(" ");
-            }
-            
-                printf("#");
-            }
+        for (int j = 0; j < n; j++)
+        {
+            printf("#");
         }
-                printf("\n");
-            }
+        printf("\n");
+    }
 }
-
