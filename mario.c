@@ -12,9 +12,10 @@ int main(void)
    }
     while (n < 1);
 
-// print a 
+// print a pyramid based on height N. the rows and columns are equal in size to N. int I represents rows
     for (int i = 0; i < n; i++)
     {
+  // Int J determines the columns. Its the same 
        for (int j = 0; j < n;  j++)
         {
             if (j < n- i - 1 )
