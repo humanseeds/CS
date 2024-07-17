@@ -8,9 +8,9 @@ int main(void);
    do
    {
          n = get_int("Height: ");
-    }
-    while (n < 1);
 
+    while (n < 1);
+   }
     for (int i = 0; i < n; i++)
     {
        for (int j = 0; j <= i; j++)
@@ -18,10 +18,10 @@ int main(void);
             for (int k = 0; k < n-1; k--)
             {
             printf("#");
-        }
-            printf("\n");
-            {
-            printf(" ");
             }
-}
+            printf("\n");
+        }
+            printf(" ");
+        }
+
 
