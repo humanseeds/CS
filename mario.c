@@ -12,7 +12,7 @@ int main(void)
    }
     while (n < 1);
 
-// p
+// print a 
     for (int i = 0; i < n; i++)
     {
        for (int j = 0; j < n;  j++)
