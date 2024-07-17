@@ -15,4 +15,14 @@ int main(void)
     {
        for (int j = 0; j < n;  j++)
         {
-            if
+            if (j < n- i - 1 )
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("#");
+            }
+            {
+                printf("\n");
+            }
