@@ -4,7 +4,7 @@
 
 int main(void)
 {
-   for int n = get_int("Height: ");
+    int n = get_int("Height: ");
     while (n < 1);
     {
         n = get_int("Height: ");
