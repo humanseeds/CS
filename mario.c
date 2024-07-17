@@ -3,7 +3,7 @@
 #include <cs50.h>
 
 int main(void);
-
+{
    int n;
    do
    {
@@ -23,5 +23,5 @@ int main(void);
             {
             printf(" ");
             }
-    }
+}
 
