@@ -14,5 +14,5 @@ int main(void)
     {
         n = get_int("Height: ");
     }
-    printf("#", n + 1);
+    printf("%i#\n", n + 1);
 }
