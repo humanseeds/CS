@@ -4,7 +4,7 @@
 
 int main(void)
 {
-   for int n = get_int("size: ")
+   for int n = get_int("Height: ")
 
         for
 
