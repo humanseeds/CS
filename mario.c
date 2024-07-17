@@ -18,7 +18,8 @@ int main(void)
   // Int J determines the columns. Its the same
        for (int j = 0; j < n;  j++)
         {
-    // this IF condition controls the spacing and # placement.Ex.height is 9, and i(row 0) then 9-0+1=8. 8 spaces are placed before the # is printed
+    // this IF condition controls the spacing and # placement.Ex.height is 9, and i(row 0) then 9-0+1=8. 8 columns are " " before the "#" is printed. As spaces decrease # increases
+
             if (j < n- i - 1 )
             {
                 printf(" ");
