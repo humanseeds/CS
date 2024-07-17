@@ -10,9 +10,14 @@ int main(void)
          n = get_int("Height: ");
     }
     while (n < 1);
+         n = get_int("Height: ");
 
+    for (int i = 0; i < n; i++)
     {
-        n = get_int("Height: ");
+       for (int j = 0; j < n; j++)
+        {
+            printf("#");
+        }
+            printf("\n);
     }
-    printf("%i#\n", n + 1);
 }
