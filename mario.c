@@ -15,9 +15,10 @@ int main(void)
 // print a pyramid based on height N. the rows and columns are equal in size to N. int I represents rows
     for (int i = 0; i < n; i++)
     {
-  // Int J determines the columns. Its the same 
+  // Int J determines the columns. Its the same
        for (int j = 0; j < n;  j++)
         {
+    // this IF condition controls the spacing and # placement.
             if (j < n- i - 1 )
             {
                 printf(" ");
