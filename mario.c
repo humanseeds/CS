@@ -3,5 +3,6 @@
 
 int main(void)
 {
-    int n =
+    int n = get_int("size: ")
+    
 }
