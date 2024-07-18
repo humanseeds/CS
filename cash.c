@@ -3,5 +3,9 @@
 
 int main(void)
 {
-    
+    int cents;
+    do
+    {
+        cents= 
+    }
 }
