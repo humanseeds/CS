@@ -6,7 +6,7 @@ int main(void)
 {
    int n;
    do
-//prompt height of pyramid with a positive integer
+// prompt height of pyramid with a positive integer
    {
          n = get_int("Height: ");
    }
