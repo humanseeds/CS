@@ -1,5 +1,4 @@
 // Library catalog
-
 #include <stdio.h>
 #include <cs50.h>
 
@@ -14,10 +13,11 @@ int main(void)
     while (n < 1);
 
 // print a pyramid based on height N. the rows and columns are equal in size to N. int I represents rows
-    for (int i = 0; i < n; i++)
+//
+     for (int i = 0; i < n; i++)
     {
   // Int J determines the columns. Its the same
-       for (int j = 0; j < n;  j++)
+       for (int j = 0; j < n; j++)
         {
     // this IF condition controls the spacing and # placement. Ex. Height(N) = 9, and I(row 0) then 9-0+1=8. 8 columns are " " before the "#" is printed. As spaces decrease # increases
 
