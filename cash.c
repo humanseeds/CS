@@ -6,7 +6,7 @@ int main(void)
     int cents;
     do
     {
-        cents = ("Change owed: ");
+        cents = get_int("Change owed: ");
     }
         while (cents < 0);
 }
