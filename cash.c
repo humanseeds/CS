@@ -10,3 +10,8 @@ int main(void)
     }
         while (cents < 0);
 }
+int calculate_quarters
+int calculate_dimes
+int calculate_nickels
+int calculate_pennies
+
