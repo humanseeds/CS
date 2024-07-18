@@ -3,4 +3,7 @@
 
 int main(void)
 {
-    for int N = get_int( h)
+    do
+    {
+        
+    }
