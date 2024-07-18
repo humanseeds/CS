@@ -6,6 +6,7 @@ int main(void)
     int cents;
     do
     {
-        cents= 
+        cents = ("Change owed: ");
     }
+        while (cents < 0);
 }
