@@ -20,7 +20,7 @@ int main(void)
     {
         printf("#");
     }
-        print("  ");
+        printf("  ");
     }
     for (int j = 0; j <= 1; j++)
     {
