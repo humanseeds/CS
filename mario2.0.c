@@ -16,7 +16,11 @@ int main(void)
       {
           printf(" ");
       }
-    for ()
+        for (int j = 0; j <= 1; j++)
+    {
         printf("#");
+    }
+        print("  ");
+        
     }
 
