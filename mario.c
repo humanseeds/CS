@@ -19,9 +19,9 @@ int main(void)
   // Int J determines the columns. Its the same
        for (int j = 0; j < n; j++)
         {
-    // this IF condition controls the spacing and # placement. Ex. Height(N) = 9, and I   increases
-    // (row 0) then 9-0+1=8. 8 columns are" " before the "#" is printed. As spaces decrease
-    // #
+    // this IF condition controls the spacing and # placement. Ex. Height(N) = 9, and
+    // I (row 0) then 9-0+1=8. 8 columns are " " before the "#" is printed. As spaces decrease
+    // # increases
             if (j < n - i - 1)
            {
                 printf(" ");
