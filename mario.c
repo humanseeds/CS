@@ -1,4 +1,5 @@
-//Library catalog
+// Library catalog
+
 #include <stdio.h>
 #include <cs50.h>
 
