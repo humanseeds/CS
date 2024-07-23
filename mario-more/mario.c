@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <cs50.h>
+#include <stdio.h>
 
 int main(void)
 {
@@ -12,20 +12,20 @@ int main(void)
 
     for (int row = 0; row < height; row++)
     {
-         for (int space = 0; space < height - row - 1; space++)
-      {
-          printf(" ");
-      }
+        for (int space = 0; space < height - row - 1; space++)
+        {
+            printf(" ");
+        }
         for (int column = 0; column <= row; column++)
-    {
-        printf("#");
-    }
-    printf("  ");
+        {
+            printf("#");
+        }
+        printf("  ");
 
-    for (int column = 0; column <= row; column++)
-    {
-        printf("#");
-    }
+        for (int column = 0; column <= row; column++)
+        {
+            printf("#");
+        }
         printf("\n");
     }
 }
