@@ -16,7 +16,7 @@ int main(void)
       {
           printf(" ");
       }
-        for (int j = 0; j <= i; j++)
+        for (int column = 0; column <= row; j++)
     {
         printf("#");
     }
