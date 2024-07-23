@@ -22,7 +22,7 @@ int main(void)
     }
     printf("  ");
 
-    for (int column = 0; column <= row; jcolumn++)
+    for (int column = 0; column <= row; column++)
     {
         printf("#");
     }
