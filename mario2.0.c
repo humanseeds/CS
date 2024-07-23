@@ -12,17 +12,17 @@ int main(void)
 
     for (int row = 0; row < height; row++)
     {
-         for (int space = 0; space < height - i - 1; space++)
+         for (int space = 0; space < height - row - 1; space++)
       {
           printf(" ");
       }
-        for (int column = 0; column <= row; j++)
+        for (int column = 0; column <= row; column++)
     {
         printf("#");
     }
     printf("  ");
 
-    for (int column = 0; j <= i; j++)
+    for (int column = 0; column <= row; jcolumn++)
     {
         printf("#");
     }
