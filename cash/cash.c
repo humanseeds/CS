@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <cs50.h>
 
-int calculate_quarters (int cents)
-int calculate_dimes (int cents)
-int calculate_nickels (int cents)
-int calculate_pennies (int cents)
+int calculate_quarters (int cents);
+int calculate_dimes (int cents);
+int calculate_nickels (int cents);
+int calculate_pennies (int cents);
 
 int main(void)
 {
@@ -14,9 +14,20 @@ int main(void)
         cents = get_int("Change owed: ");
     }
         while (cents < 0);
-        
+
         int quaters = calculate_quaters(cents);
         cents = cents - (quaters * 25);
+
+        int dimes = calculate_dimes(cents);
+        cents = cents - (dimes * 10);
+
+        int nickels = calculate_nickels(cents);
+        cents = cents - (nickels * 10);
+
+        int pennies = calculate_pennies(cents);
+        cents = cents - (pennies *1);
+
+        sum
 }
 
 int calculate_quarters (int cents)
