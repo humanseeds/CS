@@ -11,11 +11,19 @@ int main(void)
         while (cents < 0);
 }
 int calculate_quarters (int cents)
-{}
+{
+    
+}
 int calculate_dimes (int dimes)
-{}
+{
+
+}
 int calculate_nickels (int nickels)
-{}
+{
+
+}
 int calculate_pennies (int pennies)
-{}
+{
+
+}
 
