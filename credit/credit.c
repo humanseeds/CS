@@ -6,6 +6,6 @@ int main(void)
     long card;
     do
     {
-        card= get_long("Card #: ");
+        card = get_long("Card #: ");
     }
     while (card < 0);
