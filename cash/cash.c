@@ -55,7 +55,7 @@ int calculate_dimes (int cents)
 
 int calculate_nickels (int cents)
 {
-    int nickels = 1;
+    int nickels = 0;
     while (cents >= 5)
     {
         nickels++;
@@ -67,7 +67,7 @@ int calculate_nickels (int cents)
 int calculate_pennies (int cents)
 {
     int pennies = 0;
-    while (cents >= 0)
+    while (cents >= 1)
     {
         pennies ++;
         cents = cents - 1;
