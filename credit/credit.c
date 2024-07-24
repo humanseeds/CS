@@ -4,9 +4,12 @@
 int main(void)
 {
     long CreditCard#;
+
     do
     {
         printf(" Please input Credit Card #: ");
-       scanf("ld/n",  )
+       scanf("%ld/n", & CreditCard# )
     }
-    while (card < 0);
+    while (Creditcard# <= 0);
+
+    long workingCC = CreditCard#;
