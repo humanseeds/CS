@@ -7,6 +7,6 @@ int main(void)
     do
     {
         printf(" Please input Credit Card #: ");
-        card = get_long("Card #: ");
+       scanf("ld/n",  )
     }
     while (card < 0);
