@@ -22,7 +22,7 @@ int main(void)
         cents = cents - (dimes * 10);
 
         int nickels = calculate_nickels(cents);
-        cents = cents - (nickels * 10);
+        cents = cents - (nickels * 5);
 
         int pennies = calculate_pennies(cents);
         cents = cents - (pennies * 1);
