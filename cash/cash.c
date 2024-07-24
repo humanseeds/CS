@@ -27,7 +27,8 @@ int main(void)
         int pennies = calculate_pennies(cents);
         cents = cents - (pennies *1);
 
-        sum
+        int coins = quaters + dimes + nickels + pennies;
+        printf("%i\n", coins);
 }
 
 int calculate_quarters (int cents)
