@@ -3,4 +3,4 @@
 
 int main(void)
 {
-    int credit-card
+    get_long credit car = ()
