@@ -3,4 +3,9 @@
 
 int main(void)
 {
-    get_long credit card = ( )
+    long card;
+    do
+    {
+        card= get_long("Card #: ");
+    }
+    while (card < 0);
