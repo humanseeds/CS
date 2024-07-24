@@ -14,6 +14,7 @@ int main(void)
         cents = get_int("Change owed: ");
     }
         while (cents < 0);
+        
         int quaters = calculate_quaters(cents);
         cents = cents - (quaters * 25);
 }
