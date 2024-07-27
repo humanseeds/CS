@@ -3,9 +3,10 @@
 
 int main(void)
 {
-    long CreditCardNumber = get_long ("Please Input Credit Card Number: ");
+    long CreditCardNumber;
+    CreditCardNumber = get_long("Please Input Credit Card Number: ");
 
-   while (CreditCardNumber <= 0)
+    while (CreditCardNumber <= 0)
    {
     printf("Please Try Again \n");
     CreditCardNumber = get_long("Please Try Again \n");
