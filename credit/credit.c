@@ -4,5 +4,5 @@
 int main(void)
 {
     long CreditCardNumber = get_long("Input Credt Card Number: ";
-    printf( )
+    while
 }
