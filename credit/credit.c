@@ -8,7 +8,7 @@ int main(void)
     do
     {
         printf(" Please input Credit Card #: ");
-       scanf("%ld/n", & CreditCard# )
+       scanf("%ld/n", & CreditCard#; )
     }
     while (Creditcard# <= 0);
 
