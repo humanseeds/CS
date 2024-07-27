@@ -9,10 +9,5 @@ int main(void)
     {
         CreditCardNumber = get_long("Please Input Credit Card Number: ");
     if (CreditCardNumber <= 0)
-    {
-        printf("Please Try Again \n");
     }
-    }
-    while (CreditCardNumber <= 0 );
 }
-
