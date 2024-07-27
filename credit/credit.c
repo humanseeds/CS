@@ -8,8 +8,8 @@ int main(void)
     do
     {
         printf(" Please input Credit Card Number: ");
-       scanf("%ld/n", & CreditCardNumber; )
+       scanf("%ld/n", & CreditCardNumber);
     }
-    while (CreditcardNumber <= 0);
+    while (CreditCardNumber <= 0);
 
     long workingCC = CreditCardNumber;
