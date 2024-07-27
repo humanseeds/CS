@@ -4,8 +4,8 @@
 int main(void)
 {
     long CreditCardNumber;
-    do
-    {
+        do
+        {
         CreditCardNumber = get_long("Input Credit Card Number: ");
         if (CreditCardNumber <= 0)
         {
