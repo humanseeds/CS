@@ -3,13 +3,13 @@
 
 int main(void)
 {
-    long CreditCard#;
+    long CreditCardNumber;
 
     do
     {
-        printf(" Please input Credit Card #: ");
-       scanf("%ld/n", & CreditCard#; )
+        printf(" Please input Credit Card Number: ");
+       scanf("%ld/n", & CreditCardNumber; )
     }
-    while (Creditcard# <= 0);
+    while (CreditcardNumber <= 0);
 
-    long workingCC = CreditCard#;
+    long workingCC = CreditCardNumber;
