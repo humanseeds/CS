@@ -3,8 +3,7 @@
 
 int main(void)
 {
-    long CreditCardNumber;
-    do
+    long CreditCardNumber
     {
         CreditCardNumber = get_long("Please Input Credit Card Number: ");
-    
+    }
