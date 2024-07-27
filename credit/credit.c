@@ -3,8 +3,17 @@
 
 int main(void)
 {
-    long CreditCardNumber = get_long ("Input Credit Card Number: ");
+    long CreditCardNumber;
+    do
+    {
+        CreditCardNumber = get_long("Input Credit Card Number: ");
+        if (CreditCardNumber <= 0)
+        {
+            printf("Please Try Again \n");
+        }
+        while (CreditCardNumber <= 0 );
+        }
+    }
+
 
     }
-while (CreditCardNumber <= 0)
-printf("please try again \n");
