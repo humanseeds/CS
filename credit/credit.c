@@ -12,3 +12,7 @@ int main(void)
     {
         printf("Please Try Again \n");
     }
+    }
+    while (CreditCardNumber <= 0 );
+}
+
