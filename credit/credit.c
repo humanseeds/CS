@@ -3,6 +3,6 @@
 
 int main(void)
 {
-    long = get_long("CreditCardNumber;
-
+    long CreditCardNumber = get_long("Input Credt Card Number: ";
+    printf( )
 }
