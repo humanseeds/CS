@@ -4,9 +4,11 @@
 int main(void)
 {
     long CreditCardNumber;
-    CreditCardNumber = get_long("Please Input Credit Card Number: ");
-    while
+
+    do
     {
-        (CreditCardNumber <= 0)
+        CreditCardNumber = get_long("Please Input Credit Card Number: ");
+    if (CreditCardNumber <= 0)
+    {
+        printf("Please Try Again \n");
     }
-}
