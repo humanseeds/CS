@@ -3,6 +3,6 @@
 
 int main(void)
 {
-    long CreditCardNumber = get_long("Input Credt Card Number: ";
-    while
+    long CreditCardNumber = get_long("Input Credt Card Number: ");
+    while (CreditCardNumber > 0 )
 }
