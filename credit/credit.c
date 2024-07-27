@@ -8,7 +8,7 @@ int main(void)
 
     while (CreditCardNumber <= 0)
    {
-    printf("Please Try Again \n");
+    printf("Please Try Again");
     CreditCardNumber = get_long("Please Try Again \n");
    }
 }
