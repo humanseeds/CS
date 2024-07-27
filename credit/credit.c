@@ -3,5 +3,6 @@
 
 int main(void)
 {
+    long get_long CreditCardNumber;
     
 }
