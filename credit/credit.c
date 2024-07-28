@@ -23,7 +23,7 @@ int main(void)
     int EvenPositionSum = 0;
     int OddPositionSum = 0;
     int Position = 0;
-    int WorkingCard = Card_Number;
+    long WorkingCard = Card_Number;
 
         // Now we create a loop that does two functions. Run the loop until Card_Number = 0
 
