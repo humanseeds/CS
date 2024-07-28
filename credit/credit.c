@@ -68,10 +68,7 @@ int CheckSum = EvenPoitionSum + OddPositionSum;
 if (CheckSum % 10 == 0)
 {
 
-}
-else
-{
-    printf("INVALID \n");
+
 }
 }
 
