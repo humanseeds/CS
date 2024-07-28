@@ -45,6 +45,9 @@ while (WorkingCard < 0)
         EvenPositionSum += digit;  // EvenPositionSum = EvenpositionSum + digit
     }
     else
+// These odd positions are the digits that are doubled and the sum of their digits are added together
+//subtracted from the EvenPositionSum
+//the terinary operator for the below I
     {
         int DoubledDigit = digit * 2;
         if (DoubledDigit > 9 )
