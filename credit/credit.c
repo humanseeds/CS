@@ -46,7 +46,8 @@ while (WorkingCard < 0)
     }
     else
 
-// These odd positions are the digits that are doubled and the sum of their digits are added together
+// These odd positions are th
+ that are doubled and the sum of their digits are added together
 // subtracted from the EvenPositionSum
 // the ternary operator for the below 'if-else'condition would be
 // OddPositionSum += (DoubledDigit > 0) ? (DoubledDigit - 9 ) : DoubledDigit);
