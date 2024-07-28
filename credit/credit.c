@@ -69,7 +69,7 @@ while (WorkingCard > 0)
 int CheckSum = EvenPositionSum + OddPositionSum;
 if (CheckSum % 10 != 0)
 {
-    printF("INVALID \n");
+    printf("INVALID \n");
 }
 
 //Now that the card is indeed valid we determine the card type
