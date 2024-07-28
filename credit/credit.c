@@ -64,12 +64,27 @@ while (WorkingCard > 0)
     }
     Position++;
 }
+
+// Now the checksum is evaluated to have a modulo of 10 to see if the card number ends in 0 or a remainder
 int CheckSum = EvenPoitionSum + OddPositionSum;
 if (CheckSum % 10 != 0)
 {
-    printF("INVALID \n")
+    printF("INVALID \n");
 }
+
+//Now that the card is indeed valid we determine the card type
+// we create two variables, Temporary and Length to create a loop to determine card Length
+long Temporary = long Card_Number;
+int length = 0;
+while (temporary > 0)
+{
+    temp /= 10;
+    length++;
 }
+
+
+}
+
 
 
 
