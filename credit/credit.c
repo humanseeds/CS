@@ -62,6 +62,7 @@ while (WorkingCard < 0)
         {
             OddPositionSum += doubledDigit;
         }
+     WorkingCard /= 10;
     }
 }
 }
