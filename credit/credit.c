@@ -55,7 +55,7 @@ while (WorkingCard > 0)
         int DoubledDigit = digit * 2;
         if (DoubledDigit > 9 )
         {
-            OddPositionSum += (digit - 9)
+            OddPositionSum += (DoubledDigit- 9);
         }
         else
         {
