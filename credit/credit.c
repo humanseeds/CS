@@ -35,7 +35,7 @@ while (WorkingCard < 0)
 
         // modulo 2 determines if a number is even or odd by a result of 0 (no remainder) or 1 (a remainder).
         // in Boolean expressions every non zero value is true, zero value is false.
-        // If the modulo of digit is 0
+        // If the modulo of digit is 0, the digit is even
         // if the modulo of a digit is 1
 
     if (Position % 2 == 0)
