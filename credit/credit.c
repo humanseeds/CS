@@ -9,7 +9,9 @@ int main(void)
         printf("Please Try Again \n");
         Card_Number = getlong("Please input Credit Card Number: ");
     }
-    int checksu
+    int checksum = 0
+    int Digit = 0
+    
 
 
 }
