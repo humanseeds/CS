@@ -102,9 +102,9 @@ else if (length == 16 && (StartingDigits >= 51 && StartingDigits <= 55))
     printf("MASTERCARD\n");
 }
 //Because Visa starts with 4 we must again /10 to remove the last digit and evalute if the first digit == 4
-else if (length == 13 || length == 16 && (StartingDigits / 10 == 4))
+else if ((length == 13 || length == 16) && (StartingDigits / 10 == 4))
 {
-        pringtf("VISA\n");
+        printf("VISA\n");
 }
 else
 {
