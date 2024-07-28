@@ -15,7 +15,7 @@ int main(void)
         printf("Please Try Again \n");
         Card_Number = getlong("Please input Credit Card Number: ");
     }
-    // initialize 
+    // initialize Checksum to 0, initialize Digit to 0
     int Checksum = 0;
     int Digit = 0;
 
