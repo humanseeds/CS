@@ -28,7 +28,7 @@ int main(void)
 while (WorkingCard < 0)
 {
         // int digit uses the modulo to remove the last number from the WorkingCard
-        // after the digit is removed / 10 removes the last digit from the card entirely
+        // after the digit is removed / 10 removes the last digit from the card and changes position
 
     int digit = WorkingCard % 10;
     WorkingCard /= 10;
@@ -41,6 +41,10 @@ while (WorkingCard < 0)
     if (Position % 2 == 0)
     {
         checksum +== digit;
+    }
+    else
+    {
+
     }
 }
 }
