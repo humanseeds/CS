@@ -66,7 +66,7 @@ while (WorkingCard > 0)
 }
 
 // Now the checksum is evaluated to have a modulo of 10 to see if the card number ends in 0 or a remainder
-int CheckSum = EvenPoitionSum + OddPositionSum;
+int CheckSum = EvenPositionSum + OddPositionSum;
 if (CheckSum % 10 != 0)
 {
     printF("INVALID \n");
