@@ -15,11 +15,14 @@ int main(void)
         printf("Please Try Again \n");
         Card_Number = getlong("Please input Credit Card Number: ");
     }
-    // initialize or declare the starting value of the vaiables Checksum and Digit to Zero
+    // initialize or declare the starting value of the two vaiables Checksum and Poisition to zero
     int Checksum = 0;
-    int Digit = 0;
+    int Position = 0;
 
+while (Card_Number < 0)
+{
 
+}
 
 }
 
