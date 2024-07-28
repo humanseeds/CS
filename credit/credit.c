@@ -34,8 +34,8 @@ while (WorkingCard < 0)
 
         // modulo 2 determines if a number is even or odd by a result of 0 (no remainder) or 1 (a remainder).
         // in Boolean expressions every non zero value is true, zero value is false.
-        // If the modulo of the position is 0, the the position is even (false)
-        // if the modulo of a position is 1, the position is odd (true)
+        // If the Modulo of the position is 0, the the position is even (false) and we simply add it to a 
+        // if the Modulo of a position is 1, the position is odd (true)
 
     if (Position % 2 == 0)
     {
@@ -43,7 +43,7 @@ while (WorkingCard < 0)
     }
     else
     {
-
+        int Doubled = digit * 2
     }
 }
 }
