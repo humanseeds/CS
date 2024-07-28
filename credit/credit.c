@@ -82,6 +82,7 @@ while (temporary > 0)
     length++;
 }
 
+// Now that we have the length of the valid credit card, we determine which card type it belongs to
 
 }
 
