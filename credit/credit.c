@@ -46,12 +46,10 @@ while (WorkingCard > 0)
     }
     else
 
-// These odd positions are the digits
-// that are doubled and the sum of their digits are added together
-// subtracted from the EvenPositionSum
+// The digits at odd positions are doubled, and the sum of the resulting digits are added to OddPositionSum
+// if DoubledDigit > 9 we subtract 9 to find the sum in one digit. example: sum of digits for 18 would be 9 or 18-9
 // the ternary operator for the below 'if-else'condition would be
-// OddPositionSum += (DoubledDigit > 0) ? (DoubledDigit - 9 ) : DoubledDigit);
-// if DoubledDigit > 9 we subtract 9 to find the sum in one digit. example sum of digits for 18 would be 9 or 18-9
+// OddPositionSum += (DoubledDigit > 9) ? (DoubledDigit - 9 ) : DoubledDigit);
     {
         int DoubledDigit = digit * 2;
         if (DoubledDigit > 9 )
