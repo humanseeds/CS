@@ -59,10 +59,10 @@ while (WorkingCard > 0)
         }
         else
         {
-            OddPositionSum += doubledDigit;
+            OddPositionSum += DoubledDigit;
         }
-     Position++;
     }
+    Position++;
 }
 }
 
