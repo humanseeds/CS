@@ -26,10 +26,12 @@ int main(void)
     int WorkingCard = Card_Number
 
         // Now we create a loop that does two functions. Run the loop until Card_Number = 0
+        
 while (WorkingCard < 0)
 {
         // int digit uses the modulo to remove the last number from the WorkingCard
         // after the digit is removed / 10 changes the position by removing the digit
+
     int digit = WorkingCard % 10;
     WorkingCard /= 10;
 
