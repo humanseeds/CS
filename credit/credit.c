@@ -40,7 +40,7 @@ while (WorkingCard < 0)
 
     if (Position % 2 == 0)
     {
-        EvenPositionSum += digit;
+        EvenPositionSum += digit;  // EvenPositionSum = EvenpositionSum + digit
     }
     else
     {
