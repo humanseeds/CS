@@ -64,6 +64,8 @@ while (WorkingCard > 0)
     }
     Position++;
 }
+int CheckSum = EvenPoitionSum + OddPositionSum;
 }
+
 
 
