@@ -75,11 +75,11 @@ if (CheckSum % 10 != 0)
 //Now that the card is indeed valid we determine the card type
 // we create two variables, Temporary and Length to create a loop to determine card Length
 // length keeps track of how many digits, temp/10 removes digits
-long Temporary = Card_Number;
+long temporary = Card_Number;
 int length = 0;
 while (temporary > 0)
 {
-    temp /= 10;
+    temporary /= 10;
     length++;
 }
 
