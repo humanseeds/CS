@@ -17,7 +17,7 @@ int main(void)
         Card_Number = getlong("Please input Credit Card Number: ");
     }
 
-    // initialize or declare the starting value of the two vaiables Checksum and Poisition to zero
+    // initialize or declare the starting value of the two vaiables evenpositionsum and odd positionsum. Poisition to zero
     // Int workingCard is used to keep the original Card-Number intact to veryify card type later
 
     int EvenPositionSum = 0;
