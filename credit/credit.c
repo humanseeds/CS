@@ -47,7 +47,8 @@ while (WorkingCard > 0)
     else
 
 // The digits at odd positions are doubled, and the sum of the resulting digits are added to OddPositionSum
-// if DoubledDigit > 9 we subtract 9 to find the sum in one digit. example: sum of digits for 18 would be 9 or 18-9
+// if DoubledDigit > 9 we subtract 9 to find the sum in one digit.
+// example: doubling 9 results in 18. 1 + 8 = 9 or 18-9
 // the ternary operator for the below 'if-else'condition would be
 // OddPositionSum += (DoubledDigit > 9) ? (DoubledDigit - 9 ) : DoubledDigit);
     {
