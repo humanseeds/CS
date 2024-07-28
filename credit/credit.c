@@ -42,10 +42,11 @@ while (WorkingCard < 0)
     {
         EvenPositionSum += digit;  // EvenPositionSum = EvenpositionSum + digit
     }
-    else
+    else                        
     {
         int OddPositionSum = digit * 2;
-        if (digit )
+        if (digit > 9 )
+        {}
     }
 }
 }
