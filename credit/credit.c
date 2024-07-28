@@ -69,7 +69,7 @@ while (WorkingCard > 0)
 int CheckSum = EvenPositionSum + OddPositionSum;
 if (CheckSum % 10 != 0)
 {
-    printf("INVALID \n");
+    printf("INVALID\n");
     return 0;
 }
 
