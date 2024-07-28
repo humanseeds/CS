@@ -93,7 +93,7 @@ while (StartingDigits < 100)
 }
 
 // now with the starting two digits we use 'if-else' conditionals to determine card type and validate
-if (length == 15 && ((StartingDigits == 34 ||StartingDigits == 37))
+if (length == 15 && ((StartingDigits == 34 || StartingDigits == 37))
 {
     printf("AMEX\n");
 }
