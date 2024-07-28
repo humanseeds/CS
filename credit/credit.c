@@ -27,7 +27,7 @@ int main(void)
 
         // Now we create a loop that does two functions. Run the loop until Card_Number = 0
 
-while (WorkingCard < 0)
+while (WorkingCard > 0)
 {
         // int digit uses the modulo to remove the last number from the WorkingCard
         // after the digit is removed / 10 changes the position by removing the digit
