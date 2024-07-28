@@ -19,9 +19,11 @@ int main(void)
     int Checksum = 0;
     int Position = 0;
 
+// Now we create a loop that does two functions. Run the loop until Card_Number = 0
 while (Card_Number < 0)
 {
-
+    int digit = Card_Number % 10;   //This modulo
+    Card_Number /= 10;
 }
 
 }
