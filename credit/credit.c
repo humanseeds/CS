@@ -20,7 +20,8 @@ int main(void)
     // initialize or declare the starting value of the two vaiables Checksum and Poisition to zero
     // Int workingCard is used to keep the original Card-Number intact to veryify card type later
 
-    int Checksum = 0;
+    int EvenPositionSum = 0;
+    Int OddPositionSum = 0;
     int Position = 0;
     int WorkingCard = Card_Number
 
