@@ -65,5 +65,4 @@ while (WorkingCard < 0)
 }
 }
 
-}
 
