@@ -47,7 +47,7 @@ while (WorkingCard < 0)
     else
     {
         int DoubledDigit = digit * 2;
-        if (digit > 9 )
+        if (DoubledDigit > 9 )
         {
             digit = (digit - 9)
         }
