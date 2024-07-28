@@ -51,6 +51,8 @@ while (WorkingCard < 0)
         {
             digit = (digit - 9)
         }
+        else
+        {}
     }
 }
 }
