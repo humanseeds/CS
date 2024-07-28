@@ -87,7 +87,7 @@ while (temporary > 0)
 // to remove all the digits except the very last 2 digits. visa and mastercard both use the same amount of
 // digits, so we must know what the first two digits of the card are to determine the brand
 long StartingDigits = Card_Number;
-while (StartingDigits < 100)
+while (StartingDigits >= 100)
 {
     StartingDigits /= 10;
 }
