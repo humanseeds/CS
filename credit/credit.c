@@ -24,13 +24,15 @@ int main(void)
     int Position = 0;
     int WorkingCard = Card_Number
 
-// Now we create a loop that does two functions. Run the loop until Card_Number = 0
+        // Now we create a loop that does two functions. Run the loop until Card_Number = 0
 while (WorkingCard < 0)
 {
-    // 
-    int digit = WorkingCard % 10;   // This modulo gets the last digit from WorkingCard
-    WorkingCard /= 10;              // divide by 10 Removes the last Digit from WorkingCard
-
+        // int digit uses the modulo to remove the last number from the WorkingCard
+        // after the digit is removed / 10 removes the last digit from the card entirely
+    int digit = WorkingCard % 10;
+    WorkingCard /= 10;
+        // modulo 2 determines if a card is even or odd by a result of 0 or 1 ( a remainder).
+        // by using the logic of a boolena experation a 0 or 1 signified true or false
     if (Position % 2 == 0)
     {
         checksum +== digit;
