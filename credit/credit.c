@@ -65,10 +65,9 @@ while (WorkingCard > 0)
     Position++;
 }
 int CheckSum = EvenPoitionSum + OddPositionSum;
-if (CheckSum % 10 == 0)
+if (CheckSum % 10 != 0)
 {
-
-
+    printF("INVALID \n")
 }
 }
 
