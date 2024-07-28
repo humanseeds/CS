@@ -70,6 +70,7 @@ int CheckSum = EvenPositionSum + OddPositionSum;
 if (CheckSum % 10 != 0)
 {
     printf("INVALID \n");
+    return 0;
 }
 
 //Now that the card is indeed valid we determine the card type
