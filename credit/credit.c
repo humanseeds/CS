@@ -28,15 +28,14 @@ int main(void)
 while (WorkingCard < 0)
 {
         // int digit uses the modulo to remove the last number from the WorkingCard
-        // after the digit is removed / 10 removes the last digit from the card and changes position
-
+        // after the digit is removed / 10 changes the position by removing the digit
     int digit = WorkingCard % 10;
     WorkingCard /= 10;
 
         // modulo 2 determines if a number is even or odd by a result of 0 (no remainder) or 1 (a remainder).
         // in Boolean expressions every non zero value is true, zero value is false.
-        // If the modulo of digit is 0, the digit is even
-        // if the modulo of a digit is 1
+        // If the modulo of the position is 0, the the position is even (false)
+        // if the modulo of a position is 1, the position is odd (true)
 
     if (Position % 2 == 0)
     {
