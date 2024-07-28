@@ -45,6 +45,7 @@ while (WorkingCard < 0)
     else
     {
         int OddPositionSum = digit * 2;
+        if (digit )
     }
 }
 }
