@@ -89,7 +89,7 @@ while (temporary > 0)
 long StartingDigits = Card_Number;
 while (StartingDigits < 100)
 {
-    StartingDigitis /= 10;
+    StartingDigits /= 10;
 }
 
 // now with the starting two digits we use 'if-else' conditionals to determine card type and validate
