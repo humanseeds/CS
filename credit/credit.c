@@ -75,7 +75,7 @@ if (CheckSum % 10 != 0)
 //Now that the card is indeed valid we determine the card type
 // we create two variables, Temporary and Length to create a loop to determine card Length
 // length keeps track of how many digits, temp/10 removes digits
-long Temporary = long Card_Number;
+long Temporary = Card_Number;
 int length = 0;
 while (temporary > 0)
 {
@@ -86,7 +86,7 @@ while (temporary > 0)
 // Now that we have the length of the valid credit card, we must create a similar loop to
 // to remove all the digits except the very last 2 digits. visa and mastercard both use the same amount of
 // digits, so we must know what the first two digits of the card are to determine the brand
-long StartingDigits = long Card_Number;
+long StartingDigits = Card_Number;
 while (StartingDigits < 100)
 {
     StartingDigitis /= 10;
