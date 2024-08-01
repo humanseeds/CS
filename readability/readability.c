@@ -9,7 +9,7 @@ int main(void)
 string text = get_string("Input Text: ")
 
 // count the number of words, letter, and sentences in the text
-
+int count_letters (string text);
 
 // Compute Coleman-Liau formula
 
