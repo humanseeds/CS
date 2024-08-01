@@ -32,13 +32,16 @@ int main(void)
 int compute_score(string word)
 {
     int score = 0;
-    for (int i = 0, len = strlen(words); i < len; i++)
+    for (int i = 0, len = strlen(word); i < len; i++)
     {
         if (isupper(word[i]))
         {
         score += Points[word[i] - 'A'];
         }
-        else if
+        else if islower(word[i])
         {
         score =+ Points[words[i]] - 'a'];
         }
+    }
+    return score;
+}
