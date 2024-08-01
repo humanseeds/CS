@@ -12,11 +12,14 @@ int main(void)
     string(word1) = get_string("Player 1: ");
     string(word2) = get_string("Player 2: ");
 
+    int score1 = compute_score(word1);
+    int score2 = compute_score(words2);
+
     if (score1 > score2)
     {
         printf("Player 1 wins!\n");
     }
-    else (score1 < score2)
+    else if (score1 < score2)
     {
         printf("Player 2 wins!\n");
     }
@@ -24,9 +27,13 @@ int main(void)
     {
         printf("Tie!"\n");
     }
-
-
-
-
 }
 
+int compute_score(string_word)
+{
+    int score = 0;
+    for (int i = 0, len = strlen(words); i < 0; i++)
+    {
+        if 
+    }
+}
