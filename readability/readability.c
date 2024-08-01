@@ -3,6 +3,8 @@
 #include <ctype.h>
 #include <string.h>
 
+int count_letters(string text);
+
 int main(void)
 {
 //Prompt user for text
