@@ -5,7 +5,7 @@
 
 int count_letters(string text);
 int count_words(string text);
-
+int count_sentences(string text);
 
 
 int main(void)
@@ -14,8 +14,9 @@ int main(void)
 string text = get_string("Input Text: ")
 
 // count the number of words, letter, and sentences in the text
-int count_letters (string text);
-int count
+int letters = count_letters(text);
+int words = count_words(text);
+int sentences = count_sentences(text);
 // Compute Coleman-Liau formula
 
 
@@ -30,3 +31,11 @@ int count_letters(string text)
 }
 
 int count_words(string text)
+{
+    //retrun number of words in text)
+}
+
+int count_sentences(string text)
+{
+    //count number of sentences in text
+}
