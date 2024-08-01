@@ -35,12 +35,12 @@ s = (#sentences / words / 100)
 
 int count_letters(string text)
 {
-    //return number of letters in text  strlen - isalpha
+    //return number of letters in text  strlen - (isalpha - ispunct)
 }
 
 int count_words(string text)
 {
-    //retrun number of words in text)  is alpha - isblank
+    //retrun number of words in text)  (isalpha - isblank) + 1
 }
 
 int count_sentences(string text)
