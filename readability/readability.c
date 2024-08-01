@@ -24,7 +24,7 @@ int sentences = count_sentences(text);
 // cast as float so decimals arent truncated.
  index = 0.0588 * L - 0.296 * S - 15.8
 l = (#letters / words) / 100
-s = (#sentences / words0 / 100)
+s = (#sentences / words / 100)
 
 
 
