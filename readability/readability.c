@@ -20,6 +20,8 @@ int words = count_words(text);
 int sentences = count_sentences(text);
 
 // Compute Coleman-Liau formula
+// use round function from math.h
+// cast as float so decimals arent truncated. 
  index = 0.0588 * L - 0.296 * S - 15.8
 l = (#letters / words) / 100
 s = (#sentences / words0 / 100)
