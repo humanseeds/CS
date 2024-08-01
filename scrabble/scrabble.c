@@ -40,7 +40,7 @@ int compute_score(string word)
         }
         else if islower(word[i])
         {
-        score =+ Points[words[i]] - 'a'];
+        score += Points[word[i] - 'a'];
         }
     }
     return score;
