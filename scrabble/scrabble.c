@@ -9,8 +9,8 @@ int computer_score(string word);
 
 int main(void)
 {
-    string(word1) = get_string("Player 1: ");
-    string(word2) = get_string("Player 2: ");
+    string word1 = get_string("Player 1: ");
+    string word2 = get_string("Player 2: ");
 
     int score1 = compute_score(word1);
     int score2 = compute_score(words2);
@@ -29,11 +29,12 @@ int main(void)
     }
 }
 
-int compute_score(string_word)
+int compute_score(string word)
 {
     int score = 0;
-    for (int i = 0, len = strlen(words); i < 0; i++)
+    for (int i = 0, len = strlen(words); i < len; i++)
     {
-        if 
-    }
-}
+        if (isupper(word[i]))
+        {
+        score += Points[word[i] - 'A'];
+        }
