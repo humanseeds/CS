@@ -38,3 +38,7 @@ int compute_score(string word)
         {
         score += Points[word[i] - 'A'];
         }
+        else if
+        {
+        score =+ Points[words[i]] - 'a'];
+        }
