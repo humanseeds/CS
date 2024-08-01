@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <math.h>
 
 int count_letters(string text);
 int count_words(string text);
@@ -20,7 +21,9 @@ int sentences = count_sentences(text);
 
 // Compute Coleman-Liau formula
  index = 0.0588 * L - 0.296 * S - 15.8
-l=
+l = (#letters / words) / 100
+s = (#sentences / words0 / 100)
+
 
 
 // Print Grade Level
