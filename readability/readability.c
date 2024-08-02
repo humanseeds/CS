@@ -37,7 +37,7 @@ else if (index > 16)
 }
 else
 {
-    printf("Grade %i, index");
+    printf("Grade %i\n, (int) round(index"));
 }
 
 int count_letters(string text)
