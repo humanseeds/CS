@@ -12,33 +12,35 @@ int count_sentences(string text);
 int main(void)
 {
 //Prompt user for text
-string text = get_string("Input Text: ");
+    string text = get_string("Input Text: ");
 
 // count the number of words, letter, and sentences in the text
-int letters = count_letters(text);
-int words = count_words(text);
-int sentences = count_sentences(text);
+    int letters = count_letters(text);
+    int words = count_words(text);
+    int sentences = count_sentences(text);
 
 // Compute Coleman-Liau formula
 // use round function from math.h
 // cast as float so decimals arent truncated.
-float L = (float) letters / (float) words * 100;
-float S = (float) sentences / (float) words * 100;
-float index = 0.0588 * L - 0.296 * S - 15.8;
+    float L = (float) letters / (float) words * 100;
+    float S = (float) sentences / (float) words * 100;
+    float index = 0.0588 * L - 0.296 * S - 15.8;
 
 // Print Grade level
-if (index < 1)
-{
-    printf("Before Grade 1");
-}
-else if (index > 16)
-{
-    printf("Grade 16+");
-}
+    if (index < 1)
+    {
+        printf("Before Grade 1");
+    }
+    else if (index > 16)
+    {
+         printf("Grade 16+");
+    }
 else
-{
-    printf("Grade %i\n, (int) round(index"));
+    {
+        printf("Grade %i\n, (int) round(index"));
+    }
 }
+
 
 int count_letters(string text)
 {
@@ -51,6 +53,7 @@ int count_letters(string text)
             letters++;
         }
     }
+    return letters;
 }
 
 int count_words(string text)
@@ -64,7 +67,7 @@ int count_words(string text)
             words++;
         }
     }
-
+    return words++;
 }
 
 int count_sentences(string text)
