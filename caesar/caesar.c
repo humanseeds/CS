@@ -31,7 +31,7 @@ int main (int argc, string argv[])
     string plaintext = get_string("plaintext: ");
     printf("Ciphertext: ");
 
-for 
+// create function to rotate the char to int
 
 }
 
