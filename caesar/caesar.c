@@ -4,6 +4,10 @@
 #include <stdio.h>
 #include <string.h>
 
+//declare a function that will be used
+char rotate(char c , int n);
+
+
 int main (int argc, string argv[])
 {
     // make sure the amount of comman line arguments is 2 ( file name and a key number)
@@ -31,7 +35,7 @@ int main (int argc, string argv[])
     string plaintext = get_string("plaintext: ");
     printf("Ciphertext: ");
 
-// create function to rotate the char to int
+// define a function to rotate the char to int
 
 }
 
