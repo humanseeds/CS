@@ -44,7 +44,7 @@ int count_letters(string text)
 {
     //return number of letters in text  strlen - (isalpha - ispunct)
     int letters = 0;
-    for (int i = 0, i < strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++)
     {
         if (isalpha((text[i])
         {
@@ -57,7 +57,7 @@ int count_words(string text)
 {
     //retrun number of words in text)  (isalpha - isblank) + 1
     int words = 1
-    for (int i = 0, i < strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++)
     {
         if (isspace((text[1]))
         {
@@ -71,7 +71,7 @@ int count_sentences(string text)
 {
     //count number of sentences in text.   ispunct
     int sentences = 0
-    for (int i = 0, i < strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++)
     if (text[i] = "." || text[i] = "!" || text[i] = "?")
     {
         sentences++;
