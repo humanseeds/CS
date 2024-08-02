@@ -12,7 +12,7 @@ int count_sentences(string text);
 int main(void)
 {
 //Prompt user for text
-string text = get_string("Input Text: ")
+string text = get_string("Input Text: ");
 
 // count the number of words, letter, and sentences in the text
 int letters = count_letters(text);
@@ -23,7 +23,7 @@ int sentences = count_sentences(text);
 // use round function from math.h
 // cast as float so decimals arent truncated.
 float L = (float) letters / (float) words * 100;
-float S - (float) sentences / (float) words * 100;
+float S = (float) sentences / (float) words * 100;
 float index = 0.0588 * L - 0.296 * S - 15.8;
 
 // Print Grade level
