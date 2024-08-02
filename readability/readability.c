@@ -76,7 +76,7 @@ int count_sentences(string text)
     //count number of sentences in text.   ispunct
     int sentences = 0;
     for (int i = 0; i < strlen(text); i++)
-    if (text[i] == "." || text[i] == "!" || text[i] == "?")
+    if (text[i] == '.' || text[i] == '!' || text[i] == '?')
     {
         sentences++;
     }
