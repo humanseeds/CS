@@ -67,7 +67,7 @@ int count_words(string text)
             words++;
         }
     }
-    return words++;
+    return words;
 }
 
 int count_sentences(string text)
@@ -80,4 +80,5 @@ int count_sentences(string text)
         sentences++;
     }
 }
+    return sentences;
 }
