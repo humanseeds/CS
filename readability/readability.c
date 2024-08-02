@@ -39,13 +39,18 @@ int count_letters(string text)
     int letters = 0;
     for (int i = 0, i < strlen(text), i++)
     {
-        if (isalpha)(text[i])
+        if (isalpha((text[i])
+        {letters++
+        }
     }
 }
 
 int count_words(string text)
 {
     //retrun number of words in text)  (isalpha - isblank) + 1
+    int words = 1
+    for (int i = 0)
+
 }
 
 int count_sentences(string text)
