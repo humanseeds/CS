@@ -49,7 +49,7 @@ int count_words(string text)
 {
     //retrun number of words in text)  (isalpha - isblank) + 1
     int words = 1
-    for (int i = 0)
+    for (int i = 0, i < strlen(text), i++)
 
 }
 
