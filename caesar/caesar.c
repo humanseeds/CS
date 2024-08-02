@@ -38,4 +38,10 @@ int main (int argc, string argv[])
 // define a function to rotate the char to int
 
 }
-
+char rotate(char c, int n)
+{
+    if (isupper c)
+    {
+        return
+    }
+}
