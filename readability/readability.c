@@ -29,13 +29,16 @@ s = (#sentences / words / 100)
 
 
 // Print Grade Level
- printf(")
+ printf("");
 
-}
+
 
 int count_letters(string text)
 {
     //return number of letters in text  strlen - (isalpha - ispunct)
+    int letters = 0;
+    for (int i = 0, i < strlen(text), i++)
+
 }
 
 int count_words(string text)
@@ -46,4 +49,5 @@ int count_words(string text)
 int count_sentences(string text)
 {
     //count number of sentences in text.   ispunct
+}
 }
