@@ -22,23 +22,23 @@ int main(void)
 // Compute Coleman-Liau formula
 // use round function from math.h
 // cast as float so decimals arent truncated.
-    float L = (float) letters / words * 100;
-    float S = (float) sentences / words * 100;
-    float index = 0.0588 * L - 0.296 * S - 15.8;
+    float L = (float) letters / (float) words * 100;
+    float S = (float) sentences / (float) words * 100;
+    int index =round (0.0588 * L - 0.296 * S - 15.8);
 
-    int grade_level = round(index);
+
 // Print Grade level
-    if (grade_level < 1)
+    if (index < 1)
     {
         printf("Before Grade 1\n");
     }
-    else if (grade_level > 16)
+    else if (index > 16)
     {
          printf("Grade 16+\n");
     }
 else
     {
-        printf("Grade %i\n", grade_level);
+        printf("Grade %i\n", index);
     }
 }
 
