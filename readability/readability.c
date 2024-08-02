@@ -26,6 +26,7 @@ int main(void)
     float S = (float) sentences / (float) words * 100;
     float index = 0.0588 * L - 0.296 * S - 15.8;
 
+    int grade_level = round(index);
 // Print Grade level
     if (index < 1)
     {
@@ -37,7 +38,7 @@ int main(void)
     }
 else
     {
-        printf("Grade %f\n",index);
+        printf("Grade %i\n", grade_level);
     }
 }
 
