@@ -28,11 +28,11 @@ int main(void)
 
     int grade_level = round(index);
 // Print Grade level
-    if (index < 1)
+    if (grade_level < 1)
     {
         printf("Before Grade 1\n");
     }
-    else if (index > 16)
+    else if (grade_level > 16)
     {
          printf("Grade 16+\n");
     }
