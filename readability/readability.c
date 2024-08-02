@@ -38,7 +38,9 @@ int count_letters(string text)
     //return number of letters in text  strlen - (isalpha - ispunct)
     int letters = 0;
     for (int i = 0, i < strlen(text), i++)
-
+    {
+        if (isalpha)(text[i])
+    }
 }
 
 int count_words(string text)
