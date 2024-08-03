@@ -48,7 +48,7 @@ int main(int argc, string argv[])
 string plaintext = get_string("plaintext: ");
 
 // convert all characters in key to uppercase
-for (int i = 0; 1 < stren(key); i++)
+for (int i = 0; 1 < strlen(key); i++)
 {
     if(islower(key[i]))
     {
