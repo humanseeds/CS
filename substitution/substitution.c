@@ -7,7 +7,7 @@
 
 int main(int argc, string argv[])
 {
-     if (argc != 27)
+     if (argc != 2)
     {
         printf("key must contain 27 characters\n");
         return 1;
