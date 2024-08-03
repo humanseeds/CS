@@ -7,15 +7,17 @@
 
 int main(int argc, string argv[])
 {
+    //validate that there is 1 command line argument
      if (argc != 2)
     {
       printf("Usage: ./substiution key\n");
       return = 1;
     }
-
-    for (i =0; 1 < strlen(argv[1]); i++)
+    // assign the key a variable and make sure the key is 25 characters
+    string key = argv[1]
+    for (i =0; 1 < strlen(key)); i++)
     {
-        if (!isalpha(argc[1])[i]))
+        if (!isalpha(key[i]))
         {
             printf("Usage: ./substiution key\n");
             return = 1;
