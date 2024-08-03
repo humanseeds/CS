@@ -34,7 +34,7 @@ int main(int argc, string argv[])
 // validate the key has no duplicate letters regardless of case
     for (int i = 0; i < strlen(key); i++)
     {
-        for (int j = i + 1; j < strlen(key), j++)
+        for (int j = i + 1; j < strlen(key); j++)
         {
             if (toupper(key[i]) == toupper(key[j]))
             {
