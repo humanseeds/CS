@@ -16,7 +16,7 @@ int main(int argc, string argv[])
     {
         if (!isalpha(argv[1][i]))
         {
-            printf("Usage: ./caesar key\n");
+            printf("Usage: ./substitution key\n");
             return 1;
         }
 
