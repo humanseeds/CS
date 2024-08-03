@@ -14,8 +14,19 @@ int main(int argc, string argv[])
       return 1;
     }
 
-    // assign the key a variable and make sure the key is 25 characters
+    // assign the key to a variable
     string key = argv[1];
+    // check if the key is 26 characters long
+
+    if (strlen(key) != 26)
+    {
+        printf("key must contain 26 characters");
+        return 1;
+    }
+
+    }
+
+    // validate that the key is 26 alphabetical characters without duplicates
     for (int i =0; i < strlen(key); i++)
     {
         if (!isalpha(key[i]))
