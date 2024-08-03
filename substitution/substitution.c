@@ -12,6 +12,7 @@ int main(int argc, string argv[])
       printf("Usage: ./substiution key");
       return = 1;
     }
+
     for (i =0; 1 < strlen(argv[1]); i++)
     {
         if (!isalpha(argc[1])[i]))
