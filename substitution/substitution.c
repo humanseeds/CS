@@ -32,16 +32,12 @@ int main(int argc, string argv[])
             printf("key must only contain alphabetic characters\n");
             return 1;
         }
-    }
 
-// validate the key has no duplicate letters regardless of case
-    for (int i = 0; i < strlen(key); i++)
-    {
         for (int j = i + 1; j < strlen(key); j++)
         {
             if (toupper(key[i]) == toupper(key[j]))
             {
-                printf("Usage: ./substiution key\n");
+                printf("key must not contain duplicate characters\n");
                 return 1;
             }
         }
