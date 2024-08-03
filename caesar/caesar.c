@@ -42,6 +42,8 @@ int main (int argc, string argv[])
         char c = plaintext[i];
         printf("%c", rotate(c,k));
     }
+//
+
 
 // define a function to rotate the char to int
 
