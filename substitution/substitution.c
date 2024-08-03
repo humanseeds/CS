@@ -11,8 +11,9 @@ int main(int argc, string argv[])
      if (argc != 2)
     {
       printf("Usage: ./substiution key\n");
-      return = 1;
+      return 1;
     }
+
     // assign the key a variable and make sure the key is 25 characters
     string key = argv[1]
     for (i =0; 1 < strlen(key)); i++)
@@ -20,14 +21,16 @@ int main(int argc, string argv[])
         if (!isalpha(key[i]))
         {
             printf("Usage: ./substiution key\n");
-            return = 1;
+            return 1;
         }
     }
+
 // validate the length of the key is 26 character
      if strlen(key) != 26)
         {
             printf("Key must contain 26 characters.\n");
         }
+
 // validate the key has no duplicate letters regardless of case
     for (int i = 0; i < strlen(key); i++)
     {
@@ -35,8 +38,8 @@ int main(int argc, string argv[])
         {
             if (toupper(key[i]) == toupper(key[j]))
             {
-                printf("invalid key\n");
-                return = 1;
+                printf("Usage: ./substiution key\n");
+                return 1;
             }
         }
     }
