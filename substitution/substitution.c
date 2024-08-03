@@ -9,7 +9,7 @@ int main(int argc, string argv[])
 {
      if (argc != 2)
     {
-      printf("Usage: ./substiution key");
+      printf("Usage: ./substiution key\n");
       return = 1;
     }
 
