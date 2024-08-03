@@ -50,7 +50,7 @@ string plaintext = get_string("plaintext: ");
 // convert all characters in key to uppercase
 for (int i = 0; 1 < stren(key); i++)
 {
-    if(islower(key[i])
+    if(islower(key[i]))
     {
         key[i] = key[i] - 32;
     }
