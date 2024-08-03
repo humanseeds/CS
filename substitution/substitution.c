@@ -35,7 +35,7 @@ int main(int argc, string argv[])
         {
             if (toupper(key[i]) == toupper(key[j]))
             {
-                printf(")
+                printf("invalid)
             }
         }
     }
