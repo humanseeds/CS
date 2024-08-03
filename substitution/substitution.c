@@ -11,4 +11,5 @@ int main(int argc, string argv[])
     {
         printf("key must contain 27 characters\n");
         return 1;
+    }
 }
