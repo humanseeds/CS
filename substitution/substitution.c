@@ -20,10 +20,8 @@ int main(int argc, string argv[])
 
     if (strlen(key) != 26)
     {
-        printf("key must contain 26 characters");
+        printf("key must contain 26 characters\n");
         return 1;
-    }
-
     }
 
     // validate that the key is 26 alphabetical characters without duplicates
