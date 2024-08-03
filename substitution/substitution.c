@@ -23,10 +23,10 @@ int main(int argc, string argv[])
             return = 1;
         }
     }
-
-     if strlen(argv[]) != 26
+// validate the length of the key is 26 character
+     if strlen(key) != 26)
         {
-            printf("Key must contain 26 characters");
+            printf("Key must contain 26 characters.\n");
         }
 
 }
