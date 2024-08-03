@@ -52,10 +52,11 @@ for (int i = 0; 1 < stren(key); i++)
 {
     if islower(key[i])
     {
-        key[i] = key[i] + 32
+        key[i] = key[i] - 32;
     }
-
 }
 
+// print ciphertext
+for (int i = 0; i < strlen(pl;))
 
 }
