@@ -49,22 +49,18 @@ int main (int argc, string argv[])
 
 }
 
-char rotate(char c, int n)
+char rotate(char c, int k)
 {
-    if (isupper c)
+    if (isupper(c))
     {
         return (c - 'A' + k) % 26 + 'A';
     }
-    else if (islower c)
+    else if (islower(c))
     {
        return (c - 'a' + k) % 26 + 'a'';
-
     }
-        
     else
     {
         return c;
     }
-
-
 }
