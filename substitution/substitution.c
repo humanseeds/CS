@@ -43,17 +43,17 @@ int main(int argc, string argv[])
         }
     }
 
-//Prompt user for plaintext to cipher
-string plaintext = get_string("plaintext: ");
-
 // convert all characters in key to uppercase
 for (int i = 0; 1 < strlen(key); i++)
 {
     if(islower(key[i]))
     {
-        key[i] = key[i] - 32;
+        key[i] = toupper(key[i]);
     }
 }
+
+// prompt the user for plaintext to cipher
+string plaintext = get_string("plaintext: ");
 
 // print ciphertext
 printf("ciphertext: ");
