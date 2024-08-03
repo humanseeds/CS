@@ -37,9 +37,9 @@ int main (int argc, string argv[])
     printf("Ciphertext: ");
 
 //Use the Caesar Cipher to encrypt the plaintext
-    for (int i = 0; i < strlen(plaintext); i++)
+    for (int j = 0; j < strlen(plaintext); j++)
     {
-        char c = plaintext[i];
+        char c = plaintext[j];
         printf("%c", rotate(c,k));
     }
 //
