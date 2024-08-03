@@ -62,15 +62,18 @@ for (int i = 0; i < strlen(plaintext); i++)
   {
     if (isupper(plaintext[i]))
     {
-        int letter = plaintext[i] - 65;
+        int letter = plaintext[i] - 'A';
         printf("%c" , key[letter]);
     }
     else if (islower(plaintext[i]))
     {
-        int letter = plaintext[i] -97;
-        printf("%c" , key[letter] +32);
+        int letter = plaintext[i] - 'a';
+        printf("%c" , key[letter] + 'a' - 'A');
     }
-    else printf("%c" , plaintext[i]);
+    else
+    {
+         printf("%c" , plaintext[i]);
+    }
   }
 printf("\n");
 }
