@@ -17,7 +17,7 @@ int main(int argc, string argv[])
     {
         if (!isalpha(argc[1])[i]))
         {
-            printf("key must contain 26 characters");
+            printf("Usage: ./substiution key\n");
             return = 1;
         }
     }
