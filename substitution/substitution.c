@@ -28,5 +28,12 @@ int main(int argc, string argv[])
         {
             printf("Key must contain 26 characters.\n");
         }
+// validate the key has no duplicate letters regardless of case
+    if int j = 0 
+    {
+
+    }
+
+
 
 }
