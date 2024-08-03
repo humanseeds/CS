@@ -60,9 +60,18 @@ for (int i = 0; 1 < stren(key); i++)
 printf("ciphertext: ");
 
 for (int i = 0; i < strlen(plaintext); i++)
-    if (isupper(plaintext[i]))
+  {
+      if (isupper(plaintext[i]))
     {
         int letter = plaintext[i] - 65;
+        printf("%c" , key[letter]);
     }
-
+    else if (islower(plaintext[i]))
+    {
+        int letter = plaintext[i] -97;
+        printf("%c" , key[letter] +32);
+    }
+    else printf("%c" , plaintext[i]);
+  }
+printf("\n");
 }
