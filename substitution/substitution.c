@@ -44,7 +44,7 @@ int main(int argc, string argv[])
         }
     }
 
-//Prompt user for plaintext
+//Prompt user for plaintext to cipher
 string plaintext = get_string("plaintext: ");
 
 }
