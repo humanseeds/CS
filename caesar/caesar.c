@@ -33,7 +33,15 @@ int main (int argc, string argv[])
 
     // Promt the user for a plaintext to be deciphered
     string plaintext = get_string("plaintext: ");
+
     printf("Ciphertext: ");
+
+//Use the Caesar Cipher to encrypt the plaintext
+    for (int i = 0; i < strlen(plaintext); i++)
+    {
+        char c = plaintext[i];
+        printf("%c", rotate(c,k));
+    }
 
 // define a function to rotate the char to int
 
