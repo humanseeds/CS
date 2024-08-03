@@ -15,8 +15,8 @@ int main(int argc, string argv[])
     }
 
     // assign the key a variable and make sure the key is 25 characters
-    string key = argv[1]
-    for (i =0; 1 < strlen(key)); i++)
+    string key = argv[1];
+    for (int i =0; 1 < strlen(key); i++)
     {
         if (!isalpha(key[i]))
         {
