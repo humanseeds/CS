@@ -34,6 +34,9 @@ int main(int argc, string argv[])
         for (int j = i + 1; j < strlen(key), j++)
         {
             if (toupper(key[i]) == toupper(key[j]))
+            {
+                printf(")
+            }
         }
     }
 
