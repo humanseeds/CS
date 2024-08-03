@@ -40,15 +40,15 @@ int main (int argc, string argv[])
     for (int j = 0; j < strlen(plaintext); j++)
     {
         char c = plaintext[j];
-        printf("%c", rotate(c,k));
+        printf("%c", rotate(c, k));
     }
 
     printf("\n");
     return 0;
-
+}
 // define a function to rotate the char to int
 
-}
+
 
 char rotate(char c, int k)
 {
