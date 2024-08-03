@@ -57,6 +57,12 @@ for (int i = 0; 1 < stren(key); i++)
 }
 
 // print ciphertext
-for (int i = 0; i < strlen(pl;))
+printf("ciphertext: ");
+
+for (int i = 0; i < strlen(plaintext); i++)
+    if (isupper(plaintext[i]))
+    {
+        int letter = plaintext[i] - 65;
+    }
 
 }
