@@ -7,11 +7,11 @@
 
 int main(int argc, string argv[])
 {
-    //validate that there is 1 command line argument
-     if (argc != 2)
+    // validate that there is 1 command line argument
+    if (argc != 2)
     {
-      printf("Usage: ./substiution key\n");
-      return 1;
+        printf("Usage: ./substiution key\n");
+        return 1;
     }
 
     // assign the key to a variable
@@ -43,38 +43,38 @@ int main(int argc, string argv[])
         }
     }
 
-// convert all characters in key to uppercase
-for (int i = 0; i < strlen(key); i++)
-{
-    if(islower(key[i]))
+    // convert all characters in key to uppercase
+    for (int i = 0; i < strlen(key); i++)
     {
-        key[i] = toupper(key[i]);
+        if (islower(key[i]))
+        {
+            key[i] = toupper(key[i]);
+        }
     }
-}
 
-// prompt the user for plaintext to cipher
-string plaintext = get_string("plaintext: ");
+    // prompt the user for plaintext to cipher
+    string plaintext = get_string("plaintext: ");
 
-// print ciphertext
-printf("ciphertext: ");
+    // print ciphertext
+    printf("ciphertext: ");
 
-for (int i = 0; i < strlen(plaintext); i++)
-  {
-    if (isupper(plaintext[i]))
+    for (int i = 0; i < strlen(plaintext); i++)
     {
-        int letter = plaintext[i] - 'A';
-        printf("%c" , key[letter]);
+        if (isupper(plaintext[i]))
+        {
+            int letter = plaintext[i] - 'A';
+            printf("%c", key[letter]);
+        }
+        else if (islower(plaintext[i]))
+        {
+            int letter = plaintext[i] - 'a';
+            printf("%c", key[letter] + 'a' - 'A');
+        }
+        else
+        {
+            printf("%c", plaintext[i]);
+        }
     }
-    else if (islower(plaintext[i]))
-    {
-        int letter = plaintext[i] - 'a';
-        printf("%c" , key[letter] + 'a' - 'A');
-    }
-    else
-    {
-         printf("%c" , plaintext[i]);
-    }
-  }
-printf("\n");
-return 0;
+    printf("\n");
+    return 0;
 }
