@@ -3,7 +3,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
-
+#include <stdlib.h>
 //declare a function that will be used
 char rotate(char c , int n);
 
