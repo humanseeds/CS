@@ -9,6 +9,6 @@ int main(int argc, string argv[])
 {
      if (argc != 27)
     {
-        printf("Usage: ./caesar key\n");
+        printf("key must contain 27 characters\n");
         return 1;
 }
