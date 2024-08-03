@@ -25,11 +25,11 @@ int main(int argc, string argv[])
     }
 
     // validate that the key is 26 alphabetical characters without duplicates
-    for (int i =0; i < strlen(key); i++)
+    for (int i = 0; i < strlen(key); i++)
     {
         if (!isalpha(key[i]))
         {
-            printf("key must contain 26 characters\n");
+            printf("key must only contain alphabetic characters\n");
             return 1;
         }
     }
