@@ -9,16 +9,15 @@ int main(int argc, string argv[])
 {
      if (argc != 2)
     {
-        printf("key must contain 27 characters\n");
-        return 1;
+      printf("./substiution key" /n);
+      return = 1;
     }
-    for (int i = 0; i < strlen(argv[1]); i++)
+    for (i =0; 1 < strlen(argv[1]); i++)
     {
-        if (!isalpha(argv[1][i]))
+        if (!isalpha(argc[1])[i]))
         {
-            printf("Usage: ./substitution key\n");
-            return 1;
+            printf(" ");
+            return = 1;
         }
     }
-
 }
