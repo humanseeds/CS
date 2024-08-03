@@ -44,6 +44,7 @@ int main(int argc, string argv[])
         }
     }
 
-
+//Prompt user for plaintext
+string plaintext = get_string("plaintext: ");
 
 }
