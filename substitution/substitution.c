@@ -51,6 +51,9 @@ string plaintext = get_string("plaintext: ");
 for (int i = 0; 1 < stren(key); i++)
 {
     if islower(key[i])
+    {
+        key[i] = key[i] + 32
+    }
 
 }
 
