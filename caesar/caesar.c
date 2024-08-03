@@ -2,13 +2,13 @@
 #include <ctype.h>
 #include <math.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
-//declare a function that will be used
-char rotate(char c , int n);
+#include <string.h>
 
+// declare a function that will be used
+char rotate(char c, int n);
 
-int main (int argc, string argv[])
+int main(int argc, string argv[])
 {
     // make sure the amount of comman line arguments is 2 ( file name and a key number)
     // exit code with an error is not
@@ -21,11 +21,11 @@ int main (int argc, string argv[])
     // Exit with an error code if not
     for (int i = 0; i < strlen(argv[1]); i++)
     {
-       if (!isdigit(argv[1][i]))
-       {
-        printf("Usage: ./caesar key\n");
-        return 1;
-       }
+        if (!isdigit(argv[1][i]))
+        {
+            printf("Usage: ./caesar key\n");
+            return 1;
+        }
     }
 
     // convert the key from a string into an integer
@@ -36,7 +36,7 @@ int main (int argc, string argv[])
 
     printf("Ciphertext: ");
 
-//Use the Caesar Cipher to encrypt the plaintext
+    // Use the Caesar Cipher to encrypt the plaintext
     for (int j = 0; j < strlen(plaintext); j++)
     {
         char c = plaintext[j];
@@ -46,10 +46,8 @@ int main (int argc, string argv[])
     printf("\n");
     return 0;
 }
+
 // define a function to rotate the char to int
-
-
-
 char rotate(char c, int k)
 {
     if (isupper(c))
@@ -58,7 +56,7 @@ char rotate(char c, int k)
     }
     else if (islower(c))
     {
-       return (c - 'a' + k) % 26 + 'a';
+        return (c - 'a' + k) % 26 + 'a';
     }
     else
     {
