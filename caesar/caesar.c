@@ -53,6 +53,18 @@ char rotate(char c, int n)
 {
     if (isupper c)
     {
-        return (c - 'A' + k) % 25 + 'A';
+        return (c - 'A' + k) % 26 + 'A';
     }
+    else if (islower c)
+    {
+       return (c - 'a' + k) % 26 + 'a'';
+
+    }
+        
+    else
+    {
+        return c;
+    }
+
+
 }
