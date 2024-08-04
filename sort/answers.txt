@@ -26,7 +26,7 @@ timed test runs:
             user    0m0.017s
             sys     0m0.029s
 
-    reversed5000
+    sorted5000
         sort 1 time
             real    0m0.079s
             user    0m0.044s
