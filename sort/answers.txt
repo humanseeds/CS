@@ -9,3 +9,20 @@ How do you know?: TODO
 sort3 uses: TODO
 
 How do you know?: TODO
+
+
+timed test runs:
+    random5000
+        sort 1 time
+            real    0m0.110s
+            user    0m0.046s
+            sys     0m0.021s
+        sort 2 time
+            real    0m0.037s
+            user    0m0.004s
+            sys     0m0.027s
+        sort 3
+            real    0m0.046s
+            user    0m0.017s
+            sys     0m0.029s
+
