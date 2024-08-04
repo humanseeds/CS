@@ -1,14 +1,14 @@
-sort1 uses: TODO
+sort1 uses: bubble sort
 
-How do you know?: TODO
+How do you know?: it sorted through the already sorted stack the fastest.
 
 sort2 uses: Merge sort
 
 How do you know?: it was by far the fastest at dealing with random inputs
 
-sort3 uses: TODO
+sort3 uses: selection sort
 
-How do you know?: TODO
+How do you know?: it took the longest to run on the already sorted stack
 
 
 timed test runs:
