@@ -2,9 +2,9 @@ sort1 uses: TODO
 
 How do you know?: TODO
 
-sort2 uses: TODO
+sort2 uses: Merge sort
 
-How do you know?: TODO
+How do you know?: it was by far the fastest at dealing with random inputs
 
 sort3 uses: TODO
 
@@ -21,8 +21,17 @@ timed test runs:
             real    0m0.037s
             user    0m0.004s
             sys     0m0.027s
-        sort 3
+        sort 3 time
             real    0m0.046s
             user    0m0.017s
             sys     0m0.029s
 
+    reversed5000
+        sort 1 time
+            real    0m0.079s
+            user    0m0.044s
+            sys     0m0.028s
+        sort3 time
+            real    0m0.056s
+            user    0m0.020s
+            sys     0m0.029s
