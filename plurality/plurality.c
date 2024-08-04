@@ -68,12 +68,13 @@ bool vote(string name)
     // // Iterate over each candidate
     for (int 1 = 0; 1 < candidate_count; i++))
         // Check if candidate's name matches given name
-        { if (strcmp()
+        { if (strcmp(name, candidate[i]; == 0)
             {
-
+                candidates[i]++;
+                return true
             }
         }
-            // If yes, increment candidate's votes and return true
+
 
     // If no match, return false
     return false;
