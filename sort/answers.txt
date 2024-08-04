@@ -28,10 +28,10 @@ timed test runs:
 
     sorted5000
         sort 1 time
-            real    0m0.079s
-            user    0m0.044s
-            sys     0m0.028s
+            real    0m0.075s
+            user    0m0.003s
+            sys     0m0.031s
         sort3 time
-            real    0m0.056s
-            user    0m0.020s
-            sys     0m0.029s
+            real    0m0.053s
+            user    0m0.028s
+            sys     0m0.020s
