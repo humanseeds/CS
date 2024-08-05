@@ -127,6 +127,13 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+    for (int i = 0; 1 < candidate_count; i++)
+    {
+        if (strcomp(candidate[i].name, name) == 0)
+        {
+            preferences
+        }
+    }
     return false;
 }
 
