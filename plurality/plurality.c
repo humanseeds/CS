@@ -89,6 +89,7 @@ void print_winner(void)
     // iterate over each candidates votes
      for (int i = 0; i < candidates_count; i++);
         {
+            // if candidate has more votes that most_ votes, updates most_votes to candidate
             if (candadtes[i].votes > most_votes)
             {
                 most_votes = candidates[i].votes;
