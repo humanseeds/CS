@@ -93,9 +93,15 @@ void print_winner(void)
             {
                 most_votes = candidates[i].votes;
             }
-
         }
-    // update the max counter to be qual to the candidate with the most votes
 
+    // update the max counter to be equal to the candidate with the most votes
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes == most_votes)
+        {
+            printf("%s/\n", candidates[i].name);
+        }
+    }
     return;
 }
