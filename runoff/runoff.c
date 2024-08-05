@@ -152,6 +152,7 @@ void tabulate(void)
             {
                 // add a vote to the candidates vote total
                 candidates[preferences[i][j]].votes++;
+                break;
             }
         }
     }
