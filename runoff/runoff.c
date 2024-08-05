@@ -123,7 +123,7 @@ int main(int argc, string argv[])
     return 0;
 }
 
-// Record preference if vote is valid, update candidate rank and vote
+// Record preference if vote is valid, update candidate rank and voter ranking
 bool vote(int voter, int rank, string name)
 {
     // TODO
@@ -138,7 +138,7 @@ bool vote(int voter, int rank, string name)
     return false;
 }
 
-// Tabulate votes for non-eliminated candidates
+// Tabulate votes for non-eliminated candidates. loop trought i + j if not eleminated and add to count
 void tabulate(void)
 {
     // TODO
