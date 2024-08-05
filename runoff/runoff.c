@@ -24,12 +24,12 @@ int voter_count;
 int candidate_count;
 
 // Function prototypes
-bool vote(int voter, int rank, string name); //
-void tabulate(void);
-bool print_winner(void);
-int find_min(void);
-bool is_tie(int min);
-void eliminate(int min);
+bool vote(int voter, int rank, string name); // records voters preferences
+void tabulate(void); // counts to votes for all remaining candidates
+bool print_winner(void); // determines the winner of the vote
+int find_min(void); // find the candidate with the least amount of votes
+bool is_tie(int min); // determines if there is a tie between remaining candidates
+void eliminate(int min); // elimnates candidates with the least number of votes
 
 int main(int argc, string argv[])
 {
