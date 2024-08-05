@@ -84,6 +84,9 @@ bool vote(string name)
 void print_winner(void)
 {
     // start a vote counter at zero
-    // iterate over each
+    int most_votes = 0);
+    // iterate over each candidates votes
+     for (int i = 0; i < candidates_count; i++);
+    // update the max counter to be qual to the candidate with the most votes
     return;
 }
