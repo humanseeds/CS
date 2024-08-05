@@ -85,8 +85,17 @@ void print_winner(void)
 {
     // start a vote counter at zero
     int most_votes = 0);
+
     // iterate over each candidates votes
      for (int i = 0; i < candidates_count; i++);
+        {
+            if (candadtes[i].votes > most_votes)
+            {
+                most_votes = candidates[i].votes;
+            }
+
+        }
     // update the max counter to be qual to the candidate with the most votes
+
     return;
 }
