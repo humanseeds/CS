@@ -70,13 +70,13 @@ bool vote(string name)
     {
         // Check if candidate's name matches given name
         if (strcmp(name, candidates[i].name) == 0)
-            {
-                // If yes, increment candidate's votes and return true
-                candidates[i].votes++;
-                return true;
-            }
+        {
+            // If yes, increment candidate's votes and return true
+            candidates[i].votes++;
+            return true;
+        }
     }
-     // If no match, return false
+    // If no match, return false
     return false;
 }
 
@@ -87,14 +87,14 @@ void print_winner(void)
     int most_votes = 0;
 
     // iterate over each candidates votes
-     for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-            // if candidate has more votes that most_ votes, updates most_votes to candidate
-            if (candidates[i].votes > most_votes)
-            {
-                most_votes = candidates[i].votes;
-            }
-   }
+        // if candidate has more votes that most_ votes, updates most_votes to candidate
+        if (candidates[i].votes > most_votes)
+        {
+            most_votes = candidates[i].votes;
+        }
+    }
 
     // update the max counter to be equal to the candidate with the most votes
     for (int i = 0; i < candidate_count; i++)
