@@ -142,7 +142,7 @@ bool vote(int voter, int rank, string name)
     return false;
 }
 
-// Tabulate votes for non-eliminated candidates. loop trought i + j if not eleminated and add to count
+// Tabulate votes for non-eliminated candidates. loop throught i + j if not eleminated and add to count
 void tabulate(void)
 {
     // TODO
@@ -209,6 +209,7 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
+    // loop through all of the candidates
     return false;
 }
 
