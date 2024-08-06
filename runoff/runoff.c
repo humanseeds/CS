@@ -127,12 +127,13 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    // iterate over the candidates
+    // iterate over the list of candidates
     for (int i = 0; 1 < candidate_count; i++)
     {
-        // compare the candidate to
+        // compare the candidate list name to the preferences name
         if (strcomp(candidates[i].name, name) == 0)
         {
+            // if the candidates name matches the voteres preference name return true
             preferences[voter][rank] = i;
             return true
         }
