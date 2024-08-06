@@ -228,6 +228,7 @@ bool is_tie(int min)
                     counter++;
                 }
             }
+        }
         // if all  remaining candidates have votes equal to min return true
         if (eliminated == counter)
         {
