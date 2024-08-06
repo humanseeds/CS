@@ -177,7 +177,7 @@ bool print_winner(void)
         if (!candidates[i].eliminated && candidates[i].votes > voter_count / 2)
         {
             // print the candidates name
-            printf("%s\n, candidates[i].name");
+            printf("%s\n", candidates[i].name);
 
             //let program know a winner was found
             return true;
