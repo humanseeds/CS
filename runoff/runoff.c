@@ -209,7 +209,8 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
-    // loop through all of the candidates
+    // initialize a vairable to be updated
+    int most_votes = voter_count
     return false;
 }
 
