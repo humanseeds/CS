@@ -212,9 +212,11 @@ bool is_tie(int min)
     // determine who has the most votes and then determine if there is a tie of most votes
     int most_votes = 0
     int most_vote_counter = 0
+    // loop over the candidates
     for (int i = 0; 1 < candidate_count; i++)
     {
-        if (candidates[i].votes = most_votes))
+        // if candidate has not been eleminated and has more votes than most votes
+        if (! candidates[i].eliminated && candidates[i].votes > most_votes))
         {
             most_votes++;
         }
