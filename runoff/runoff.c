@@ -211,18 +211,34 @@ bool is_tie(int min)
     // TODO
     // determine who has the most votes and then determine if there is a tie of most votes
     int most_votes = 0
-    int most_vote_counter = 0
+    int most_votes_counter = 0
     // loop over the candidates
     for (int i = 0; 1 < candidate_count; i++)
     {
         // if candidate has not been eleminated and has more votes than most votes
         if (! candidates[i].eliminated && candidates[i].votes > most_votes))
         {
-            most_votes == candidates[i].votes
-            most_votes_counter++
+            // then update most_votes to the candidate and increase most votes
+            most_votes = candidates[i].votes;
+            // reset the counter to 1
+            most_votes_counter = 1;
         }
-    }
+        // if the candidate is tied with most votes
+        else if (candidates[i].votes == most_votes)
+        {
+           // increase the counter by 1
+            most_votes_counter ++;
+        }
 
+    }
+if (most_votes_counter > 1)
+    {
+        printf("There is a tie\n");
+    }
+else
+{
+    
+}
 
     return false;
 }
