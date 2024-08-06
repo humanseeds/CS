@@ -222,7 +222,7 @@ bool is_tie(int min)
                 eliminated++;
 
                 // if not eliminated, check if candidate's votes = min
-                if (candidates[i].votes = min)
+                if (candidates[i].votes == min)
                 {
                     //if so increase the counter
                     counter++;
