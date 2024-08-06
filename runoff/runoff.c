@@ -171,6 +171,9 @@ bool print_winner(void)
     // TODO
     // loop throught each candidate
     for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates)
+    }
 
 
     return false;
