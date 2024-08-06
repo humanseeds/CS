@@ -172,15 +172,18 @@ bool print_winner(void)
     // loop throught each candidate
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i] > voter_count / 2)
+       // if the candidate has not been eliminated & their votes are greater than half the total votes
+        if (!candidates[i].eliminated && candidates[i].votes> voter_count / 2)
         {
+            // print the candidates name
             printf("%s/n, candidates[i].name");
+
+            //let program know a winner was found
             return true;
         }
     }
-
-
-    return false;
+     // continue the program if no winner was found
+     return false;
 }
 
 // Return the minimum number of votes any remaining candidate has
