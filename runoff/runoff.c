@@ -208,34 +208,8 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    // TODO
-    // determine who has the most votes and then determine if there is a tie of most votes
-    int most_votes = 0
-    int most_votes_counter = 0
-    // loop over the candidates
-    for (int i = 0; 1 < candidate_count; i++)
-    {
-        // if candidate has not been eleminated and has more votes than most votes
-        if (! candidates[i].eliminated && candidates[i].votes > most_votes))
-        {
-            // then update most_votes to the candidate and increase most votes
-            most_votes = candidates[i].votes;
-            // reset the counter to 1
-            most_votes_counter = 1;
-        }
-        // if the candidate is tied with most votes
-        else if (candidates[i].votes == most_votes)
-        {
-           // increase the counter by 1
-            most_votes_counter ++;
-        }
 
-    }
-// if more than one candidate has the most votes there is a tie
-if (most_votes_counter > 1)
-   
-
-    return false;
+     return false;
 }
 
 // Eliminate the candidate (or candidates) in last place
