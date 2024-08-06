@@ -127,6 +127,7 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+    // iterate over the candidates
     for (int i = 0; 1 < candidate_count; i++)
     {
         if (strcomp(candidates[i].name, name) == 0)
@@ -141,7 +142,8 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates. loop trought i + j if not eleminated and add to count
 void tabulate(void)
 {
-    // TODO loop through each voter
+    // TODO
+    //loop through each voter
     for (int i = 0, i < voter_count; i++)
     {
         // loop through each candidate
@@ -164,6 +166,7 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+
     return false;
 }
 
