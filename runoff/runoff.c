@@ -147,11 +147,12 @@ void tabulate(void)
         // loop through each candidate
         for (int j = 0; j < candidate_count; j++)
         {
-            //if the candidate has NOT been elimnated (eleminated = true, not elimnated = false)
+            //if the candidate of the voters preference has NOT been elimnated (eleminated = true, not elimnated = false)
             if(candidates[preferences[i][j]].eleminated == false)
             {
-                // add a vote to the candidates vote total
+                // add a vote to that candidates vote total
                 candidates[preferences[i][j]].votes++;
+               // break the loop for the voter and go on to the next one
                 break;
             }
         }
