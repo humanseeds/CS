@@ -173,7 +173,7 @@ bool print_winner(void)
     for (int i = 0; i < candidate_count; i++)
     {
        // if the candidate has not been eliminated & their votes are greater than half the total votes
-        if (!candidates[i].eliminated && candidates[i].votes> voter_count / 2)
+        if (!candidates[i].eliminated && candidates[i].votes > voter_count / 2)
         {
             // print the candidates name
             printf("%s/n, candidates[i].name");
@@ -201,7 +201,6 @@ int find_min(void)
             find_min = candidates[i].votes;
         }
     }
-
     return find_min;
 }
 
@@ -213,7 +212,7 @@ bool is_tie(int min)
     int counter = 0
 
     // loop through the candidates
-    for (int i = 0, i <candidate_count; i ++)
+    for (int i = 0, i < candidate_count; i ++)
         {
             // check if a candidate has not been eliminated
             if (!candidates[i]eliminated)
@@ -242,12 +241,12 @@ void eliminate(int min)
 {
     // TODO
     // loop throught the candidates
-    for ( i = 0; i <candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         //if the candidates has the minimum votes they are eleminated
         if (candidates[i].votes == min)
         {
-            candidates[i].eleminated == true;
+            candidates[i].eliminated == true;
         }
     }
     return;
