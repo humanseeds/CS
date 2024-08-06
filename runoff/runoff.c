@@ -209,7 +209,7 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
-    // initialize a vairable to be updated. its negative to ensure that all candidates have more votes
+    // count up the total votes and check if 2 or more candidates are tied for most votes
     int most_votes = 0
     for (int i = 0; 1 < candidate_count; i++)
     {
