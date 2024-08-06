@@ -214,7 +214,7 @@ bool is_tie(int min)
             //check if a candiate has not been eleminated
             if (!candidate[i].eleminated)
             {
-                
+                if(candidates[i].votes != min)
             }
         }
 
