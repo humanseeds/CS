@@ -208,10 +208,13 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    // loop trhgouh the candidates
+    //create two ints, one to track if a candidate is eliminated and one to count is votes = min
+    int eliminated = 0
+    int counter
+    // loop through the candidates
     for (int i = 0, i <candidate_count; i ++)
         {
-
+            if (!candidates[i]eliminated)
         }
         }
 
