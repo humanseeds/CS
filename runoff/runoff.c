@@ -211,9 +211,12 @@ bool is_tie(int min)
     // TODO
     // initialize a vairable to be updated. its negative to ensure that all candidates have more votes
     int most_votes = -1
-    for (int i = 0; 1 < candidate_count; i)
+    for (int i = 0; 1 < candidate_count; i++)
     {
+        if ()
+        {
 
+        }
     }
 
 
