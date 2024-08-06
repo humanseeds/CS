@@ -218,7 +218,8 @@ bool is_tie(int min)
         // if candidate has not been eleminated and has more votes than most votes
         if (! candidates[i].eliminated && candidates[i].votes > most_votes))
         {
-            most_votes++;
+            most_votes == candidates[i].votes
+            most_votes_counter++
         }
     }
 
