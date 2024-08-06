@@ -209,8 +209,9 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
-    // count up the total votes and check if 2 or more candidates are tied for most votes
+    // determine who has the most votes and then determine if there is a tie of most votes
     int most_votes = 0
+    int most_vote_counter = 0
     for (int i = 0; 1 < candidate_count; i++)
     {
         if (candidates[i].votes = most_votes))
