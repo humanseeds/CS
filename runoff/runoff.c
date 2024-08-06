@@ -247,7 +247,7 @@ void eliminate(int min)
         //if the candidates has the minimum votes they are eleminated
         if (candidates[i].votes == min)
         {
-            candidates[i].eliminated == true;
+            candidates[i].eliminated = true;
         }
     }
     return;
