@@ -210,15 +210,30 @@ bool is_tie(int min)
 {
     //create two ints, one to track if a candidate is eliminated and one to count is votes = min
     int eliminated = 0
-    int counter
+    int counter = 0
+
     // loop through the candidates
     for (int i = 0, i <candidate_count; i ++)
         {
+            // check if a candidate has not been eliminated
             if (!candidates[i]eliminated)
-        }
-        }
+            {
+                // if not increase the counter
+                eliminated++;
 
-     return false;
+                // if not eliminated, check if candidate's votes = min
+                if (candidates[i].votes = min)
+                {
+                    //if so increase the counter
+                    counter++;
+                }
+            }
+        // if all  remaining candidates have votes equal to min return true
+        if (eliminated == counter)
+        {
+            return true;
+        }
+        return false;
 }
 
 // Eliminate the candidate (or candidates) in last place
