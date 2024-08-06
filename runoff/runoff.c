@@ -147,7 +147,7 @@ void tabulate(void)
 {
     // TODO
     //loop through each voter
-    for (int i = 0, i < voter_count; i++)
+    for (int i = 0; i < voter_count; i++)
     {
         // loop through each candidate
         for (int j = 0; j < candidate_count; j++)
@@ -170,8 +170,8 @@ bool print_winner(void)
 {
     // TODO
     // loop throught each candidate
-    for (int i = 0; i < candidates; i==)
-    
+    for (int i = 0; i < candidate_count; i++)
+
 
     return false;
 }
