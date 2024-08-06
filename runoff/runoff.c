@@ -130,6 +130,7 @@ bool vote(int voter, int rank, string name)
     // iterate over the candidates
     for (int i = 0; 1 < candidate_count; i++)
     {
+        // compair the candidate to 
         if (strcomp(candidates[i].name, name) == 0)
         {
             preferences[voter][rank] = i;
