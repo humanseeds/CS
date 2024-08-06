@@ -192,12 +192,12 @@ int find_min(void)
 {
     // TODO
     // set find_min to the maximum amount of votes
-    int find_min = voter_count;
+    int min = voter_count;
     // loop throught each candidate
-    for (i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
        // if the candidate has not been eleminated and their votes is less than vote min
-        if (!candidates[i].eleminated && candidates[i].votes < find_min)
+        if (!candidates[i].eliminated && candidates[i].votes < find_min)
         {
             find_min = candidates[i].votes;
         }
