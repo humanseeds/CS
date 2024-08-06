@@ -231,13 +231,21 @@ bool is_tie(int min)
         }
 
     }
+// if more than one candidate has the most votes there is a tie
 if (most_votes_counter > 1)
     {
         printf("There is a tie\n");
     }
+// if there is not a tie, loop throught the candidates to determine who has the most votes
 else
 {
-    
+    for (int i = 0, i < candidate_count; i ++)
+    {
+        if (candidates[i].votes == most_votes)
+        {
+            printf("The Winner is: %s\n", candidates[i].name);
+        }
+    }
 }
 
     return false;
