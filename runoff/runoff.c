@@ -169,6 +169,9 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    // loop throught each candidate
+    for (int i = 0; i < candidates; i==)
+    
 
     return false;
 }
