@@ -225,7 +225,10 @@ void eliminate(int min)
     // loop throught the candidates and remove candidates witht the least amount of votes
     for ( i = 0; i <candidate_count; i++)
     {
-        
+        if (candidates[i].votes == min)
+        {
+            candidates[i].eleminated == true;
+        }
     }
     return;
 }
