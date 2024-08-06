@@ -128,16 +128,17 @@ bool vote(int voter, int rank, string name)
 {
     // TODO
     // iterate over the list of candidates
-    for (int i = 0; 1 < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         // compare the candidate list name to the preferences name
-        if (strcomp(candidates[i].name, name) == 0)
+        if (strcmp(candidates[i].name, name) == 0)
         {
-            // if the candidates name matches the voteres preference name return true
+            // if the candidates name matches the voteres preference name update preferences
             preferences[voter][rank] = i;
-            return true
+            return true;
         }
     }
+    // if the voter preferences doesnt match the candidates name return false
     return false;
 }
 
