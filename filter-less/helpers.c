@@ -111,6 +111,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             // now we must loop through a 3 x 3 grid around each pixel
             for (int x = -1; x <= 1; x ++)
+            {
+                for (int y = -1, x <= 1; y++)
+                {
+                    
+                }
+            }
         }
     }
 
