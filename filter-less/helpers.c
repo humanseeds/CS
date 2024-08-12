@@ -23,7 +23,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // create a helper function to ensure rgbt values dont exceed 255
-int capped255 
+int capped255
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
