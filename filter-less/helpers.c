@@ -101,7 +101,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // loop through each pixel of the original
     for (int i = 0; i < height; i++)
     {
-        for (int  j = 0; j < width; j++)
+        for (int j = 0; j < width; j++)
         {
             // initialize variables of the pixels to zero and create a counter to find averages
             int sumRed = 0;
