@@ -115,11 +115,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 for (int y = -1, y <= 1; y++)
                 {
                     // dettermine the cooridnates of the current pixel
-                    int currentX = i + X;
-                    int currentY= J + Y;
+                    int currentX = i + x;
+                    int currentY= J + y;
 
                     // check to see if the neighboring pixel is in bounds and not out of the array
-                    if ( currentX >= 0 && currentX < width && currentY >= 0 && currentY < height)
+                    if (currentX >= 0 && currentX < width && currentY >= 0 && currentY < height)
                     {
                         // now we find the sums of the pixels in the grid
                         sumRed += copy[currentX][currentY].rgbtRed;
