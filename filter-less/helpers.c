@@ -114,7 +114,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int y = -1, x <= 1; y++)
                 {
-                    int 
+                    // dettermine the cooridnates of the current pixel
+                    int currentY = i + X;
+                    int currentX = j + y;
+
+                    // check to see if the neighboring pixel is in bounds and not out of the array
+                    if ( currentX >= 0 && x < height )
                 }
             }
         }
