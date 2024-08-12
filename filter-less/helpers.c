@@ -54,8 +54,8 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
             // apply the new calculated sepia filter
             image[i][j].rgbtRed = sepiaRed;
-            image[i][j].rgbtgreen = ;
-            image[i][j].rgbtblue = ;
+            image[i][j].rgbtgreen = sepiaGreen;
+            image[i][j].rgbtblue = SepiaBlue;
 
         }
     }
