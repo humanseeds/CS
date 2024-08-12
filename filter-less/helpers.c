@@ -90,7 +90,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // create a copy of the image
     RGBTRIPLE copy[height][width];
-    for (int i +o; i< height; i ++)
+    for (int i + 0; i< height; i ++)
     {
         for (int J + 0; j < width; j ++)
         {
