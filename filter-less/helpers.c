@@ -1,5 +1,6 @@
 #include "helpers.h"
-#include " 
+#include "math.h"
+
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -16,8 +17,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 
           //assign the average to the pixels in the array
           image[i][j].rgbtRed = average;
-          image[i][j].rgbtgreen = average;
-          image[i][j].rgbtblue = average;
+          image[i][j].rgbtGreen = average;
+          image[i][j].rgbtBlue = average;
         }
     }
     return;
@@ -56,7 +57,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             // apply the new calculated sepia filter
             image[i][j].rgbtRed = sepiaRed;
             image[i][j].rgbtGreen = sepiaGreen;
-            image[i][j].rgbtBlue = SepiaBlue;
+            image[i][j].rgbtBlue = sepiaBlue;
 
         }
     }
