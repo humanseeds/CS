@@ -121,7 +121,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     // check to see if the neighboring pixel is in bounds and not out of the array
                     if ( currentX >= 0 && currentX < width && currentY >= 0 && currentY < height)
                     {
-                        // now we 
+                        // now we find the sums of the pixels in the grid
+                        sumRed += copy[currentX][currentY].rgbtRed;
+                        sumGreen += copy[currentX][currentY].rgbtGreen;
+                        sumBlue +=copy[currentX][currentY].rgbtBlue;
+                        count++;
                     }
                 }
             }
