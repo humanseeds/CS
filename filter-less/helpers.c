@@ -119,9 +119,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     int currentY= J + Y;
 
                     // check to see if the neighboring pixel is in bounds and not out of the array
-                    if ( currentX >= 0 && x < width && currentY >= 0 && currentY < height)
+                    if ( currentX >= 0 && currentX < width && currentY >= 0 && currentY < height)
                     {
-                        
+                        // now we 
                     }
                 }
             }
