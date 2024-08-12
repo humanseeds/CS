@@ -48,14 +48,14 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int sepiaBlue = round((.272 * image[i][j].rgbtRed) + (.534 * image[i][j].rgbtGreen) + (.131 * image[i][j].rgbtBlue));
 
             // recall helper function to ensure the new value does now exceed the 255 max limit
-            sepiaRed = capped255(SepiaRed);
+            sepiaRed = capped255(sepiaRed);
             sepiaGreen = capped255(sepiaGreen);
             sepiaBlue = capped255(sepiaBlue);
 
             // apply the new calculated sepia filter
             image[i][j].rgbtRed = sepiaRed;
-            image[i][j].rgbtgreen = sepiaGreen;
-            image[i][j].rgbtblue = SepiaBlue;
+            image[i][j].rgbtGreen = sepiaGreen;
+            image[i][j].rgbtBlue = SepiaBlue;
 
         }
     }
