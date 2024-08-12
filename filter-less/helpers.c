@@ -112,14 +112,17 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // now we must loop through a 3 x 3 grid around each pixel
             for (int x = -1; x <= 1; x ++)
             {
-                for (int y = -1, x <= 1; y++)
+                for (int y = -1, y <= 1; y++)
                 {
                     // dettermine the cooridnates of the current pixel
-                    int currentY = i + X;
-                    int currentX = j + y;
+                    int currentX = i + X;
+                    int currentY= J + Y;
 
                     // check to see if the neighboring pixel is in bounds and not out of the array
-                    if ( currentX >= 0 && x < height )
+                    if ( currentX >= 0 && x < width && currentY >= 0 && currentY < height)
+                    {
+                        
+                    }
                 }
             }
         }
