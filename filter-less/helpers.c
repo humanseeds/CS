@@ -132,9 +132,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
             // now we find the average of the pixels and again cap the value with our helper function
-            image[i][j].rgbtRed = capped255(round((float)sumRed / count));
-            image[i][j].rgbtGreen = capped255(round((float)sumGreen / count));
-            image[i][j].rgbtBlue = capped255(round((float)sumBlue / count));
+            image[i][j].rgbtRed = capped255(round((float)sumRed / counter));
+            image[i][j].rgbtGreen = capped255(round((float)sumGreen / counter));
+            image[i][j].rgbtBlue = capped255(round((float)sumBlue / counter));
         }
     }
 
