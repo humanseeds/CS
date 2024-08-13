@@ -22,10 +22,11 @@ int main(int argc, char *argv[])
         // Create JPEGs from the data
         if (buffer[0] == 0xff &&
             buffer[1] == 0xd8 &&
-            buffer[2] == 0xff &&// first jpeg starts with certain jpg identifiers
+            buffer[2] == 0xff &&    // if first jpeg starts with certain jpg identifiers
            (buffer[3] & 0xf0) == 0xe0)
-
             {
+                sprintf(filename, "%03i.jpg", )
+            }
                 // sprintf string into new file
         }
     }
