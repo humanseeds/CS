@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
                 FILE *img = fopen(filename,"w" ); // create a new file for the found jpg
             }
-            else int fclose(FILE *jpg; // if not the first 
+            else int fclose(FILE *jpg; // if not the first jpg close the file and look for another
             {}
         }
     }
