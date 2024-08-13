@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 int main(int argc, char *argv[])
 {
    // Accept a single command-line argument
@@ -18,9 +19,9 @@ int main(int argc, char *argv[])
 
     // create a counter to make sure all 50 files are found
     int file_counter = 0;
-    
+    int block_size = 512
     // While there's still data left to read from the memory card
-    while (fread(buffer, 1, 512, card) == 512)
+    while (fread(buffer, 1, 512, card) == block_size)
     {
         if (buffer[0] == 0xff &&
             buffer[1] == 0xd8 &&
