@@ -17,8 +17,8 @@ int main(int argc, char *argv[])
     // Create a buffer for a block of data
     uint8_t buffer[512];
 
-    // create a counter to make sure all 50 files are found
-    int file_counter = 0;
+    // create a counter to properly label each new jpg file
+    int file_count = 0;
 
    // define a block size to eleminate magic numbers
     int block_size = 512
