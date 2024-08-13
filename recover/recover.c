@@ -25,9 +25,9 @@ int main(int argc, char *argv[])
             buffer[2] == 0xff &&    // if first jpeg starts with certain jpg identifiers
            (buffer[3] & 0xf0) == 0xe0)
             {
-                sprintf(filename, "%03i.jpg", )
+                sprintf(filename, "%03i.jpg",x ) // create a new file. rmemeber to create an actual filename and  replace x
             }
-                // sprintf string into new file
+                
         }
     }
 }
