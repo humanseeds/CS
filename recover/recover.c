@@ -17,12 +17,13 @@ int main(int argc, char *argv[])
     // Create a buffer for a block of data
     uint8_t buffer[512];
 
+    // define a block size to eleminate magic numbers
+    int block_size = 512
+
     // create a counter to properly label each new jpg file
     int file_count = 0;
 
-   // define a block size to eleminate magic numbers
-    int block_size = 512
-
+    //create a pointer to 
     // While there's still data left to read from the memory card
     while (fread(buffer, 1, block_size, card) == block_size)
     {
