@@ -19,8 +19,6 @@ int main(int argc, char *argv[])
     // While there's still data left to read from the memory card
     while (fread(buffer, 1, 512, card) == 512)
     {
-        int i = 0; i < 512 ; i++; // not sure what to run as the end of the file
-        // Create JPEGs from the data
         if (buffer[0] == 0xff &&
             buffer[1] == 0xd8 &&
             buffer[2] == 0xff &&    // if first jpeg starts with certain jpg identifiers
