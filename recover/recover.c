@@ -26,10 +26,11 @@ int main(int argc, char *argv[])
             buffer[2] == 0xff &&    // if first jpeg starts with certain jpg identifiers
            (buffer[3] & 0xf0) == 0xe0)
             {
-                sprintf(filename, "%03i.jpg",x ); // store the new file in memory until a full jpg is found
+
                 FILE *img = fopen(filename,"w" ); // create a new file for the found jpg
             }
-
+            else int fclose(FILE *jpg; // if not the first 
+            {}
         }
     }
 }
