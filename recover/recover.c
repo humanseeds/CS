@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
         // Create JPEGs from the data
         if ()// first jpeg starts with certain jpg identifiers
         {
-            
+            // sprintf string into new file
         }
     }
 }
