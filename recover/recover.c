@@ -19,9 +19,12 @@ int main(int argc, char *argv[])
 
     // create a counter to make sure all 50 files are found
     int file_counter = 0;
+
+   // define a block size to eleminate magic numbers
     int block_size = 512
+
     // While there's still data left to read from the memory card
-    while (fread(buffer, 1, 512, card) == block_size)
+    while (fread(buffer, 1, block_size, card) == block_size)
     {
         if (buffer[0] == 0xff &&
             buffer[1] == 0xd8 &&
