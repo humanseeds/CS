@@ -32,5 +32,7 @@ int main(int argc, char *argv[])
             else int fclose(FILE *jpg; // if not the first jpg close the file and look for another
             {}
         }
+        else // if a jpeg
+            if // continue writing the next block of the jpg on the same file
     }
 }
