@@ -20,9 +20,11 @@ int main(int argc, char *argv[])
     while (fread(buffer, 1, 512, card) == 512)
     {
         // Create JPEGs from the data
-        if ()// first jpeg starts with certain jpg identifiers
+        if (buffer[0])// first jpeg starts with certain jpg identifiers
         {
-            // sprintf string into new file
+            if()
+            {
+                // sprintf string into new file
         }
     }
 }
