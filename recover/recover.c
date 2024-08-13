@@ -14,11 +14,11 @@ int main(int argc, char *argv[])
     // Open the memory card
     FILE *card = fopen(argv[1], "r");
 
-    // Create a buffer for a block of data
-    uint8_t buffer[512];
-
-    // define a block size to eleminate magic numbers
+     // define a block size to eleminate magic numbers
     int block_size = 512;
+
+    // Create a buffer for a block of data
+    uint8_t buffer[block_size];
 
     // create a counter to properly label each new jpg file
     int file_count = 0;
@@ -34,13 +34,4 @@ int main(int argc, char *argv[])
             buffer[2] == 0xff &&    // if first jpeg starts with certain jpg identifiers
            (buffer[3] & 0xf0) == 0xe0)
             {
-
-                FILE *img = fopen(filename,"w" ); // create a new file for the found jpg
-            }
-            else int fclose(FILE *jpg; // if not the first jpg close the file and look for another
-            {}
-        }
-        else // if a jpeg
-            if // continue writing the next block of the jpg on the same file
-    }
-}
+                
