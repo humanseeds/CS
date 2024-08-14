@@ -44,3 +44,5 @@ int main(int argc, char *argv[])
     char recovered[8];
     sprintf(recovered, "%031.jpg", jpg_counter);
 
+    // check to seee if a jpeg is currently open
+    img = fopen(recovered, "W")
