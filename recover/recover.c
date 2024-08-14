@@ -54,5 +54,5 @@ int main(int argc, char *argv[])
 
     if (img != NULL)
     {
-        fwrite()
+        fwrite(buffer, 1, buffer_size
     }
