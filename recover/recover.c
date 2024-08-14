@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
             {
                 fclose(img);
             }
-        }
+
 
     // generate a new file name. create an 8 digit array
     char recovered[8];
@@ -50,10 +50,20 @@ int main(int argc, char *argv[])
 
     // increment the jpg counter
     jpg_count ++;
-    }
+        }
 
     // if the jpg is open, write the current block to it
     if (img != NULL)
     {
         fwrite(buffer, 1, buffer_size, img);
     }
+}
+
+    // close any remaining files
+    if (img = NULL)
+    {
+        fclose(img);
+    }
+
+fclose(card);
+}
