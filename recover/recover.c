@@ -40,7 +40,9 @@ int main(int argc, char *argv[])
                 fclose(img);
             }
 
-    // generate a new file name
-    char[8] =
-    sprintf(filename, "%031.jpg",jpg_counter)
+    // generate a new file name. create an 8 digit array
+    char filename[8]
+    sprintf(filename, "%031.jpg", jpg_counter);
+
     //open a new file
+    FILE *img = fopen(filename, 'w');
