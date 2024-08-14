@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     //create a pointer to the currently open jpg file
     FILE *img = NULL;
 
-    // While there's still data left to read from the memory card
+    //  loop  while there's still data left to read from the memory card
     while (fread(buffer, 1, block_size, card) == block_size)
     {
         // check if the block is a new jpg
