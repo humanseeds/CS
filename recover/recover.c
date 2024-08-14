@@ -52,7 +52,8 @@ int main(int argc, char *argv[])
     jpg_count ++;
     }
 
+    // if the jpg is open, write the current block to it
     if (img != NULL)
     {
-        fwrite(buffer, 1, buffer_size
+        fwrite(buffer, 1, buffer_size, img);
     }
