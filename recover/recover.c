@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[block_size];
 
     // create a counter to properly label each new jpg file
-    int JPG_count = 0;
+    int jpg_count = 0;
 
     //create a pointer to the currently open jpg file
     FILE *img = NULL;
@@ -42,5 +42,5 @@ int main(int argc, char *argv[])
 
     // generate a new file name
     char[8] =
-    sprintf(buffer,%);
+    sprintf(filename, "%031.jpg",jpg_counter)
     //open a new file
