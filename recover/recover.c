@@ -41,6 +41,6 @@ int main(int argc, char *argv[])
             }
 
     // generate a new file name
-    char[8] = 
-
+    char[8] =
+    sprintf(buffer,%);
     //open a new file
