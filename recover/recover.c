@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 int main(int argc, char *argv[])
 {
    // Accept a single command-line argument
@@ -21,7 +20,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[block_size];
 
     // create a counter to properly label each new jpg file
-    int file_count = 0;
+    int JPG_count = 0;
 
     //create a pointer to the currently open jpg file
     FILE *img = NULL;
