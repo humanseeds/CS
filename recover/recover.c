@@ -34,8 +34,13 @@ int main(int argc, char *argv[])
             buffer[2] == 0xff &&
            (buffer[3] & 0xf0) == 0xe0)
         {
+            //if a jpg file is already open, close it
             if (img != NULL)
             {
                 fclose(img);
             }
 
+    // generate a new file name
+    char[8] = 
+
+    //open a new file
