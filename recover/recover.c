@@ -52,4 +52,7 @@ int main(int argc, char *argv[])
     jpg_count ++;
     }
 
-    
+    if (img != NULL)
+    {
+        fwrite()
+    }
