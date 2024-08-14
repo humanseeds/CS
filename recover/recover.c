@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     // Open the memory card
     FILE *card = fopen(argv[1], "r");
 
-     // define a block size to eleminate magic numbers
+     // define a block size to eliminate magic numbers
     int block_size = 512;
 
     // Create a buffer for a block of data
