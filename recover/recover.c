@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
     img = fopen(recovered, "W");
 
     // check for error creating thr file
-    if (img == NULL);
+    if (img == NULL)
     {
         fclose(card);
         return 1;
