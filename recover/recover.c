@@ -48,9 +48,6 @@ int main(int argc, char *argv[])
     // open the newly created recovered file
     img = fopen(recovered, "W");
 
-    // increment the jpg counter
-    jpg_count ++;
-        }
 
     // if the jpg is open, write the current block to it
     if (img != NULL)
