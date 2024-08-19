@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     int block_size = 512;
 
     // Create a buffer for a block of data
-    uint8_t buffer[block_size];
+    uint8_t; buffer[block_size];
 
     // create a counter to properly label each new jpg file
     int jpg_count = 0;
