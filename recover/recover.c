@@ -48,13 +48,16 @@ int main(int argc, char *argv[])
     // open the newly created recovered file
     img = fopen(recovered, "W");
 
-    if (img ==NULL);
+    // check for error creating thr file
+    if (img == NULL);
     {
-        printf("can not create file %s. /n", recoverd);
+        fclose(card);
         return 1;
     }
 
-
+    //increment jpg counter
+    jpg_count++;
+}
 
     // if the jpg is open, write the current block to it
     if (img != NULL)
