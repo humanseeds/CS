@@ -55,12 +55,12 @@ int main(int argc, char *argv[])
     // if the jpg is open, write the current block to it
     if (img != NULL)
     {
-        fwrite(buffer, 1, buffer_size, img);
+        fwrite(buffer, 1, block_size, img);
     }
 }
 
     // close any remaining files
-    if (img = NULL)
+    if (img != NULL)
     {
         fclose(img);
     }
