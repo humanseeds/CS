@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 int main(int argc, char *argv[])
 {
@@ -42,7 +43,7 @@ int main(int argc, char *argv[])
 
     // generate a new file name. create an 8 digit array
     char recovered[8];
-    sprintf(recovered, "%031.jpg", jpg_counter);
+    sprintf(recovered, "%031.jpg", jpg_count);
 
     // open the newly created recovered file
     img = fopen(recovered, "W");
