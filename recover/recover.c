@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     // create a counter to properly label each new jpg file
     int jpg_count = 0;
 
-    //create a pointer to the currently open jpg file
+    //create a pointer to the currently opened jpg file
     FILE *img = NULL;
 
     //  loop  while there's still data left to read from the memory card
