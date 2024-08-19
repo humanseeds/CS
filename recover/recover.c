@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 
     // generate a new file name. create an 8 digit array
     char recovered[8];
-    sprintf(recovered, "%031.jpg", jpg_count);
+    sprintf(recovered, "%03i.jpg", jpg_count);
 
     // open the newly created recovered file
     img = fopen(recovered, "W");
