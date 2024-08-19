@@ -48,6 +48,12 @@ int main(int argc, char *argv[])
     // open the newly created recovered file
     img = fopen(recovered, "W");
 
+    if (img ==NULL);
+    {
+        pr
+    }
+
+
 
     // if the jpg is open, write the current block to it
     if (img != NULL)
