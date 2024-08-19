@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
     sprintf(recovered, "%03i.jpg", jpg_count);
 
     // open the newly created recovered file
-    img = fopen(recovered, "W");
+    img = fopen(recovered, "w");
 
     // check for error creating thr file
     if (img == NULL)
