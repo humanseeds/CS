@@ -40,7 +40,6 @@ int main(int argc, char *argv[])
                 fclose(img);
             }
 
-
     // generate a new file name. create an 8 digit array
     char recovered[8];
     sprintf(recovered, "%031.jpg", jpg_counter);
