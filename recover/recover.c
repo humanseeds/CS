@@ -50,7 +50,8 @@ int main(int argc, char *argv[])
 
     if (img ==NULL);
     {
-        pr
+        printf("can not create file %s. /n", recoverd);
+        return 1;
     }
 
 
