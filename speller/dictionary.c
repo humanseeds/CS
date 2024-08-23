@@ -43,7 +43,7 @@ bool load(const char *dictionary)
     if (file == NULL)
     {
         printf("Unable to open %s\n", dictionary);
-    return false,
+    return false;
     }
 
     // read each string from file one at a time
