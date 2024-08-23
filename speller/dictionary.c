@@ -64,7 +64,7 @@ bool load(const char *dictionary)
 
         //hash word to obtain a hash value
 
-
+        // insert the new node into the hash function.
     }
 
     return false;
