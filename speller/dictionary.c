@@ -33,6 +33,7 @@ unsigned int hash(const char *word)
 }
 
 // Loads dictionary into memory, returning true if successful, else false
+// open dictionary, read each word and add each word, close the dictionary
 bool load(const char *dictionary)
 {
     // TODO
