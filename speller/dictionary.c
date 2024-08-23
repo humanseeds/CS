@@ -52,13 +52,14 @@ bool load(const char *dictionary)
         node *new_node = malloc(sizeof(node));
         if (new_node) == NULL
         {
+            unload();
             return false;
         }
         strcpy(n->word, word);
         new_node->next = NULL;
 
         //hash word to obtain a hash value
-        
+
 
     }
 
