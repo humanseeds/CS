@@ -41,7 +41,11 @@ bool load(const char *dictionary)
     if (source == NULL)
     {
         printf("Unable to open %s\n", dictionary);
+    return false,
     }
+    
+
+
     return false;
 
 
