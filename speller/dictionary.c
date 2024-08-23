@@ -62,7 +62,8 @@ bool load(const char *dictionary)
 
 
         //hash word to obtain a hash value
-
+        new_node->next = head;
+        head = new_node;
 
     }
 
