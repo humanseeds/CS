@@ -48,13 +48,13 @@ bool load(const char *dictionary)
     char word[LENGTH +1];
     while (fscanf(file, %s, word) != EOF)
     {
-        // create a new node with malloc
+        // create a new node with malloc, return null if unable
         node *new_node = malloc(sizeof(node));
         if (new_node) == NULL
         {
             return false;
         }
-
+        
     }
 
     return false;
