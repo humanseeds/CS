@@ -38,6 +38,10 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE *source = fopen(dictionary, "r");
+    if (Source == NULL)
+    {
+        printf("Unable to open %s\n", dictionary);
+    }
     return false;
 }
 
