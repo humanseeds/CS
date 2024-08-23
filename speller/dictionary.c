@@ -57,6 +57,7 @@ bool load(const char *dictionary)
             unload();
             return false;
         }
+        // make a new word
         strcpy(new_node->word, word);
 
 
