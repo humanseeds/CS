@@ -55,8 +55,8 @@ bool load(const char *dictionary)
             unload();
             return false;
         }
-        strcpy(n->word, word);
-        new_node->next = NULL;
+        strcpy(new_node->word, word);
+
 
         //hash word to obtain a hash value
 
