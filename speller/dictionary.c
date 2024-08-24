@@ -48,7 +48,7 @@ bool load(const char *dictionary)
 
     // create a temp variable to hold each word from file
     char temp_word[LENGTH +1];
-    while (fscanf(file, %s, word) != EOF)
+    while (fscanf(file, %s, temp_word) != EOF)
     {
         // create a new node for each word
         node *new_node = malloc(sizeof(node));
