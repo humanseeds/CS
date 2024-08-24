@@ -52,7 +52,7 @@ bool load(const char *dictionary)
     {
         // create a new node for each word
         node *new_node = malloc(sizeof(node));
-        if (new_node) == NULL
+        if (new_node == NULL)
         {
             unload();
             return false;
