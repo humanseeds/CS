@@ -69,8 +69,12 @@ bool load(const char *dictionary)
     new_node->next = table[index];
     table[index] = new_node;
     }
-    fclose(file)
-    return false;
+
+    //close the dictionary source file
+    fclose(file);
+
+    //return true if the function was successful
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
