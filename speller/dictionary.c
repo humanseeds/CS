@@ -54,8 +54,11 @@ bool load(const char *dictionary)
     {
         // create a new node for each word
         node *new_node = malloc(sizeof(node));
+
+        //if the memory cannot be allocated, close the file, and unload memory leaks
         if (new_node == NULL)
         {
+            fclose(file);
             unload();
             return false;
         }
