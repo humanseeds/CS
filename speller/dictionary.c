@@ -48,6 +48,8 @@ bool load(const char *dictionary)
 
     // create a temp variable to hold each word from file
     char input_word[LENGTH +1];
+
+    //
     while (fscanf(file, %s, temp_word) != EOF)
     {
         // create a new node for each word
@@ -58,9 +60,7 @@ bool load(const char *dictionary)
             return false;
         }
         // copy the word into the node
-        strcpy(new_node->word, word);
-        new_node->next = head;
-        head = new_node;
+      strcpy()
 
         //hash word to obtain a hash value
 
