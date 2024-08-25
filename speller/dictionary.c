@@ -62,9 +62,10 @@ bool load(const char *dictionary)
         // copy the word into the node
     strcpy(new_node->word, buffer);
 
-        //hash word to obtain a hash value
+    //hash word to obtain a hash value
     int index = hash(buffer);
-        // insert the new node into the hash function.
+
+    // insert the new node into the hash function.
     new_node->next = head;
     head = new_node;
     }
