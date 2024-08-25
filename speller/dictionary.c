@@ -49,7 +49,7 @@ bool load(const char *dictionary)
     // create a temp variable to hold each word from file
     char input_word[LENGTH +1];
 
-    //
+    //read strings from the file
     while (fscanf(file, %s, temp_word) != EOF)
     {
         // create a new node for each word
