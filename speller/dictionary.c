@@ -37,7 +37,6 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
     //open the dictionary file, print error if unable
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
@@ -55,7 +54,7 @@ bool load(const char *dictionary)
         // create a new node for each word
         node *new_node = malloc(sizeof(node));
 
-        //if the memory cannot be allocated, close the file, and unload memory leaks
+        //if the memory cannot be allocated, close the file, and free memory leaks
         if (new_node == NULL)
         {
             fclose(file);
