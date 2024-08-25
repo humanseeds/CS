@@ -60,20 +60,17 @@ bool load(const char *dictionary)
             return false;
         }
         // copy the word into the node
-    strcpy(new_node->word, buffer);
+    strcpy(new_node->word, input_word);
 
     //hash word to obtain a hash value
-    int index = hash(buffer);
+    int index = hash(input_word);
 
     // insert the new node into the hash function.
     new_node->next = table[index];
     table[index] = new_node;
     }
-
+    fclose(file)
     return false;
-
-
-fclose(source);
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
