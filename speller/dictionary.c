@@ -65,6 +65,8 @@ bool load(const char *dictionary)
         //hash word to obtain a hash value
     int index = hash(buffer);
         // insert the new node into the hash function.
+    new_node->next = head;
+    head = new_node;
     }
 
     return false;
