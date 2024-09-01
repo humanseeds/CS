@@ -17,6 +17,9 @@ typedef struct node
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
 
+//create a global vriable to track the number of words loaded
+unsigned in (word_count) = 0
+
 // Hash table
 node *table[N];
 
@@ -103,8 +106,8 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
-    return 0;
+
+    return word_count;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
