@@ -23,7 +23,28 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    
+    // use the right index in the hash table for the word
+    int index = hash(word);
+
+    //create a pointer to traverse the liniked list
+    node *cursor = table[index];
+
+    //traverse the linked list as long as the word is not found
+    while (cursor != NULL)
+        {
+
+            //case insensitive comparison of the word in the node vs the searched word
+            if (strcascmp(cursor->word, word) == 0)
+            {
+               //if the word is found, return true
+                return true;
+            }
+
+            //move the cursor to the next node
+            cursor = cursor->next;
+        }
+
+    // if the word is not found return false
     return false;
 }
 
