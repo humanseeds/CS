@@ -3,9 +3,10 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include <dictionary.h>
+#include "dictionary.h"
+#include <strings.h>
 #include <string.h>
-
+#include <stdlib.h>
 
 // Represents a node in a hash table
 typedef struct node
@@ -18,7 +19,7 @@ typedef struct node
 const unsigned int N = 5381;
 
 //create a global vriable to track the number of words loaded
-unsigned int word_count = 0
+unsigned int word_count = 0;
 
 // Hash table
 node *table[N];
