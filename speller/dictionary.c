@@ -135,6 +135,6 @@ bool unload(void)
             cursor = temp
         }
     }
-    
+   //return true to indicate the memory is properly free
     return true;
 }
