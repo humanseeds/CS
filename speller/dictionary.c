@@ -68,11 +68,11 @@ unsigned int hash(const char *word)
         //convert to lowercase to be case insensitive
         c = tolower(c);
 
-        //hash = hash * 33 + c. the << operator shifts the bits by 5 positions (each bit shift
+        //hash = hash * 32 + c. the << operator shifts the bits by 5 positions (each bit shift
         //multiples by 2, a 5 position shift is 2^5 or 32)
         hash = ((hash << 5) + hash) + c;
     }
-
+    // return the value of the hashed value modulated by the number of buckets
     return hash % N;
 }
 
