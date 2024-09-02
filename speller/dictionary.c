@@ -57,11 +57,16 @@ bool check(const char *word)
 //the DJB2 hash function is from Daniel J. Bernstein
 unsigned int hash(const char *word)
 {
+    //initialize the hash to a large prime number
     unsigned long hash = 5381;
     int c;
     while ((c = *word++))
     {
+
+        //convert to lowercase to be case insensitive
         c = tolower(c);
+
+        //hash = has * 33 + c. the << operator shifts the byte
         hash = ((hash << 5) + hash) + c;
     }
 
