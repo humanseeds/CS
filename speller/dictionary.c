@@ -140,13 +140,15 @@ bool unload(void)
     //iterate over each bucket of the hash table
     for (int i = 0; i < N; i++)
     {
-        //set a pointer to the head of the list
-        node *cursor = table[i];
-
-        if (table[i] = NULL)
+        //skip a bucket if it is empty
+          if (table[i] == NULL)
         {
             continue;
         }
+
+         //set a pointer to the head of the list
+        node *cursor = table[i];
+
 
         // run a loop while the pointer is not at the end of the linked list
         while (cursor != NULL)
