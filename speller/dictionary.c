@@ -137,7 +137,7 @@ unsigned int size(void)
 bool unload(void)
 {
     //iterate over each bucket of the hash table
-    for (int i = 0, i < N; i++)
+    for (int i = 0; i < N; i++)
     {
         //set a pointer to the head of the list
         node *cursor = table[i];
@@ -152,7 +152,7 @@ bool unload(void)
             free(cursor);
 
             // move the pointer to the next node that the temp pointer is addressing
-            cursor = temp
+            cursor = temp;
         }
     }
    //return true to indicate the memory is properly free
