@@ -116,6 +116,9 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    
+    tmp = cursor
+    cursor = cursor->next
+    free(tmp)
+    free(cursor);
     return false;
 }
