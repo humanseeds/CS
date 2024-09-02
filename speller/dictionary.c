@@ -57,8 +57,15 @@ bool check(const char *word)
 //the DJB2 hash function is from Daniel J. Bernstein
 unsigned int hash(const char *word)
 {
-    
-    return toupper(word[0]) - 'A';
+    unsigned long hash = 5381;
+    int c;
+    while ((c = *word++))
+    {
+        c = tolower(c);
+        hash = ((hash << 5) + hash) + c;
+    }
+
+    return hash % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
