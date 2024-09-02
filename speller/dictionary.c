@@ -18,7 +18,7 @@ typedef struct node
 const unsigned int N = 5381;
 
 //create a global vriable to track the number of words loaded
-unsigned in (word_count) = 0
+unsigned int word_count = 0
 
 // Hash table
 node *table[N];
@@ -37,7 +37,7 @@ bool check(const char *word)
         {
 
             //case insensitive comparison of the word in the node vs the searched word
-            if (strcascmp(cursor->word, word) == 0)
+            if (strcasecmp(cursor->word, word) == 0)
             {
                //if the word is found, return true
                 return true;
