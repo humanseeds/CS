@@ -119,13 +119,22 @@ bool unload(void)
     //iterate over each bucket of the hash table
     for (int i = 0, i < N; i++)
     {
+        //set a pointer to the head of the list
         node *cursor = table[i];
+
+        // run a loop while the pointer is not at tthe end of the linked list
         while (cursor != NULL)
         {
+            // create a temporary cursor set to the next node in the list
             node *temp = cursor->next;
+
+            // free the memory for the node at the current pointer
             free(cursor);
+
+            // move the pointer to the next node that the temp pointer is addressing
             cursor = temp
         }
     }
-    return tru;
+    
+    return true;
 }
