@@ -52,9 +52,12 @@ bool check(const char *word)
 }
 
 // Hashes word to a number
+//at 7:35 in the hash tables short video Doug Loyd sayd to not write our own hashfunction
+// instead find a hash function online and give credit to the athor.
+//the DJB2 hash function is from Daniel J. Bernstein
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
+    
     return toupper(word[0]) - 'A';
 }
 
