@@ -94,6 +94,9 @@ bool load(const char *dictionary)
     // insert the new node into the hash function.
     new_node->next = table[index];
     table[index] = new_node;
+
+     //increment the word count
+    word_count++;
     }
 
     //close the dictionary source file
