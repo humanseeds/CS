@@ -60,13 +60,16 @@ unsigned int hash(const char *word)
     //initialize the hash to a large prime number
     unsigned long hash = 5381;
     int c;
+
+    //
     while ((c = *word++))
     {
 
         //convert to lowercase to be case insensitive
         c = tolower(c);
 
-        //hash = has * 33 + c. the << operator shifts the byte
+        //hash = hash * 33 + c. the << operator shifts the bits by 5 positions (each bit shift
+        //multiples by 2, a 5 position shift is 2^5 or 32)
         hash = ((hash << 5) + hash) + c;
     }
 
