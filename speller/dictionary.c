@@ -59,9 +59,11 @@ unsigned int hash(const char *word)
 {
     //initialize the hash to a large prime number
     unsigned long hash = 5381;
+
+    //create a variable to store each character of the string'word'
     int c;
 
-    //
+    //loop
     while ((c = *word++))
     {
 
