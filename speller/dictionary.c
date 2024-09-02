@@ -15,7 +15,7 @@ typedef struct node
 } node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+const unsigned int N = 5381;
 
 //create a global vriable to track the number of words loaded
 unsigned in (word_count) = 0
