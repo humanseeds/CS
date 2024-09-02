@@ -63,7 +63,7 @@ unsigned int hash(const char *word)
     //create a variable to store each character of the string'word'
     int c;
 
-    //loop
+    //loop through the string, assign the value of each char to c, and increment to the next char in the string
     while ((c = *word++))
     {
 
