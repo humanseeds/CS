@@ -143,7 +143,12 @@ bool unload(void)
         //set a pointer to the head of the list
         node *cursor = table[i];
 
-        // run a loop while the pointer is not at tthe end of the linked list
+        if (table[i] = NULL)
+        {
+            continue;
+        }
+
+        // run a loop while the pointer is not at the end of the linked list
         while (cursor != NULL)
         {
             // create a temporary cursor set to the next node in the list
