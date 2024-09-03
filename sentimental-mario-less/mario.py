@@ -6,10 +6,11 @@ while True:
         break
 
 for i in range(n):
-    j < n - i - 1
+
+    if j < n - i - 1
         print(" ")
-elif print("#")
-else:
+    elif print("#")
+    else:
     print("")
 
 
