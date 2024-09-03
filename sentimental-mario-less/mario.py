@@ -5,5 +5,5 @@ while True:
     if n > 0:
         break
 
-    for i in range(n):
-        print("#")
+ for i in range(n):
+     print("#")
