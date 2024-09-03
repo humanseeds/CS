@@ -3,7 +3,7 @@ from cs50 import get_int
 # get the height user
 while True:
     n = get_int("Height: ")
-    if n > 0:
+    if n > 0 and n < 9:
         break
 # create a loop until the height from user
 for i in range(n):
