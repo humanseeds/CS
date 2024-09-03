@@ -6,11 +6,8 @@ while True:
         break
 
 for i in range(n):
-
-    if j < n - i - 1:
-        print(" ")
-    elif
-    print("#")
-
-
-
+    for j in range( n- i -1):
+        print(" ", end="")
+    for j in range i + 1):
+        print("#", end="")
+        print()
