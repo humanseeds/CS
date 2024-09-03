@@ -8,12 +8,19 @@ while True:
 # create a loop until the height from user
 for i in range(n):
 
-    # print the spaces first
+    # print the spaces for first pyramid
     for j in range(n - i - 1):
         print(" ", end="")
 
-    # print the blocks next
+    # print the blocks for left pyramid
     for j in range(i + 1):
+        print("#", end="")
+
+    # print the spaces between the two pyramids
+    print("  ", end="")
+
+    #print the right pyramid
+    for j in range(i +1):
         print("#", end="")
 
     # move to the next line
