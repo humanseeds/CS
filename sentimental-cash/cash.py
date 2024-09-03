@@ -6,10 +6,14 @@ while True:
         break
 
 quaters = 0
+    quaters += 1
 
-dimes
+dimes = 0
+    dimes +=1
 
-nickels
+nickels = 0
+    nickels += 1
 
-pennies
+pennies = 0
+    pennies += 1
 
