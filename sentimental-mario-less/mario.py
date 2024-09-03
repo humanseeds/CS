@@ -6,20 +6,10 @@ while True:
         break
 
 for i in range(n):
-    print("#")
+    j < n - i - 1
+    print(" ")
+    elif print("#")
+    else print("")
 
 
 
-
- if (j < n - i - 1)
-           {
-                printf(" ");
-            }
-            else
-            {
-                printf("#");
-            }
-        }
-                printf("\n");
-            }
-}
