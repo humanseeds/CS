@@ -7,11 +7,9 @@ while True:
 
 for i in range(n):
 
-    if j < n - i - 1
+    if j < n - i - 1:
         print(" ")
     elif print("#")
-    else:
-    print("")
 
 
 
