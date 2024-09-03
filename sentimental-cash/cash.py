@@ -1,3 +1,5 @@
 from cs50 import get_float
 
+while True:
+    change = get_float("Change: ")
 
