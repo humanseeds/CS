@@ -9,12 +9,12 @@ while True:
 for i in range(n):
 
     # print the spaces first
-    for j in range(n - i -1):
+    for j in range(n - i - 1):
         print(" ", end="")
 
-    #print the blocks next
+    # print the blocks next
     for j in range(i + 1):
         print("#", end="")
 
-    #move to the next line
+    # move to the next line
     print()
