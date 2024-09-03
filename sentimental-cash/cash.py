@@ -6,16 +6,16 @@ while True:
         break
 
 for change < 0
-    
-quaters = 0
+
+calculate_quaters = 0
     quaters += 1
 
-dimes = 0
+calculate_dimes = 0
     dimes +=1
 
-nickels = 0
+calculate_nickels = 0
     nickels += 1
 
-pennies = 0
+calculate_pennies = 0
     pennies += 1
 
