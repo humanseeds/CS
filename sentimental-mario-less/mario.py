@@ -7,3 +7,19 @@ while True:
 
 for i in range(n):
     print("#")
+
+
+
+
+ if (j < n - i - 1)
+           {
+                printf(" ");
+            }
+            else
+            {
+                printf("#");
+            }
+        }
+                printf("\n");
+            }
+}
