@@ -5,6 +5,8 @@ while True:
     if change > 0:
         break
 
+for change < 0
+    
 quaters = 0
     quaters += 1
 
