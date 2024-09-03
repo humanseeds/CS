@@ -5,6 +5,7 @@ while True:
     n = get_int("Height: ")
     if n > 0 and n <= 8:
         break
+
 # create a loop until the height from user
 for i in range(n):
 
@@ -19,8 +20,8 @@ for i in range(n):
     # print the spaces between the two pyramids
     print("  ", end="")
 
-    #print the right pyramid
-    for j in range(i +1):
+    # print the right pyramid
+    for j in range(i + 1):
         print("#", end="")
 
     # move to the next line
