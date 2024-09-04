@@ -19,6 +19,7 @@ for coin in denominations:
     value = denominations[coin]['value']
     while change >= value:
         change -= value
+        change = 
         denominations[coin]['count'] += 1
 
 for coin, info in denominations.items():
