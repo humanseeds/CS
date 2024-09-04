@@ -11,7 +11,7 @@ while True:
 change = round(change, 2)
 
 #create a list of denominations for quaters, dimes, nickles, pennies
-coins = [0.25, 0.10, 0.05, 0.01]
+denominations = [0.25, 0.10, 0.05, 0.01]
 
 #create a coin counter set to zero
 coin_count = 0
@@ -19,7 +19,7 @@ coin_count = 0
 #itterate over the list of denominations
 #increase coin coun after each loop
 for coin in coins:
-    while change >= coin:
+    while change >= denominations:
         change -= coin
         coin_count += 1
 
