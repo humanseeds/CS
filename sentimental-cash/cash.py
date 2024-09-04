@@ -7,20 +7,20 @@ while True:
     break
 
 
-denominations = {
-    'quater': {'value': 0.25, 'count' : 0},
-    'dimes': {'value' : 0.10, 'count' : 0},
-    'nickel': {'value' : 0.05, 'count' : 0},
-    'penny': {'value' : 0.01, 'count' : 0},
-}
+denominations = [
+    "quater": {"value": 0.25, "count" : 0},
+    "dimes": {"value" : 0.10, "count" : 0},
+    "nickel": {"value" : 0.05, "count" : 0},
+    "penny": {"value" : 0.01, "count" : 0},
+]
 
 
 for coin in denominations:
-    value = denominations[coin]['value']
+    value = denominations[coin]["value"]
     while change >= value:
         change -= value
-        change = 
-        denominations[coin]['count'] += 1
+        change =
+        denominations[coin]["count] += 1
 
 for coin, info in denominations.items():
-    print(f"{coin.title()}: {info['count']}")
+    print(f"{coin.title()}: {info["count"]}")
