@@ -2,9 +2,9 @@ from cs50 import get_float
 
 
 while True:
-   n = get_float("Change Owed: ")
-   if n >= 0:
-   break
+   change = get_float("Change Owed: ")
+   if change  >= 0:
+    break
 
 
 denominations = {
@@ -19,7 +19,7 @@ for coin in denominations:
     value = denominations[coin]['value']
     while change > value:
         change -= value
-        denominations[coin['count'] += 1
+        denominations[coin]['count'] += 1
 
-for coin in denominations.items():
+for coin infon in denominations.items():
     print(f"{coin.title()}: {info['count']}")
