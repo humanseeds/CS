@@ -4,6 +4,7 @@ from cs50 import get_float
 # Prompt for user input
 
 
+
 # multiply every other digit
 
 
