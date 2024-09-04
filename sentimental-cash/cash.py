@@ -5,17 +5,9 @@ while True:
     if change > 0:
         break
 
-for change < 0
+denominations = {
+    
 
-calculate_quaters = 0
-    quaters += 1
 
-calculate_dimes = 0
-    dimes +=1
-
-calculate_nickels = 0
-    nickels += 1
-
-calculate_pennies = 0
-    pennies += 1
+}
 
