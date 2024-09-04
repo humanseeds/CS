@@ -21,4 +21,5 @@ for coin in denominations:
         change -= value
         denominations[coin['count'] += 1
 
-for coin in denominations.items
+for coin in denominations.items():
+    print(f"{coin.title()} : {infor})
