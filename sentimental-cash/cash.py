@@ -8,7 +8,7 @@ while True:
 
 change = round(change, 2)
 
-coins[25, 10, 5, 1]
+coins = [25, 10, 5, 1]
 coin_count = 0
 
 while change > 0
