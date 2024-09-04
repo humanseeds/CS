@@ -21,7 +21,7 @@ for coin in denominations:
     while change >= value:
         change -= value
         change =
-        denominations[coin]["count] += 1
+        denominations[coin]['count'] += 1
 
 for coin in denominations:
     print(f"{coin}: {'count'}")
