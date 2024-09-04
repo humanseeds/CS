@@ -7,19 +7,19 @@ while True:
    if change  >= 0:
     break
 
-# round the amount of change to 0.00 to avoid floating error
-change = round(change, 2)
+# convert the amount of change to cents
+change = round(change * 100)
 
 #create a list of denominations for quaters, dimes, nickles, pennies
-denominations = [0.25, 0.10, 0.05, 0.01]
+denominations = [25, 10, 5, 1]
 
 #create a coin counter set to zero
 coin_count = 0
 
 #itterate over the list of denominations
 #increase coin count after each loop
-for coin in coins:
-    while change >= denominations:
+for coin in denominations:
+    while change >= coin:
         change -= coin
         coin_count += 1
 
