@@ -6,6 +6,7 @@ while True:
    if change  >= 0:
     break
 
+change = round(change, 2)
 
 denominations = [
     "quater": {"value": 0.25, "count" : 0},
