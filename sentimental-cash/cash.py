@@ -3,7 +3,8 @@ from cs50 import get_float
 
 while True:
    n = get_float("Change Owed: ")
-   
+   if n >= 0
+   break
 
 
 denominations = {
