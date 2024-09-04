@@ -20,8 +20,8 @@ coin_count = 0
 #increase coin coun after each loop
 for coin in coins:
     while change >= coin:
-    change -= coin
-    coin_count += 1
+        change -= coin
+        coin_count += 1
 
 #print the coin count
 print(coin_count)
