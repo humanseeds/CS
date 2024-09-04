@@ -17,7 +17,7 @@ denominations = [0.25, 0.10, 0.05, 0.01]
 coin_count = 0
 
 #itterate over the list of denominations
-#increase coin coun after each loop
+#increase coin count after each loop
 for coin in coins:
     while change >= denominations:
         change -= coin
