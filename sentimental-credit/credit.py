@@ -6,7 +6,7 @@ while True:
     CC_number = get_string("Please Input Credit Card Numer: ")
     if CC_number >= 0:
         break
-
+        
 
 # multiply every other digit
 
