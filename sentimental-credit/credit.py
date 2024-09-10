@@ -26,6 +26,7 @@ while working_card > 0:
     else:
         doubled_digit = digit *2
         if doubled_digit > 9:
+            #subtract 9 to find the sum of the 2 digits b
             odd_position_sum += doubled_digit - 9
          else : odd_position_sum += doubled_digit
     position+= 1
