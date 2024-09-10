@@ -35,8 +35,10 @@ while working_card > 0:
 checksum = odd_position_sum + even_position_sum
 
 # if the checksum doesnt end in 0 the card is invalid
-if checksum % 10 != 0
+if checksum % 10 != 0:
    print("Invalid")
+else:
+    
 
 
 
