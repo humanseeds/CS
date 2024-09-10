@@ -7,7 +7,9 @@ while True:
     if CC_number >= 0:
         break
 
-
+working_cnn = get_int
+even_positions = 0
+odd_positions = 0
 # multiply every other digit
 
 
