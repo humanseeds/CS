@@ -15,8 +15,8 @@ odd_positions = 0
 
 # determione the checksum
 while working_card > 0:
-    digit = working_card % 10 #% 10 determines odd or even
-    working_card //= 10  #divide by 10 to move to next digit
+    digit = working_card % 10 # % 10 removes last digit
+    working_card //= 10  # //10 to move to next digit
 
     if position % 2 == 0:
       even_position += digit
