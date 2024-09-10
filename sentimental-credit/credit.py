@@ -1,11 +1,12 @@
 from cs50 import get_int
 
 
-# Prompt for user input
-while True:
-    CC_number = get_int("Please Input Credit Card Numer: ")
-    if CC_number >= 0:
-        break
+# Prompt for user for a credit card number
+
+card_number = int(input()"Please Input Credit Card Numer: "))
+while card_number <= 0
+   print("invalid card number please try agian")
+   
 
 working_cnn = get_int
 even_positions = 0
