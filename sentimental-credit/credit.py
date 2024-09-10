@@ -41,6 +41,7 @@ if checksum % 10 != 0:
 
 # determine the card length of the valid card number
 else:
+    length = 0
     temporary = card_number
     while temporary > 0:
          temporary // 10 # again %10 removes each digit
@@ -49,13 +50,13 @@ else:
     #determine the first 2 digits of the credit card
     Starting_digits = card_number
     while starting_digits >= 100:
-         starting_digits //10
+         starting_digits //= 10
 
     if length == 15 and (starting_digits == 34 or starting_digits == 37):
          print("AMEX")
     elif length == 16 and (starting_digits >= 51 and starting_digits <= 55):
          print("MASTERCARD")
-    elif length == 13 or length = 16 and (starting_digits / 10 ==4):
+    elif (length == 13 or length == 16) and (starting_digits / 10 == 4):
          print("VISA")
     else:
          print("INVALID")
