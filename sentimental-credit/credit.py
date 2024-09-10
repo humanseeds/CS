@@ -13,7 +13,7 @@ working_cnn = get_int
 even_positions = 0
 odd_positions = 0
 
-# determine the odd vs even positions of each digit
+# determione the checksum
 while working_card > 0:
     digit = working_card % 10 #% 10 determines odd or even
     working_card //= 10  #divide by 10 to move to next digit
