@@ -14,6 +14,18 @@ even_positions = 0
 odd_positions = 0
 
 # multiply every other digit
+while working_card > 0:
+    digit = working_card % 10
+    working_card //= 10
+
+    if position % 2 == 0:
+      even_position += digit
+    else:
+        doubled_ddigit = digit *2
+        if doubled_digit > 9:
+            odd_position_sum += doubled_digit - 9
+         else : odd_position_sum += doubled_digit
+    position+= 1
 
 
 # sum those digits
