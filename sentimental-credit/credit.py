@@ -39,9 +39,9 @@ if checksum % 10 != 0:
    print("Invalid")
 else:
     temporary = card_number
-    while temporary > 100
-         temporary // 10:
-
+    while temporary > 0:
+         temporary // 10
+         length += 1
 
 
 
