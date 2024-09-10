@@ -31,17 +31,4 @@ while working_card > 0:
          else : odd_position_sum += doubled_digit
     position+= 1
 
-
-# sum those digits
-
-
-# add to remaining digits
-
-
-# validate checksum
-
-
-# validate company's number
-
-
-# validate number's length
+check
