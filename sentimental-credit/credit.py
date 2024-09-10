@@ -38,12 +38,13 @@ checksum = odd_position_sum + even_position_sum
 if checksum % 10 != 0:
    print("Invalid")
 
-# determine the card lenght of the valid card number
+# determine the card length of the valid card number
 else:
     temporary = card_number
     while temporary > 0:
-         temporary // 10
-         length += 1
+         temporary // 10 # again %10 removes each digit
+         length += 1   #counter increments
+
 
 
 
