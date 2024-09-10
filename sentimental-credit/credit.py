@@ -29,7 +29,7 @@ while working_card > 0:
             #subtract 9 to find the sum of the 2 digits b
             odd_position_sum += doubled_digit - 9
          else : odd_position_sum += doubled_digit
-    position+= 1
+    position += 1
 
 #find the checksum by adding the product of the even and odd positions
 checksum = odd_position_sum + even_position_sum
@@ -37,6 +37,8 @@ checksum = odd_position_sum + even_position_sum
 # if the checksum doesnt end in 0 the card is invalid
 if checksum % 10 != 0:
    print("Invalid")
+
+# determine the card lenght of the valid card number
 else:
     temporary = card_number
     while temporary > 0:
