@@ -10,8 +10,8 @@ while True:
 
 #initialize variables to be used in the program to 0
 working_cnn = get_int
-even_position = 0
-odd_position = 0
+even_position_sum = 0
+odd_position_sum = 0
 
 # determine the checksum
 while working_card > 0:
@@ -20,7 +20,7 @@ while working_card > 0:
 
    # %2 determines if digit is even (0) or odd (1)
     if position % 2 == 0:
-      even_position += digit  #even digits are summed
+      even_position_sum += digit  #even digits are summed
 
    #odd digits are doubled and then summed
     else:
@@ -31,4 +31,4 @@ while working_card > 0:
          else : odd_position_sum += doubled_digit
     position+= 1
 
-check
+checksum = odd_position_sum + even_position_sum
