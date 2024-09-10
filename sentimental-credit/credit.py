@@ -9,9 +9,10 @@ while True:
     print("invalid credit card number, please try again.")
 
 #initialize variables to be used in the program to 0
-working_cnn = get_int
+working_card = card_number
 even_position_sum = 0
 odd_position_sum = 0
+position = 0
 
 # determine the checksum
 while working_card > 0:
@@ -50,8 +51,14 @@ else:
     while starting_digits >= 100:
          starting_digits //10
 
-    
-
+    if length == 15 and (starting_digits == 34 or starting_digits == 37):
+         print("AMEX")
+    elif length == 16 and (starting_digits >= 51 and starting_digits <= 55):
+         print("MASTERCARD")
+    elif length == 13 or length = 16 and (starting_digits / 10 ==4):
+         print("VISA")
+    else:
+         print("INVALID")
 
 
 
