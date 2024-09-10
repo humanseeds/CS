@@ -6,7 +6,7 @@ from cs50 import get_int
 card_number = int(input("Please Input Credit Card Numer: "))
 
 while card_number <= 0
-   print("invalid card number please try agian")
+   print("Invalid card number please try agian")
 
 
 working_cnn = get_int
