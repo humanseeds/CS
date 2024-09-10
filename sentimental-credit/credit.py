@@ -38,7 +38,11 @@ checksum = odd_position_sum + even_position_sum
 if checksum % 10 != 0:
    print("Invalid")
 else:
-    
+    temporary = card_number
+    while temporary > 100
+         temporary // 10:
+
+
 
 
 
