@@ -31,4 +31,9 @@ while working_card > 0:
          else : odd_position_sum += doubled_digit
     position+= 1
 
+#find the checksum by adding the product of the even and odd positions
 checksum = odd_position_sum + even_position_sum
+
+# if the checksum doesnt end in 0 the card is invalid
+if checksum % 10 != 0
+   print(Invalid Credit card number)
