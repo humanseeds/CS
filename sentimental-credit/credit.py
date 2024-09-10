@@ -5,9 +5,9 @@ from cs50 import get_int
 
 card_number = int(input("Please Input Credit Card Numer: "))
 
-while card_number <= 0
-   print("Invalid card number please try agian")
-
+while card_number <= 0:
+   print("Invalid credit card number please try agian")
+   card_number + int(input("Please input credit card number: "))
 
 working_cnn = get_int
 even_positions = 0
