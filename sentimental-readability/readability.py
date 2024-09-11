@@ -11,8 +11,8 @@ for letters in text:
 
 # count the number of words in the text
 num_words = 1
-for in text:
-    if isspace():
+for character in text:
+    if character.isspace():
         num_words += 1
 
 # count the number of sentences in the text
