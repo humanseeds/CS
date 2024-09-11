@@ -11,7 +11,7 @@ for letters in text:
 
 # count the number of words in the text
 num_words = 1
-for words in text:
+for in text:
     if isspace():
         num_words += 1
 
