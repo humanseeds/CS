@@ -22,7 +22,9 @@ for sentences in text:
     centences += 1
 
 # computer the Coleman-Liau index
-
+float_L = num_letters / num_words * 100
+float_S = Num_sentences / Num_words * 100
+index = (0.0588 * float(L) - 0.296 * float(s))
 
 # Print the grade level
 if index < 1
