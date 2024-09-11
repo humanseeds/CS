@@ -24,7 +24,7 @@ for characters in text:
 # computer the Coleman-Liau index
 L = (num_letters / num_words) * 100
 S = (Num_sentences / Num_words) * 100
-index = (0.0588 * L - 0.296 * S - 15.8
+index = 0.0588 * L - 0.296 * S - 15.8
 
 # Print the grade level
 if index < 1:
