@@ -7,28 +7,29 @@ text = get_string("Input Text: ")
 num_letters = 0
 for letters in text:
     if isalpha():
-    num_letters += 1
+        num_letters += 1
 
 # count the number of words in the text
 num_words = 1
 for words in text:
     if isspace():
-    num_words += 1
+        num_words += 1
 
 # count the number of sentences in the text
 num_sentences = 0
-for sentences in text:
-    if text ="." or "!" or "?"
-    centences += 1
+for characters in text:
+    if character in [".", "!", "?"]
+        num_sentences += 1
 
 # computer the Coleman-Liau index
-float_L = num_letters / num_words * 100
-float_S = Num_sentences / Num_words * 100
-index = (0.0588 * float(L) - 0.296 * float(s))
+L = num_letters / num_words * 100
+S = Num_sentences / Num_words * 100
+index = (0.0588 * L - 0.296 * S - 15.8
 
 # Print the grade level
-if index < 1
+if index < 1:
     print(" Before Grade 1")
-    elif index >= 16
+elif index >= 16:
     print("Grade 16+")
-else: print("Grade ")
+else:
+    print(f"Grade {round(index)}")
