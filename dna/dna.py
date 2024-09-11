@@ -8,10 +8,11 @@ def main():
 
     # TODO: Read database file into a variable
 #open csv file and dna sequence, read into memory
-# for each str, compute longest consec
-    # TODO: Read DNA sequence file into a variable
 
+    # TODO: Read DNA sequence file into a variable
+# For each str, computer longest consecutive repeats in sequence
     # TODO: Find longest match of each STR in DNA sequence
+#compare str counts against each row in csv file
 # len(s)
 # s[i:j]
     # TODO: Check database for matching profiles
