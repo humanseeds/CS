@@ -17,7 +17,7 @@ for character in text:
 
 # count the number of sentences in the text
 num_sentences = 0
-for characters in text:
+for character in text:
     if character in [".", "!", "?"]:
         num_sentences += 1
 
