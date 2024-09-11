@@ -7,7 +7,8 @@ def main():
     # TODO: Check for command-line usage
 
     # TODO: Read database file into a variable
-
+#open csv file and dna sequence, read into memory
+# for each str, compute longest consec
     # TODO: Read DNA sequence file into a variable
 
     # TODO: Find longest match of each STR in DNA sequence
