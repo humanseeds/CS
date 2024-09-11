@@ -5,7 +5,7 @@ text = get_string("Input Text: ")
 
 # count the number of letters in the text
 num_letters = 0
-for letters in text:
+for letter in text:
     if letter.isalpha():
         num_letters += 1
 
