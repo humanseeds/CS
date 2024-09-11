@@ -39,7 +39,6 @@ int main(void)
         printf("Grade %i\n", index);
     }
 }
-
 int count_letters(string text)
 {
     // return number of letters in text  strlen - (isalpha - ispunct)
@@ -53,7 +52,6 @@ int count_letters(string text)
     }
     return letters;
 }
-
 int count_words(string text)
 {
     // retrun number of words in text)  (isalpha - isblank) + 1
@@ -67,7 +65,6 @@ int count_words(string text)
     }
     return words;
 }
-
 int count_sentences(string text)
 {
     // count number of sentences in text.   ispunct
