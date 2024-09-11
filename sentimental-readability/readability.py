@@ -4,7 +4,9 @@ from cs50 import get_string
 text = get_string("Input Text: ")
 
 # count the number of letters in the text
-
+letters = 0
+if isalpha
+    letters += 1
 
 # count the number of words in the text
 
