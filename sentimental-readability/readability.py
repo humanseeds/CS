@@ -10,12 +10,23 @@ for letters in text:
     num_letters += 1
 
 # count the number of words in the text
-
+num_words = 1
+for words in text:
+    if isspace():
+    num_words += 1
 
 # count the number of sentences in the text
-
+num_sentences = 0
+for sentences in text:
+    if text ="." or "!" or "?"
+    centences += 1
 
 # computer the Coleman-Liau index
 
 
 # Print the grade level
+if index < 1
+    print(" Before Grade 1")
+    elif index >= 16
+    print("Grade 16+")
+else: print("Grade ")
