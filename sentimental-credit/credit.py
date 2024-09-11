@@ -18,7 +18,7 @@ position = 0
 while working_card > 0:
     digit = working_card % 10 # % 10 removes last digit
     working_card //= 10  # //10 to move to next digit
-print(bug)
+
    # %2 determines if digit is even (0) or odd (1)
     if position % 2 == 0:
       even_position_sum += digit  #even digits are summed
@@ -45,7 +45,7 @@ else:
     length = 0
     temporary = card_number
     while temporary > 0:
-         temporary // 10 # again %10 removes each digit
+         temporary //= 10 # again %10 removes each digit
          length += 1   #counter increments
 
     #determine the first 2 digits of the credit card
