@@ -58,7 +58,7 @@ else:
          print("AMEX")
     elif length == 16 and (starting_digits >= 51 and starting_digits <= 55):
          print("MASTERCARD")
-    elif (length == 13 or length == 16) and (starting_digits / 10 == 4):
+    elif (length == 13 or length == 16) and (starting_digits // 10 == 4):
          print("VISA")
     else:
          print("INVALID")
