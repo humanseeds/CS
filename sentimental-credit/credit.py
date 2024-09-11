@@ -49,7 +49,7 @@ else:
          length += 1   #counter increments
 
     #determine the first 2 digits of the credit card
-    Starting_digits = card_number
+    starting_digits = card_number
     while starting_digits >= 100:
          starting_digits //= 10
 
