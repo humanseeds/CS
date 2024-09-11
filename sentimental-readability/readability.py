@@ -6,7 +6,7 @@ text = get_string("Input Text: ")
 # count the number of letters in the text
 num_letters = 0
 for letters in text:
-    if isalpha():
+    if letter.isalpha():
         num_letters += 1
 
 # count the number of words in the text
