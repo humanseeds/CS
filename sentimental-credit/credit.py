@@ -53,6 +53,7 @@ else:
     while starting_digits >= 100:
          starting_digits //= 10
 
+   # sort out which company the credit card number belongs to
     if length == 15 and (starting_digits == 34 or starting_digits == 37):
          print("AMEX")
     elif length == 16 and (starting_digits >= 51 and starting_digits <= 55):
