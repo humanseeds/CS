@@ -34,16 +34,18 @@ def main():
 
 
     # TODO: Check database for matching profiles
-    #
+    # loop trough people, if a person is not a match break out and move to next person
     for person in database:
         match = True
         for str_sequence in strs:
             if int(person[str_sequence]) != str_counts[str_sequence]:
                 match = False
                 break
+       #if the person is a match, print their name
         if match:
             print(person['name'])
             sys.exit(0)
+    # if no matches found
     print("No match")
     return
 
