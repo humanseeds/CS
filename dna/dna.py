@@ -6,12 +6,12 @@ def main():
 
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
-        print("Use only python dna.py, data.csv and sequence.txt")
+        print("Usage: python dna.py, data.csv and sequence.txt")
         sys.exit(1)
 
 
     # TODO: Read database file into a variable
-     database[]
+     database = []
      with open(sys.argv[1], "r") as database_file:
         reader = csv.DictReader(database_file)
         for row in reader:
