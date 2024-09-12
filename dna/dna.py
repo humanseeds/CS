@@ -5,16 +5,22 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
+#sys module gives access to sys.argv for command line arguments
+
 
     # TODO: Read database file into a variable
-#open csv file and dna sequence, read into memory
-
+# csv module has reader and dictreader
+# open csv file and dna sequence, read into memory
+# first row of csv is name, column if str
+# open text file f using open(filename)
     # TODO: Read DNA sequence file into a variable
 # For each str, computer longest consecutive repeats in sequence
+# f.read()
     # TODO: Find longest match of each STR in DNA sequence
 #compare str counts against each row in csv file
 # len(s)
 # s[i:j]
+
     # TODO: Check database for matching profiles
 # save str counts in date structure
 # for each row,check if each str count matches. if so, print persons name
