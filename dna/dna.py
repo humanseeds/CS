@@ -38,7 +38,7 @@ def main():
     for person in database:
         match = True
         for str_sequence in strs:
-            if int(person[str_sequence]) != str_counts[str_sequence]:
+            if int(person[str_sequence]) != str_count[str_sequence]:
                 match = False
                 break
        #if the person is a match, print their name
