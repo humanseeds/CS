@@ -11,6 +11,7 @@ def main():
 
 
     # TODO: Read database file into a variable
+    # create an empty list to store database in 
      database = []
      with open(sys.argv[1], "r") as database_file:
         reader = csv.DictReader(database_file)
