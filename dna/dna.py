@@ -22,11 +22,7 @@ def main():
     # TODO: Read DNA sequence file into a variable
 # For each str, computer longest consecutive repeats in sequence
 # f.read()rows = []
-    rows = []
-    with open("foo.csv") as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            rows.append(row)
+   
 
     # TODO: Find longest match of each STR in DNA sequence
 # for each position in sequence, computer str repititons in that position
