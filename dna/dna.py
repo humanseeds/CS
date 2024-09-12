@@ -6,7 +6,7 @@ def main():
 
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
-        print("Usage: python dna.py data.csv sequence.txt")
+        print("Usage: python dna.py data.csv sequences.txt")
         sys.exit(1)
 
 
@@ -20,8 +20,8 @@ def main():
 
 
     # TODO: Read DNA sequence file into a variable
-    with open(sys.argv[2], "r") as sequence_file:
-        dna_sequence = sequence_file.read()
+    with open(sys.argv[2], "r") as sequences_file:
+        dna_sequence = sequences_file.read()
 
 
     # TODO: Find longest match of each STR in DNA sequence
