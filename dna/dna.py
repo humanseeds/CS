@@ -26,7 +26,7 @@ def main():
 # For each str, computer longest consecutive repeats in sequence
 # f.read()rows = []
     with open(sys.argv[2], "r") as sequence_file:
-        dna_sequence = sequence_file.read()
+        sequence = sequence_file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
 # for each position in sequence, computer str repititons in that position
