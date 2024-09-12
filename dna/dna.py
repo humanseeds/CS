@@ -23,13 +23,22 @@ def main():
         sequence_file = sequence_file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-
+    strs = database[0].keys() - {'name'}
+    str_count = {}
+    for str_sequence in strs:
+        str_count[str_sequence] = longest_match(dna_sequence, str_sequence)
 
     # TODO: Check database for matching profiles
-# save str counts in date structure
-# for each row,check if each str count matches. if so, print persons name
-# int(x) turns string x into an int
-# check every column other than first column(name column)
+    for person in database:
+        match = True
+        for str_sequence in strs:
+            if int(person[str_sequence]) != str_counts[str_sequence]:
+                match = False
+                break
+        if match:
+            print(person['name'])
+            sys.exit(0)
+    print("No match")
     return
 
 
