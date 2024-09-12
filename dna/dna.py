@@ -6,8 +6,8 @@ def main():
 
     # TODO: Check for command-line usage
 #sys module gives access to sys.argv for command line arguments
-    if len(sys.argv) != 2:
-        print("Use only data.csv and sequence.txt")
+    if len(sys.argv) != 3:
+        print("Use only python dna.py, data.csv and sequence.txt")
         sys.exit(1)
 
     # TODO: Read database file into a variable
