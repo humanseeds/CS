@@ -6,7 +6,7 @@ def main():
 
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
-        print("Usage: python dna.py, data.csv and sequence.txt")
+        print("Usage: python dna.py data.csv and sequence.txt")
         sys.exit(1)
 
 
