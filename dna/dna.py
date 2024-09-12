@@ -22,7 +22,8 @@ def main():
      with open(sys.argv[2], "r") as sequence_file:
         sequence = sequence_file.read()
 
-    # TODO: 
+    # TODO: Find longest match of each STR in DNA sequence
+    
 
     # TODO: Check database for matching profiles
 # save str counts in date structure
