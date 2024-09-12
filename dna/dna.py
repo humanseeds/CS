@@ -15,7 +15,7 @@ def main():
 # open csv file and dna sequence, read into memory
 # first row of csv is name, column if str
 # open text file f using open(filename)
-     with open(sys.argv[1], "r") as database:
+     with open(sys.argv[2], "r") as database:
         reader = csv.DictReader(database)
         print(reader.fieldnames)
 
