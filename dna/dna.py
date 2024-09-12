@@ -9,15 +9,24 @@ def main():
     if len(sys.argv) != 2:
         print("Use only data.csv and sequence.txt")
         sys.exit(1)
+
     # TODO: Read database file into a variable
 # csv module has reader and dictreader
 # open csv file and dna sequence, read into memory
 # first row of csv is name, column if str
 # open text file f using open(filename)
+     with open(sys.argv[1], "r") as database:
+        reader = csv.DictReader(database)
+        print(reader.fieldnames)
 
     # TODO: Read DNA sequence file into a variable
 # For each str, computer longest consecutive repeats in sequence
-# f.read()
+# f.read()rows = []
+    rows = []
+    with open("foo.csv") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            rows.append(row)
 
     # TODO: Find longest match of each STR in DNA sequence
 # for each position in sequence, computer str repititons in that position
