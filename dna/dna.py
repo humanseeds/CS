@@ -15,14 +15,13 @@ def main():
 # open csv file and dna sequence, read into memory
 # first row of csv is name, column if str
 # open text file f using open(filename)
-     with open(sys.argv[2], "r") as database:
+     with open(sys.argv[2], "r") as :
         reader = csv.DictReader(database)
-        print(reader.fieldnames)
-
+        databse = list(reader)
     # TODO: Read DNA sequence file into a variable
 # For each str, computer longest consecutive repeats in sequence
 # f.read()rows = []
-   
+
 
     # TODO: Find longest match of each STR in DNA sequence
 # for each position in sequence, computer str repititons in that position
