@@ -16,8 +16,8 @@ def main():
 # first row of csv is name, column if str
 # open text file f using open(filename)
      database[]
-     with open(sys.argv[1], "r") as file:
-        reader = csv.DictReader(file)
+     with open(sys.argv[1], "r") as database.file:
+        reader = csv.DictReader(database.file)
        for row in reader:
             database.append(row)
 
@@ -25,7 +25,7 @@ def main():
     # TODO: Read DNA sequence file into a variable
 # For each str, computer longest consecutive repeats in sequence
 # f.read()rows = []
-    with open(sys.argv[2], "r") as file:
+    with open(sys.argv[2], "r") as sequence_file:
         dna_sequence = sequence_file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
