@@ -12,15 +12,15 @@ def main():
 
     # TODO: Read database file into a variable
     # create an empty list to store database in
-     database = []
-     with open(sys.argv[1], "r") as database_file:
+    database = []
+    with open(sys.argv[1], "r") as database_file:
         reader = csv.DictReader(database_file)
         for row in reader:
             database.append(row)
 
 
     # TODO: Read DNA sequence file into a variable
-     with open(sys.argv[2], "r") as sequence_file:
+    with open(sys.argv[2], "r") as sequence_file:
         dna_sequence = sequence_file.read()
 
 
