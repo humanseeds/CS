@@ -11,7 +11,7 @@ def main():
 
 
     # TODO: Read database file into a variable
-    # create an empty list to store database in 
+    # create an empty list to store database in
      database = []
      with open(sys.argv[1], "r") as database_file:
         reader = csv.DictReader(database_file)
@@ -23,13 +23,18 @@ def main():
      with open(sys.argv[2], "r") as sequence_file:
         dna_sequence = sequence_file.read()
 
+
     # TODO: Find longest match of each STR in DNA sequence
+    # remove the 'name' row from each column and make a dictionary to store each str
     strs = database[0].keys() - {'name'}
     str_count = {}
+    # use the helper function to compute matchs for strs in sequences
     for str_sequence in strs:
         str_count[str_sequence] = longest_match(dna_sequence, str_sequence)
 
+
     # TODO: Check database for matching profiles
+    #
     for person in database:
         match = True
         for str_sequence in strs:
