@@ -1,3 +1,3 @@
-SELECT names
+SELECT name
 From songs
-WHERE name LIKE 
+WHERE name LIKE
