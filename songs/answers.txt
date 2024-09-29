@@ -9,4 +9,8 @@ this example. The following table is an average breakdown of each of the major s
 +------------+---------------+--------------+-------------+------------------+-------------------+
 
 With this info we can deduce that the tempo and the valence are both rather moderate. The energy is in the
-positive side and the as well as the dancibility,yet they are not very high. The speechiness metric s
+positive side and the as well as the dancibility,yet they are not very high. The speechiness metric seems
+to be on the low side. from these metrics it appears that this playlist is overall moderate to upbeat
+with a slight lean to the positive side, but with music being the main appeal and not lyrics.
+
+
