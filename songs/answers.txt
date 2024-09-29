@@ -1,4 +1,9 @@
-To get an idea of the "Audio Aura" calculation that Spotify is offering t
+To get an idea of the "Audio Aura" calculation that the Spotify Spotify Wrappped
+campagin is offering, we must look over the specifiers that are used to breakdown
+the users playlist that we were given in this example. The following table is an
+average breakdown 
+
+
 
 +------------+---------------+--------------+-------------+------------------+
 | AVG(tempo) | AVG(loudness) | AVG(valence) | AVG(energy) | AVG(speechiness) |
