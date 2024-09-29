@@ -13,4 +13,11 @@ positive side and the as well as the dancibility,yet they are not very high. The
 to be on the low side. from these metrics it appears that this playlist is overall moderate to upbeat
 with a slight lean to the positive side, but with music being the main appeal and not lyrics.
 
++------------------+
+| AVG(duration_ms) |
++------------------+
+| 205206.78        |
++------------------+
+
+The duration is not very long,  only a few minutes 
 
