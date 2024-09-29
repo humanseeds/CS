@@ -9,5 +9,4 @@ this example. The following table is an average breakdown of each of the major s
 +------------+---------------+--------------+-------------+------------------+-------------------+
 
 With this info we can deduce that the tempo and the valence are both rather moderate. The energy is in the
-positive side and the as well as the dancibility,yet they are not very high. The speachiness average isnt
-much help as its not common metric of music, so we dont really know if 0.11 is 
+positive side and the as well as the dancibility,yet they are not very high. The speechiness metric s
