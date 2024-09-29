@@ -21,4 +21,11 @@ below we see the duration is also rather average at 3 minutes and 41 seconds.
 | 205206.78        |
 +------------------+
 
-In terms of picking an "Audio Aura" 
+In terms of picking an "Audio Aura" my guess would be yellow, but im no Mystic Michaela. Without and actual
+guidline of paramaters designated by Spotify its just a guess, and this is where I would say the main issue is.
+Its all rather subjective without guidlines, and Furthermore, some people listen to upbeat music because it
+matches their energy and personality, while others might listen to upbeat music to pull them out of depression
+or a somber low energy state of mind. While music has objective markers that we can all agree on, how those
+markers are percieved by listener are far to subjective. Perhaps if Spotify offered a questionaire for
+the account holder about how they percieve music, it would shine more insight as to how the playlist is
+percieved.
