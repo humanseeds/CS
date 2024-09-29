@@ -1,13 +1,11 @@
-To get an idea of the "Audio Aura" calculation that the Spotify Spotify Wrappped
-campagin is offering, we must look over the specifiers that are used to breakdown
-the users playlist that we were given in this example. The following table is an
-average breakdown 
+To get an idea of the "Audio Aura" calculation that the Spotify Spotify Wrappped campagin is offering,
+we must look over the specifiers that are used to breakdown the users playlist that we were given in
+this example. The following table is an average breakdown of each of the major specifiers.
 
++------------+---------------+--------------+-------------+------------------+-------------------+
+| AVG(tempo) | AVG(loudness) | AVG(valence) | AVG(energy) | AVG(speechiness) | AVG(danceability) |
++------------+---------------+--------------+-------------+------------------+-------------------+
+| 119.90418  | -5.67764      | 0.484443     | 0.65906     | 0.115569         | 0.71646           |
++------------+---------------+--------------+-------------+------------------+-------------------+
 
-
-+------------+---------------+--------------+-------------+------------------+
-| AVG(tempo) | AVG(loudness) | AVG(valence) | AVG(energy) | AVG(speechiness) |
-+------------+---------------+--------------+-------------+------------------+
-| 119.90418  | -5.67764      | 0.484443     | 0.65906     | 0.115569         |
-+------------+---------------+--------------+-------------+------------------+
-sqlite>
+From this database search we have 
