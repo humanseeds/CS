@@ -8,4 +8,4 @@ this example. The following table is an average breakdown of each of the major s
 | 119.90418  | -5.67764      | 0.484443     | 0.65906     | 0.115569         | 0.71646           |
 +------------+---------------+--------------+-------------+------------------+-------------------+
 
-This give us an idea 
+With this info we can deduce that the tempo is moderate, 
