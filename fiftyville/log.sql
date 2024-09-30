@@ -32,7 +32,7 @@ WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15
 SELECT people.names, bakery_security_logs.activity, bakery_secuirty_logs.license_plate, bakery_security_logs.year,
 bakery_securirty_logs.month, bakery_secuirty_logs.day, bakery_secuirty_logs.hour, bakery_secuirty_logs.minute
 FROM bakery_security_logs
-JOIN people ON people.license_plate = bakery_secuirty_logs.License_plate
+JOIN people ON people.license_plate = bakery_secuirty_logs.icense_plate
 WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 25;
 
 
