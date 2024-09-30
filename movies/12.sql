@@ -1,5 +1,5 @@
 SELECT tiles
 FROM movies
 JOIN stars on movies.id = stars.movie_id
-JOIN people on Stars.person_id = people.id
-WHERE people.name IN ('Bradley Cooper",'Jennifer Lawrence')
+JOIN people on stars.person_id = people.id
+WHERE people.name IN ('Bradley Cooper','Jennifer Lawrence')
