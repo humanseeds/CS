@@ -80,7 +80,7 @@ LIMIT 1;
 -- ID 36 from Fiftyville Regional Airport to LaGuaria Airport! the Thief went to new York! Now we can check the passengers for the flight
 
 
-SELECT people.name, People.passport_number
+SELECT people.name, people.passport_number
 FROM passengers
 JOIN people ON passengers.passport_number = people.passport_number
 WHERE passengers.flight_id = 38
