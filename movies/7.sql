@@ -1,3 +1,4 @@
 SELECT
 FROM
 WHERE
+ORDER BY ratings DESC;
