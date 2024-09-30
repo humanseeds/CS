@@ -70,7 +70,7 @@ phone_calls.duration < 60;
 
 SELECT flights. *, destination_airports.full_name AS destination_name
 FROM flights
-JOIN airports AS flights.origin_airport_id = airports.id
+JOIN airports ASorigin flights.origin_airport_id = origin_airports.id
 JOIN airports AS
 WHERE airports.city LIKE '%Fiftyville%' AND flights.year = 2023 AND flights.month = 7 AND flights.Day = 29
 ORDER BY flights.hour, flights.min
