@@ -1,0 +1,3 @@
+SELECT titles
+FROM movies
+
