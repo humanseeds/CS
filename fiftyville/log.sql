@@ -29,10 +29,10 @@ WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15
 --and also check phone call records from those people to find the accomplice
 
 
-SELECT people.names, bakery_security_logs.activity, bakery_secuirty_logs.license_plate, bakery_security_logs.year,
+SELECT people.name, bakery_security_logs.activity, bakery_secuirty_logs.license_plate, bakery_security_logs.year,
 bakery_securirty_logs.month, bakery_secuirty_logs.day, bakery_secuirty_logs.hour, bakery_secuirty_logs.minute
 FROM bakery_security_logs
-JOIN people ON people.license_plate = bakery_secuirty_logs.icense_plate
+JOIN people ON people.license_plate = bakery_secuirty_logs.license_plate
 WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 25;
 
 
