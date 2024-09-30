@@ -1,2 +1,3 @@
-SELECT COUNT(movies)
-FROM 
+SELECT COUNT(*)
+FROM ratings
+WHERE rating = 10;
