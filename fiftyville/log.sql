@@ -12,7 +12,17 @@ AND street = 'Humphrey Street';
 -- Theft at 10:15 at bakery. 3 witnesses
 -- check the bakery
 
+
 SELECT *
 FROM interviews
 WHERE transcript LIKE '%bakery%';
+-- Ruth-check footage for vehicle within 10 minutes of crime (10:15-10:25)
+-- Eugene-check ATM on Leggett Street
+-- Raymond- theif made call leaving bakery, asked for first flight out of fiftyville for the next day
+
+
+
+
+
+
 
