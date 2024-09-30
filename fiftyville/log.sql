@@ -69,7 +69,7 @@ phone_calls.duration < 60;
 
 
 SELECT id
-FROM flights
+FROM airports
 JOIN airports ON flights.origin_airport_id = airports.id
 WHERE airports.city LIKE '%Fiftyville%' AND year = 2023 AND month = 7 AND Day = 29
 ORDER BY flights.hour, flights.min
