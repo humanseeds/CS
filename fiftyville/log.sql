@@ -68,10 +68,11 @@ phone_calls.duration < 60;
 -- along with the passenger list and destination
 
 
-SELECT full_name, city, id
-FROM airports
-JOIN flights ON
-WHERE city LIKE '%Fiftyville%';
+SELECT flights
+FROM flights
+JOIN airports ON flights.origin_airport_id = airports.id
+WHERE airports.city LIKE '%Fiftyville%'
+ORDER BY aiports
 
 
 
