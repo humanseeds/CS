@@ -1,0 +1,2 @@
+SELECT COUNT(movies)
+FROM 
