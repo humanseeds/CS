@@ -72,8 +72,7 @@ SELECT flights
 FROM flights
 JOIN airports ON flights.origin_airport_id = airports.id
 WHERE airports.city LIKE '%Fiftyville%'
-ORDER BY aiports
-
+ORDER BY flights.year = 2023 AND flights.month = 7 and flights.day = 
 
 
 
