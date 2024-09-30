@@ -24,7 +24,12 @@ WHERE transcript LIKE '%bakery%';
 SELECT *
 FROM bakery_security_logs
 WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 25;
+--this gives 8 different license plates. if we combine this table with people.license_plate we can find
+-- 8 names and the suspect must be one of those names. from there we can check atm transactions of those people
+--and also check phone call records from those people to find the accomplice
 
+
+SELECT people.names, bakery_
 
 
 
