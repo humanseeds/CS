@@ -1,4 +1,4 @@
 SELECT title
 FROM movies
-WHERE >= 2018
-ORDER BY
+WHERE year >= 2018
+ORDER BY title ASC;
