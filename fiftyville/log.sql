@@ -60,3 +60,8 @@ JOIN people ON phone_calls.caller = people.phone_number
 WHERE phone_calls.year = 2023 AND phone_calls.month = 7 AND phone_calls.day = 28 and
 phone_calls.duration < 60;
 -- Now we have two main suspects Bruce and Diana!
+-- Now lets check the flights, to find the first flight out of fiftyville
+-- along with the passenger list and destination
+
+
+SELECT name FROM 
