@@ -1,4 +1,2 @@
-SELECT * titles
+SELECT m.titles, r.rating
 FROM movies
-WHERE
-ORDER BY ratings DESC;
