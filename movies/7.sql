@@ -1,2 +1,3 @@
-SELECT m.titles, r.rating
+SELECT movies.titles, ratings.rating
 FROM movies
+JOIN ratings ON
