@@ -71,7 +71,7 @@ phone_calls.duration < 60;
 SELECT full_name, city, id
 FROM airports
 JOIN flights ON
-WHERE city LIKE '%Fiftyville%'
+WHERE city LIKE '%Fiftyville%';
 
 
 
