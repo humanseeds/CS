@@ -39,4 +39,5 @@ WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15
 
 SELECT *
 FROM atm_transcations
-WHERE 
+WHERE atm_location = 'Leggett Street'
+AND year = 2023 AND month = 7 and day = 28;
