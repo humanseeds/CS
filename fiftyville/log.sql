@@ -13,5 +13,7 @@ AND street = 'Humphrey Street';
 -- and additional littering crime took place at 4:36pm no witnesses
 -- from this I need to search the interviews and bakery_security_logs
 
-
+SELECT activity
+FROM bakery_secuirty_logs
+WHERE 
 
