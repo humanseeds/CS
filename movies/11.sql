@@ -1,8 +1,6 @@
 SELECT title
 FROM movies
-WHERE id LIKE 'Chadwick Boseman'
-JOIN
-JOIN
-JOIN
+JOIN stars on movies.id = stars.movie_id
+JOIN 
 ORDER BY DESC
 LIMIT 5
