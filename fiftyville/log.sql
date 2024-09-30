@@ -87,3 +87,8 @@ WHERE passengers.flight_id = "38"
 AND people.name = 'Bruce' OR people.name = 'Diana';
 --Diana is the thief! we know this from her licence plate, atm record, and now verified with flight record to New York
 -- now we need to check her phone records and see who she called
+
+
+Select phone_number
+FROM people
+Where name = "Diana
