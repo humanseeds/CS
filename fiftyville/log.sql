@@ -68,7 +68,7 @@ phone_calls.duration < 60;
 -- along with the passenger list and destination
 
 
-SELECT flights.*, destination_airports.full_name AS destination_name
+SELECT flights.*,origin_airports.full_name AS origin_name, destination_airports.full_name AS destination_name
 FROM flights
 JOIN airports AS origin_airports ON flights.origin_airport_id = origin_airports.id
 JOIN airports AS destination_airports ON flights.destination_airport_id = destination_airports.id
@@ -76,7 +76,7 @@ WHERE origin_airports.city LIKE '%Fiftyville%'
 AND flights.year = 2023 AND flights.month = 7 AND flights.day = 29
 ORDER BY flights.hour, flights.minute
 LIMIT 1;
--- we know the city is Fiftyville, so using that we are able to find origin flights 
+-- we know the city is Fiftyville, so using that we are able to find origin flights
 
 
 
