@@ -68,7 +68,7 @@ phone_calls.duration < 60;
 -- along with the passenger list and destination
 
 
-SELECT flights
+SELECT flights.*, flights.destination_airport_id
 FROM flights
 JOIN airports ON flights.origin_airport_id = airports.id
 WHERE airports.city LIKE '%Fiftyville%' AND flights.year = 2023 AND flights.month = 7 AND flights.Day = 29
