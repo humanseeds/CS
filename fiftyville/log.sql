@@ -89,6 +89,6 @@ AND people.name = 'Bruce' OR people.name = 'Diana';
 -- now we need to check her phone records and see who she called
 
 
-Select phone_number
+Select name
 FROM people
-Where name = "Diana
+Where phone_number = 
