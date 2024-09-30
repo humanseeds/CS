@@ -1,3 +1,3 @@
 SELECT AVG(rating)
-FROM movies
-JOIN    ON
+FROM ratings
+WHERE movie_id IN (SELECT id FROM movies WHERE year = 2012);
