@@ -41,3 +41,7 @@ SELECT *
 FROM atm_transactions
 WHERE atm_location = 'Leggett Street'
 AND year = 2023 AND month = 7 and day = 28;
+-- now we can cross reference these account numbers with namesto see if any of our suspect names match
+
+
+SELECT 
