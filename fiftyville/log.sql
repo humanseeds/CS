@@ -64,4 +64,6 @@ phone_calls.duration < 60;
 -- along with the passenger list and destination
 
 
-SELECT name FROM 
+SELECT full_name
+FROm airports
+WHERE city = 'fiftyville',
