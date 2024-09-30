@@ -66,4 +66,7 @@ phone_calls.duration < 60;
 
 SELECT full_name
 FROM airports
-WHERE city = '%Fiftyville%';
+WHERE city LIKE '%Fiftyville%';
+--now we know the name of the Fiftyville airport
+
+
