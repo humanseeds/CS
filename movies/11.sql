@@ -5,4 +5,4 @@ JOIN people ON stars.person_id = people.id
 JOIN ratings ON movies.id = ratings.movie_id
 WHERE people.name = 'Cadwick Boseman'
 ORDER BY rating
-ASC LIMIT 5
+ASC LIMIT 5;
