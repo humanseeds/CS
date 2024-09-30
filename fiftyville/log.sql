@@ -51,7 +51,7 @@ JOIN atm_transactions ON atm_transactions.account_number = bank_accounts.account
 WHERE atm_location = 'Leggett Street'
 AND year = 2023 AND month = 7 AND day = 28 AND transaction_type = 'withdraw';
 --with this list we see 4 common suspects, Bruce, Diana, Iman, and Luca!
--- we can no reference these 4 names with flight tickets and phone calls.
+-- we can now reference these 4 names with flight tickets and phone calls.
 
 
 SELECT people.name, phone_calls.caller, phone_calls.receiver, phone_calls.duration
