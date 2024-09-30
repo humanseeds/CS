@@ -68,9 +68,9 @@ phone_calls.duration < 60;
 -- along with the passenger list and destination
 
 
-SELECT
-FROM
-JOIN
+SELECT full_name, city, id
+FROM airports
+JOIN flights ON
 WHERE city LIKE '%Fiftyville%'
 
 
