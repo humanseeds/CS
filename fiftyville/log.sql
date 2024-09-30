@@ -56,7 +56,7 @@ AND year = 2023 AND month = 7 AND day = 28 AND transaction_type = 'withdraw';
 
 SELECT people.name, phone_calls.caller, phone_calls.receiver, phone_calls.duration
 FROM phone_calls
-JOIN people ON phone_calls.caller = people.phone_number OR phone_calls.receiver = people.phone_number
+JOIN people ON phone_calls.caller = people.phone_number
 WHERE phone_calls.year = 2023 AND phone_calls.month = 7 AND phone_calls.day = 28 and
 phone_calls.duration < 60;
 -- Now we have two main suspects Bruce and Diana!
