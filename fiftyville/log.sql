@@ -65,5 +65,5 @@ phone_calls.duration < 60;
 
 
 SELECT full_name
-FROm airports
-WHERE city = 'fiftyville';
+FROM airports
+WHERE city = '%Fiftyville%';
