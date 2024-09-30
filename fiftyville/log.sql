@@ -18,7 +18,7 @@ FROM interviews
 WHERE transcript LIKE '%bakery%';
 -- Ruth-check footage for vehicle within 10 minutes of crime (10:15-10:25)
 -- Eugene-check ATM on Leggett Street
--- Raymond- theif made call leaving bakery, asked for first flight out of fiftyville for the next day
+-- Raymond- theif made call < 1min leaving bakery, asked for first flight out of fiftyville for the next day
 
 
 SELECT *
@@ -58,5 +58,5 @@ SELECT people.name, phone_calls.caller, phone_calls.reciever, phone_calls.durati
 FROM phone_calls
 JOIN people ON phone_calls.caller = poeople.phone_number
 WHERE phone_calls.year = 2023 AND phone_calls.month = 7 AND phone_calls.day = 28 and
-phone_calls.duration < 60
+phone_calls.duration < 60;
 
