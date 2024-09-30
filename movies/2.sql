@@ -1,3 +1,3 @@
 SELECT birth
 FROM people
-WHERE
+WHERE name = Emma Stone;
