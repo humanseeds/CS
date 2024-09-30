@@ -60,15 +60,15 @@ JOIN people ON phone_calls.caller = people.phone_number
 WHERE phone_calls.year = 2023 AND phone_calls.month = 7 AND phone_calls.day = 28 and
 phone_calls.duration < 60;
 -- Now we have two main suspects Bruce and Diana!
+-- after searching passenger info on flights to determine the thief, we can use these
+-- phone numbers to find the accomplice
+-- Bruce   | (367) 555-5533 | (375) 555-8161 | 45
+-- Diana   | (770) 555-1861 | (725) 555-3243 | 49
 -- Now lets check the flights, to find the first flight out of fiftyville
 -- along with the passenger list and destination
 
 
-SELECT full_name, id
-FROM airports
-WHERE city LIKE '%Fiftyville%';
---now we know the name of the Fiftyville airport and the ID
--- now we can check flights from that airport
+SELECT origin_airport_id
 
 
 
