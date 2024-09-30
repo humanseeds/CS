@@ -76,7 +76,8 @@ WHERE origin_airports.city LIKE '%Fiftyville%'
 AND flights.year = 2023 AND flights.month = 7 AND flights.day = 29
 ORDER BY flights.hour, flights.minute
 LIMIT 1;
--- we know the city is Fiftyville, so using that we are able to find origin flights
+-- we know the city is Fiftyville,so after searching for the next flight out of the city of Fiftyville we find a flight from
+-- Fiftyville Regional Airport to LaGuaria Airport! the Thief went to new York! Now we can check the passengers for the flight
 
 
 
