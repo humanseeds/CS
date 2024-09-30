@@ -29,7 +29,7 @@ WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15
 --and also check phone call records from those people to find the accomplice
 
 
-SELECT people.names, bakery_
+SELECT people.names, bakery_security_logs.activity, bakery_secuirty_logs.License_plate, 
 
 
 
