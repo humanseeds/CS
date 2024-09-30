@@ -15,5 +15,5 @@ AND street = 'Humphrey Street';
 
 SELECT activity
 FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND hour = 16 AND minute = 36;
+WHERE month = 7 AND day = 28 AND hour = 10 AND minute = 15;
 
