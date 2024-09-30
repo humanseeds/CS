@@ -68,12 +68,13 @@ phone_calls.duration < 60;
 -- along with the passenger list and destination
 
 
-SELECT flights. *, destination_airports.full_name AS destination_name
+SELECT flights.*, destination_airports.full_name AS destination_name
 FROM flights
-JOIN airports ASorigin flights.origin_airport_id = origin_airports.id
-JOIN airports AS
-WHERE airports.city LIKE '%Fiftyville%' AND flights.year = 2023 AND flights.month = 7 AND flights.Day = 29
-ORDER BY flights.hour, flights.min
+JOIN airports AS origin_airports ON flights.origin_airport_id = origin_airports.id
+JOIN airports AS destination_airports ON flights.destination_airport_id = destination_airports.id
+WHERE origin_airports.city = '%Fiftyville%'
+AND flights.year = 2023 AND flights.month = 7 AND flights.Day = 29
+ORDER BY flights.hour, flights.minute
 LIMIT 1;
 
 
