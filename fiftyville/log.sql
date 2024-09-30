@@ -41,7 +41,7 @@ SELECT *
 FROM atm_transactions
 WHERE atm_location = 'Leggett Street'
 AND year = 2023 AND month = 7 AND day = 28;
--- now we can cross reference these account numbers with namesto see if any of our suspect names match
+-- now we can cross reference these account numbers with names to see if any of our suspect names match
 
 
 SELECT name
@@ -50,4 +50,12 @@ JOIN bank_accounts ON people.id = bank_accounts.person_id
 JOIN atm_transactions ON atm_transactions.account_number = bank_accounts.account_number
 WHERE atm_location = 'Leggett Street'
 AND year = 2023 AND month = 7 AND day = 28 AND transaction_type = 'withdraw';
---with this list we see 4 common suspects, Bruce, Diana,
+--with this list we see 4 common suspects, Bruce, Diana, Iman, and Luca!
+-- we can no reference these 4 names with flight tickets and phone calls.
+
+
+SELECT
+FROM
+JOIN
+JOIN
+
