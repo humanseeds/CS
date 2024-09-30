@@ -37,4 +37,6 @@ WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15
 -- Vanessa, Bruce, Barry, Luca, Sofia, Iman, Diana, Kelsey. now we can cross reference these names from atm
 
 
-
+SELECT *
+FROM atm_transcations
+WHERE 
