@@ -9,11 +9,10 @@ SELECT description
 FROM crime_scene_reports
 WHERE month = 7 AND day = 28
 AND street = 'Humphrey Street';
--- 3 witnesses mentioning bakery,
--- and additional littering crime took place at 10:15 no witnesses
--- from this I need to search the interviews and bakery_security_logs
+-- Theft at 10:15 at bakery. 3 witnesses
+-- check the bakery
 
-SELECT transcript
+SELECT *
 FROM interviews
-WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute = 15;
+WHERE transcript LIKE '%bakery%';
 
