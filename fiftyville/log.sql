@@ -80,8 +80,10 @@ LIMIT 1;
 -- ID 36 from Fiftyville Regional Airport to LaGuaria Airport! the Thief went to new York! Now we can check the passengers for the flight
 
 
-SELECT people.name, people.passport_number
+SELECT DISTINCT people.name, people.passport_number
 FROM passengers
 JOIN people ON passengers.passport_number = people.passport_number
 WHERE passengers.flight_id = "38"
 AND people.name = 'Bruce' OR people.name = 'Diana';
+--Diana is the thief! we know this from her licence plate, atm record, and now verified with flight record to New York
+-- now we need to check her phone records and see who she called
