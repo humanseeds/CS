@@ -54,9 +54,9 @@ AND year = 2023 AND month = 7 AND day = 28 AND transaction_type = 'withdraw';
 -- we can no reference these 4 names with flight tickets and phone calls.
 
 
-SELECT people.name, phone_calls.caller, phone_calls.reciever, phone_calls.duration
+SELECT people.name, phone_calls.caller, phone_calls.receiver, phone_calls.duration
 FROM phone_calls
 JOIN people ON phone_calls.caller = people.phone_number
 WHERE phone_calls.year = 2023 AND phone_calls.month = 7 AND phone_calls.day = 28 and
 phone_calls.duration < 60;
-
+-- Bruce, Diana,,
