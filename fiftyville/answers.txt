@@ -1,3 +1,3 @@
-The THIEF is:
-The city the thief ESCAPED TO: Laguardia Airport New York City
-The ACCOMPLICE is:
+The THIEF is: Diana
+The city the thief ESCAPED TO: New York City (Laguardia Airport)
+The ACCOMPLICE is: Philip

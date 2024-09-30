@@ -91,4 +91,5 @@ AND people.name = 'Bruce' OR people.name = 'Diana';
 
 Select people.name, people.phone_number
 FROM people
-WHERE people.phone_number = '(725)555-3243';
+WHERE people.phone_number = '(725) 555-3243';
+--since we already have the call record from Diana from earlier, a simple search showed us that the accomplice is Philip
