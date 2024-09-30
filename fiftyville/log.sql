@@ -77,7 +77,7 @@ AND flights.year = 2023 AND flights.month = 7 AND flights.day = 29
 ORDER BY flights.hour, flights.minute
 LIMIT 1;
 -- we know the city is Fiftyville,so after searching for the next flight out of the city of Fiftyville we find a flight from
--- Fiftyville Regional Airport to LaGuaria Airport! the Thief went to new York! Now we can check the passengers for the flight
+-- ID 36 from Fiftyville Regional Airport to LaGuaria Airport! the Thief went to new York! Now we can check the passengers for the flight
 
 
 
