@@ -1,3 +1,12 @@
 SELECT name
 FROM people
-WHERE 
+WHERE id IN
+(
+    SELECT person_id
+    FROM stars
+    WHERE movie_id = (
+        SELECT id
+        FROM movies
+        MOVIEs title = 'Toy Story'
+    )
+);
