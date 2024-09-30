@@ -13,7 +13,7 @@ AND street = 'Humphrey Street';
 -- and additional littering crime took place at 16:36 no witnesses
 -- from this I need to search the interviews and bakery_security_logs
 
-SELECT license_plate
+SELECT activity
 FROM bakery_security_logs
 WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute = 15;
 
