@@ -44,9 +44,9 @@ AND year = 2023 AND month = 7 and day = 28;
 -- now we can cross reference these account numbers with namesto see if any of our suspect names match
 
 
-SELECT  people.name
-FROM atm_transactions
+SELECT name
+FROM people
 JOIN bank_accounts ON atm_transactions.account_number = bank_accounts.account_number
 JOIN people ON bank_accounts.person_id = people.id
 WHERE atm_transactions.atm_location = 'Leggett Street'
-AND year = 2023 AND month = 7 and day = 28 AND atm_transactions.transaction_type = 'withdrawal';
+AND year = 2023 AND month = 7 and day = 28 AND transaction_type = 'withdrawal';
