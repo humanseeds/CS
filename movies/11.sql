@@ -1,5 +1,6 @@
-SELECT
-FROM
+SELECT title
+FROM movies
+WHERE id LIKE 'Chadwick Boseman'
 JOIN
 JOIN
 JOIN
