@@ -54,7 +54,7 @@ AND year = 2023 AND month = 7 AND day = 28 AND transaction_type = 'withdraw';
 -- we can no reference these 4 names with flight tickets and phone calls.
 
 
-SELECT
+SELECT people.name, phone_calls.caller, phone_calls.reciever, phone_calls.
 FROM
 JOIN
 JOIN
