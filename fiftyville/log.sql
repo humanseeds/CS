@@ -89,6 +89,7 @@ AND people.name = 'Bruce' OR people.name = 'Diana';
 -- now we need to check her phone records and see who she called
 
 
-Select name
+Select people.name
 From phone_calls
-WHERE phone_calls.receiver = '(725)555-3243';
+JOIN people ON phone_call.receiver = people.phone_number
+WHERE phone_calls.caller = '(725)555-3243';
