@@ -59,4 +59,4 @@ FROM phone_calls
 JOIN people ON phone_calls.caller = people.phone_number
 WHERE phone_calls.year = 2023 AND phone_calls.month = 7 AND phone_calls.day = 28 and
 phone_calls.duration < 60;
--- Bruce, Diana,,
+-- Now we have two main suspects Bruce and Diana!
