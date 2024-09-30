@@ -71,7 +71,7 @@ phone_calls.duration < 60;
 SELECT id
 FROM flights
 JOIN airports ON flights.origin_airport_id = airports.id
-WHERE airports.city LIKE '%Fiftyville%'
+WHERE airports.city LIKE '%Fiftyville%' AND year = 2023 AND month = 7 AND Day = 
 
 
 
