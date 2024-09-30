@@ -50,3 +50,4 @@ JOIN bank_accounts ON people.id = bank_accounts.person_id
 JOIN atm_transactions ON atm_transactions.account_number = bank_accounts.account_number
 WHERE atm_location = 'Leggett Street'
 AND year = 2023 AND month = 7 AND day = 28 AND transaction_type = 'withdraw';
+--with this list we see 4 common suspects, Bruce, Diana,
