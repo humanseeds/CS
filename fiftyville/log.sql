@@ -68,7 +68,7 @@ SELECT full_name, id
 FROM airports
 WHERE city LIKE '%Fiftyville%';
 --now we know the name of the Fiftyville airport and the ID
-
+-- now we can check flights from that airport
 
 
 
