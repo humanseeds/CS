@@ -83,5 +83,5 @@ LIMIT 1;
 SELECT people.name, People.passport_number
 FROM passengers
 JOIN people ON passengers.passport_number = people.passport_number
-WHERE passengers.flight_id = flight_id_38
+WHERE passengers.flight_id = 38
 AND (people.name = 'Bruce' OR people.name = 'Diana');
