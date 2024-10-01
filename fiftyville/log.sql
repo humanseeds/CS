@@ -91,5 +91,5 @@ WHERE passengers.flight_id = "36";
 
 Select people.name, people.phone_number
 FROM people
-WHERE people.phone_number = '(375) 555- 8161';
---since we already have the call record from Diana from earlier, a simple search showed us that the accomplice is Philip
+WHERE people.phone_number = '(375) 555-8161';
+--since we already have the call record from Bruce from earlier, a simple search showed us that the accomplice is Robin
