@@ -11,14 +11,14 @@
             // wait for the page to load before exectuting JS
             document.addEventListener('DOMContentLoaded', function() {
 
-                        //change color of button to green when the correct answer is selected
+                 //change color of button to green when the correct answer is selected
                 let correct = document.querySelector('.correct');
                 correct.addEventListener('click', function() {
                     correct.style.backgroundColor = 'green';
                     document.querySelector('#feedback1').innerHTML = 'Correct!';
                 });
 
-                        // Change the color of the button to red when an incorrect answer is selected
+                // Change the color of the button to red when an incorrect answer is selected
                 let incorrect = document.querySelectorAll('.incorrect');
                 for (let i = 0; i < incorrect.length; i++) {
                     incorrect[i].addEventListener('click', function() {
