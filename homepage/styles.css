@@ -7,3 +7,30 @@
 {
     font-size: large;
 }
+
+/*backgrounds and fonts for pages*/
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Unique background colors for each page */
+#home {
+    background-color: black;
+    color: white;
+}
+
+#dog1 {
+    background-color: red;
+    color: white;
+}
+
+#dog2 {
+    background-color: grey;
+    color: black;
+}
+
+#dog3 {
+    background-color: yellow;
+    color: black;
+}
