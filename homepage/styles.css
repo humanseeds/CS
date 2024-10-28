@@ -16,12 +16,12 @@ body {
 
 /* Unique background colors for each page */
 #home {
-    background-color: black;
+    background-color: LightSlateGray;
     color: white;
 }
 
 #ruby {
-    background-color: red;
+    background-color: light pink;
     color: white;
 }
 
