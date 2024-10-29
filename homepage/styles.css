@@ -34,3 +34,9 @@ body {
     background-color: khaki;
     color: black;
 }
+
+/*carousel image sizing*/
+.carousel-inner img {
+    height: 1000px;
+    object-fit: cover;
+}
