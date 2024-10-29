@@ -37,7 +37,7 @@ body {
 
 
 .carousel-inner img {
-    height: 800;  /* Set your preferred height */
+    height: 600;  /* Set your preferred height */
     object-fit: cover;  /* Crop images to fit the set height without distortion */
 }
 
@@ -48,7 +48,7 @@ body {
 #loader {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 50vh;
     z-index: 1;
     width: 120px;
     height: 120px;
