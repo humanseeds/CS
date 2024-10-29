@@ -46,9 +46,9 @@ body {
 
 /* Center the loader */
 #loader {
-    position: absolute;
+    position: ;
     left: 50%;
-    top: 50vh;
+    top: 50%;
     z-index: 1;
     width: 120px;
     height: 120px;
