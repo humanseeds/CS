@@ -36,6 +36,13 @@ body {
 }
 
 
+.carousel-inner img {
+    height: 1000px;  /* Set your preferred height */
+    object-fit: cover;  /* Crop images to fit the set height without distortion */
+}
+
+
+
 
 /* Center the loader */
 #loader {
