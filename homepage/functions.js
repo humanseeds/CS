@@ -10,7 +10,7 @@ function showPage() {
 }
 
 
- /*window.onload = function() {
+ window.onload = function() {
   document.getElementById("loader").style.display = "none"; // Hide loader
   document.getElementById("myDiv").style.display = "block"; // Show main content
 };
