@@ -1,0 +1,30 @@
+html tags
+    1.<p>
+    2.<div>
+    3.<ul>
+    4.<li>
+    5.<a>
+    6.<h2>
+    7.<link>
+    8.<meta>
+    9.<header>
+    10.<button>
+    11.<img>
+    12.<script>
+    13.<span>
+
+CSS selectors
+    1.
+    2.
+    3.
+    4.
+    5.
+
+CSS properties
+    1.
+    2.
+    3.
+    4.
+    5.
+
+I used a javascript prompt to control the loading wheel while the bootstrap carousel loads
