@@ -14,17 +14,27 @@ html tags
     13.<span>
 
 CSS selectors
-    1.
-    2.
-    3.
-    4.
-    5.
+    1. .centered
+    2. .large
+    3. .body
+    4. #loader
+    5. #mydiv
+    6. .carousel_inner img
+    7. .animate-bottom
+    8. #ruby
+    9. #odin
+    10. #autumn
 
 CSS properties
-    1.
-    2.
-    3.
-    4.
-    5.
-
+    1. text-align
+    2. font-size
+    3. font-family
+    4. color
+    5.height
+    6.object-fit
+    7. width
+    8. backgroun_color
+    9. position
+    10.animation
+    
 I used a javascript prompt to control the loading wheel while the bootstrap carousel loads
