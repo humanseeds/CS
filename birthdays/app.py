@@ -31,7 +31,7 @@ def index():
         day = request.form.get("day")
 
         # insert data
-        db.execute("INSERT INTO birthdays(name, month, day) VALUES(?,?,?,)", name, month, day)
+        db.execute("INSERT INTO birthdays (name, month, day) VALUES(?,?,?,)", name, month, day)
         # go back to homepage
         return redirect("/")
 
