@@ -25,6 +25,7 @@ def after_request(response):
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
+
         name = request.form.get("name")
         month = request.form.get("month")
         day = request.form.get("day")
