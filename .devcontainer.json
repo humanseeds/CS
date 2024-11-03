@@ -93,6 +93,7 @@
             }
           }
         },
+        "editor.stickyScroll.enabled": false,
         "editor.suggestOnTriggerCharacters": false,
         "explorer.autoOpenDroppedFile": false,
         "explorer.compactFolders": false,
@@ -145,6 +146,7 @@
         "javascript.validate.enable": false,
         "Prettier-SQL.keywordCase": "upper",
         "problems.decorations.enabled": false,
+        "problems.visibility": false,
         "python.terminal.executeInFileDir": true,
         "remote.autoForwardPorts": true,
         "remote.autoForwardPortsFallback": 0,
@@ -225,7 +227,7 @@
     8082,
     8787
   ],
-  "image": "ghcr.io/cs50/codespace:20d799d53d942aef76351ac5a87ed9bc54f0919f",
+  "image": "ghcr.io/cs50/codespace:9c4f24b5e97adab0b1f23ad3480980f9002ae632",
   "mounts": [
     {
       "source": "/var/run/docker.sock",
