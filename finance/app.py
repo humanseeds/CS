@@ -175,4 +175,11 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    # When requested via GET, display form to sell stock
+        display form 
+
+    # when submitted via POST, check for errors and sell specified number of shares and updates users cash
+
+    # redirect to homepage upoin completion
+
     return apology("TODO")
