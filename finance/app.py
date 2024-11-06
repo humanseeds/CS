@@ -47,6 +47,7 @@ def buy():
         # check for valid input
 
     # When for submit via POST, purchase the stock so long as user can afford it
+    
     return apology("TODO")
 
 
