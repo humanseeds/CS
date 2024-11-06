@@ -108,8 +108,10 @@ def quote():
     """Get stock quote."""
     # when request via GET, displace stock quote
 
-    # When submitted via POST, lookup stock symbol
-        #call the lookup function and display results
+    # When submitted via POST, use lookup function for  stock symbol and display results
+        # lookup takes stock symbol and returns stock quote
+        # if lookup successful, function returns dictionary with name,price,symbol
+        # if lookup unsucceful, function returns none
     return apology("TODO")
 
 
