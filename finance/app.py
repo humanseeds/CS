@@ -113,7 +113,13 @@ def quote():
 def register():
     """Register user"""
     # when requested via GET, display registration form
-
+        # create a new template for registraion from templates folder
+        # borrow from login.html
+        # HTML <input name= "password".../>
+        #python request.form.get("password")
+        # prompt user for username, password,and confirmation
+            # confirm (if field is blank return apology)
+            
     # when form is submitted via POST, check for possible errors and insert the new user in users table
 
     #log user in
