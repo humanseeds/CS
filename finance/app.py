@@ -36,7 +36,12 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     # Display HTML table with
-        #
+        # all stocks owned
+        # number of shares per stock
+        # current price of each stock
+        # total value of each holding
+    # Display users cash balance
+    # display total value of stocks and cash together
 
     return apology("TODO")
 
