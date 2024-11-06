@@ -45,8 +45,14 @@ def buy():
     # When request via GET, display buy stock form
         # user input name is symbol. render apology if input blank or does not exist per lookup
         # user input shares as text field whose name is shares. render apology if input is not positive int
-
-
+        # submit user input via post or buy
+        # redirect user to homepage upon purchase
+    # lookup stock price, SELECT cash user has in users
+    # add new tables to finance.db to track purchaase.
+        # decide table names and fields UNIQUE or non-UNIQUE
+        # CREATE TABLE to add new tables
+        # run SQL statement on DB to purchase stock.
+        # update cash to reflect purchase
 
     # When for submit via POST, purchase the stock so long as user can afford it
 
