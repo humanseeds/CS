@@ -119,9 +119,12 @@ def register():
         #python request.form.get("password")
         # prompt user for username, password,and confirmation
             # confirm (if field is blank return apology)
-            
+            # if password and confirmation dont match return an apology
+            #if username is taken return apology
+            #database should use generate_password_hash to generate password
     # when form is submitted via POST, check for possible errors and insert the new user in users table
-
+        #use db.execute
+        
     #log user in
     return apology("TODO")
 
