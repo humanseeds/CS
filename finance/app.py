@@ -47,7 +47,7 @@ def buy():
         # check for valid input
 
     # When for submit via POST, purchase the stock so long as user can afford it
-    
+
     return apology("TODO")
 
 
@@ -112,7 +112,8 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    # when request via GET, displace stock quote
+    # when request via GET, display stock quote
+        # text field name is symbol
 
     # When submitted via POST, use lookup function for  stock symbol and display results
         # lookup takes stock symbol and returns stock quote
