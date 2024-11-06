@@ -42,6 +42,11 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
+    # When request via GET, display buy stock form
+        # ask for symbol and number of shares
+        # check for valid input
+
+    # When for submit via POST, purchase the stock so long as user can afford it
     return apology("TODO")
 
 
