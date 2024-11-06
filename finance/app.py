@@ -106,6 +106,10 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+    # when request via GET, displace stock quote
+
+    # When submitted via POST, lookup stock symbol
+        #call the lookup function and display results
     return apology("TODO")
 
 
@@ -116,16 +120,17 @@ def register():
         # create a new template for registraion from templates folder
         # borrow from login.html
         # HTML <input name= "password".../>
-        #python request.form.get("password")
+        # python request.form.get("password")
         # prompt user for username, password,and confirmation
             # confirm (if field is blank return apology)
             # if password and confirmation dont match return an apology
-            #if username is taken return apology
-            #database should use generate_password_hash to generate password
+            # if username is taken return apology
+            # database should use generate_password_hash to generate password
     # when form is submitted via POST, check for possible errors and insert the new user in users table
-        #use db.execute
-        
+        # use db.execute
+        # use ? as placeholder
     #log user in
+        # session["user_id"] keeps track of which user is logged in
     return apology("TODO")
 
 
