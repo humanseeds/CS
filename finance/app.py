@@ -35,6 +35,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    # 
+
     return apology("TODO")
 
 
@@ -51,7 +53,7 @@ def buy():
     # add new tables to finance.db to track purchaase.
         # decide table names and fields UNIQUE or non-UNIQUE
         # CREATE TABLE to add new tables
-        # run SQL statement on DB to purchase stock.
+        # run SQL statement on DB to purchase stock. is enough cash. if not return apology
         # update cash to reflect purchase
 
     # When for submit via POST, purchase the stock so long as user can afford it
