@@ -78,6 +78,9 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
+    # display html table with history of all transactioins. one row per buy or sell
+    # each row contains stock name, bought or sold, purchase of sale price, number of shares and date and time
+    #alter table for buy to minimize redundancies
     return apology("TODO")
 
 
@@ -176,10 +179,17 @@ def register():
 def sell():
     """Sell shares of stock"""
     # When requested via GET, display form to sell stock
-        # display form
-
+        # display form implemented as select
+        # name is symbol
+        #render apology user doesnt ownt the stock or selects the wrong stock
+        # require number of shares as text field whose name is shares. render apology if integer is negative
+    #submit via POST to SELL
     # when submitted via POST, check for errors and sell specified number of shares and updates users cash
 
     # redirect to homepage upoin completion
-
     return apology("TODO")
+
+
+# NEW FEATURE
+    # create new features not listed i.e change password, add cash to account,
+    # or add more stocks or shares already owned viaw index
