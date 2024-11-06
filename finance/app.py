@@ -35,7 +35,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    # Display HTML table with
+    # Display HTML table with the following. use lookup, SELECT GROUP BY HAVING SUM or WHERE
         # all stocks owned
         # number of shares per stock
         # current price of each stock
