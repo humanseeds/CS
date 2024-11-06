@@ -176,7 +176,7 @@ def register():
 def sell():
     """Sell shares of stock"""
     # When requested via GET, display form to sell stock
-        display form 
+        # display form
 
     # when submitted via POST, check for errors and sell specified number of shares and updates users cash
 
