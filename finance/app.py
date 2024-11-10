@@ -165,10 +165,13 @@ def register():
         confirmation = request.form.get("confirmation")
 
         if not username:
-            return apology("Input valid username")
+            return apology("Input Valid Username")
         if not password:
-            reutrn apology("Input valid password")
-            
+            reutrn apology("Input Valid Password")
+        if not confirmation("Confirm Password)
+
+        if password != confirmation:
+            return apology("Confirmation Must Match Password")
 
         # create a new template for registraion from templates folder
         # borrow from login.html
