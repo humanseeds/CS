@@ -159,12 +159,12 @@ def register():
     # when requested via GET, display registration form
      # create a new template for registraion from templates folder
         # borrow from login.html
-    if request.method == "GET":
-       return render_template("register.html")
-    else:
-         username = request.form.get("username")
-         password = request.form.get("password")
-         confirmation = request.form.get("confirmation")
+   if request.method == "GET":
+    return render_template("register.html")
+else:
+    username = request.form.get("username")
+    password = request.form.get("password")
+    confirmation = request.form.get("confirmation")
 
         # create a new template for registraion from templates folder
         # borrow from login.html
