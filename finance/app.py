@@ -164,6 +164,9 @@ def register():
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
 
+        if not username:
+            return apology("Input valid username")
+
         # create a new template for registraion from templates folder
         # borrow from login.html
         # HTML <input name= "password".../>
