@@ -157,6 +157,7 @@ def quote():
 def register():
     """Register user"""
     # when requested via GET, display registration form
+    if request.method= "GET"
         # create a new template for registraion from templates folder
         # borrow from login.html
         # HTML <input name= "password".../>
