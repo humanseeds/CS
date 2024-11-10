@@ -161,6 +161,8 @@ def register():
         # borrow from login.html
     if request.method == "GET":
        return render_template("register.html")
+    else: request.method == "POST":
+        
 
         # create a new template for registraion from templates folder
         # borrow from login.html
