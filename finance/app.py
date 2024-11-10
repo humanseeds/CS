@@ -166,6 +166,9 @@ def register():
 
         if not username:
             return apology("Input valid username")
+        if not password:
+            reutrn apology("Input valid password")
+            
 
         # create a new template for registraion from templates folder
         # borrow from login.html
