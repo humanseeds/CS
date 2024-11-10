@@ -161,6 +161,7 @@ def register():
         # borrow from login.html
    if request.method == "GET":
     return render_template("register.html")
+
 else:
     username = request.form.get("username")
     password = request.form.get("password")
