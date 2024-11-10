@@ -159,7 +159,7 @@ def register():
     # when requested via GET, display registration form
      # create a new template for registraion from templates folder
         # borrow from login.html
-    if request.method= "GET"
+    if request.method == "GET":
        return render_template("register.html")
 
         # create a new template for registraion from templates folder
