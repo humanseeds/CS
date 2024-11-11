@@ -141,14 +141,19 @@ def quote():
     # when request via GET, display stock quote
     if request.method == "POST":
         symbol = request.form.get("symbol")
+
+        if not symbol:
+            return apology("Must Give Valid Symbol")
+
         quote = lookup(symbol)
 
         if not quote:
-            return apology("Must Give Valid Symbol")
+            return apology("Invalid Symbol")
+
         return render_template("quote.html", quote=quote)
 
-    else:
-        return render_template("quote.html")
+
+    return render_template("quote.html")
 
 
 
