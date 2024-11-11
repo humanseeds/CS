@@ -153,7 +153,7 @@ def quote():
         if stock == None:
             return apology("Symbol is Invalid")
 
-        return render_template("quoted.html, name = stock["name"], price = stock["price"], symbol = stock["symbol"])
+        return render_template("quote.html")
 
     # When submitted via POST, use lookup function for  stock symbol and display results
         # lookup takes stock symbol and returns stock quote
