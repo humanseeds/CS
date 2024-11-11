@@ -173,6 +173,10 @@ def register():
         if password != confirmation:
             return apology("Confirmation Must Match Password")
 
+        hash = generate_password_hash(password)
+
+         
+
         # create a new template for registraion from templates folder
         # borrow from login.html
         # HTML <input name= "password".../>
