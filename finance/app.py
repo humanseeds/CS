@@ -168,7 +168,7 @@ def register():
             return apology("Input Valid Username")
         if not password:
             reutrn apology("Input Valid Password")
-        if not confirmation("Must Confirm Password)
+        if not confirmation("Must Confirm Password")
 
         if password != confirmation:
             return apology("Passwords Must Match")
