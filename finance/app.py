@@ -156,7 +156,7 @@ def quote():
             # python- return render_template("hello.html", name="Brian"
             # Jinja template- <p. hello, {{ name }}</p>
         # if lookup unsucceful, function returns none
-    return apology("TODO")
+
 
 
 @app.route("/register", methods=["GET", "POST"])
