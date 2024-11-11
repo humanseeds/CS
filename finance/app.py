@@ -142,7 +142,7 @@ def quote():
     If request.method == "GET":
         return render_template("quote.html")
             # text field name is symbol
-        # creat template quote.html
+      
 
     # When submitted via POST, use lookup function for  stock symbol and display results
         # lookup takes stock symbol and returns stock quote
