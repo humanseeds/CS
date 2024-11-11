@@ -142,14 +142,16 @@ def quote():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         quote = lookup(symbol)
+
         if not quote:
             return apology("Must Give Valid Symbol")
+
         return render_template("quote.html", quote=quote)
     else:
         return render_template("quote.html")
 
 
- 
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
