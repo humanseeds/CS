@@ -149,7 +149,7 @@ def quote():
       stock = lookup(symbol.upper())
       if stock is none:
           return apology("Symbol is Invalid")
-      return render_template("quote.html, stock=stock)
+      return render_template("quote.html", stock=stock)
 
     # When submitted via POST, use lookup function for  stock symbol and display results
         # lookup takes stock symbol and returns stock quote
