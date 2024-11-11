@@ -180,6 +180,13 @@ def register():
         except:
             return apology("Username Already Exists")
 
+
+        session["user_id"] = rows[0]["id"]
+
+
+        return redirect("/")
+
+
             # database should use generate_password_hash to generate password
     # when form is submitted via POST, check for possible errors and insert the new user in users table
         # use db.execute
