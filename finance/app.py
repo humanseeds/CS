@@ -149,17 +149,7 @@ def quote():
         return render_template("quote.html")
 
 
-    # When submitted via POST, use lookup function for  stock symbol and display results
-        # lookup takes stock symbol and returns stock quote
-        # if lookup successful, function returns dictionary with name,price,symbol
-            # create template quoted.html
-            # display name, price,symbol with html
-            # python- return render_template("hello.html", name="Brian"
-            # Jinja template- <p. hello, {{ name }}</p>
-        # if lookup unsucceful, function returns none
-
-
-
+ 
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
