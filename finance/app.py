@@ -175,8 +175,8 @@ def register():
 
         hash = generate_password_hash(password)
 
-        db.execute("INSERT INTO users (username, hash) VALUES(?,?)",
-                   
+        db.execute("INSERT INTO users (username, hash) VALUES(?,?)", username, hash)
+
 
             # database should use generate_password_hash to generate password
     # when form is submitted via POST, check for possible errors and insert the new user in users table
