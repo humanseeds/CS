@@ -168,10 +168,10 @@ def register():
             return apology("Input Valid Username")
         if not password:
             reutrn apology("Input Valid Password")
-        if not confirmation("Confirm Password)
+        if not confirmation("Must Confirm Password)
 
         if password != confirmation:
-            return apology("Must Confirm Password")
+            return apology("Passwords Must Match")
 
         hash = generate_password_hash(password)
 
