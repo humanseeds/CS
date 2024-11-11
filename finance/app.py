@@ -175,7 +175,7 @@ def register():
 
         hash = generate_password_hash(password)
 
-         
+        db.execute
 
         # create a new template for registraion from templates folder
         # borrow from login.html
