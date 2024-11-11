@@ -142,16 +142,11 @@ def quote():
     if request.method == "GET":
       symbol = request.form.get("symbol")
       stock = lookup(symbol)
-      if not symbol:
-            return apology("Must Give Valid Symbol")
-
-
-
-        if stock is None:
-            return apology("Symbol is Invalid")
-        return render_template("quote.html")
- else:
-    return render_template("quote")
+      if not stock:
+         return apology("Must Give Valid Symbol")
+      return render_template("quote.html", quote=quote)
+    else:
+         return render_template("quote")
 
     # When submitted via POST, use lookup function for  stock symbol and display results
         # lookup takes stock symbol and returns stock quote
