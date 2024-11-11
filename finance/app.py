@@ -171,7 +171,7 @@ def register():
         if not confirmation("Confirm Password)
 
         if password != confirmation:
-            return apology("Confirmation Must Match Password")
+            return apology("Must Confirm Password")
 
         hash = generate_password_hash(password)
 
