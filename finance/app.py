@@ -141,7 +141,7 @@ def quote():
     # when request via GET, display stock quote
     if request.method == "GET":
         return render_template("quote.html")
-            # text field name is symbol
+         
     else:
         symbol = request.form.get("symbol")
 
