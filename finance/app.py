@@ -150,7 +150,7 @@ def quote():
 
         stock = lookup(symbol.upper())
 
-        if stock == None:
+        if stock is None:
             return apology("Symbol is Invalid")
 
         return render_template("quote.html")
