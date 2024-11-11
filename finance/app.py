@@ -188,12 +188,6 @@ def register():
         return redirect("/")
 
 
-            # database should use generate_password_hash to generate password
-    # when form is submitted via POST, check for possible errors and insert the new user in users table
-        # use db.execute
-        # use ? as placeholder
-    #log user in
-        # session["user_id"] keeps track of which user is logged in
     return apology("TODO")
 
 
