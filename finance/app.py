@@ -145,6 +145,11 @@ def quote():
     else:
         symbol = request.form.get("symbol")
 
+        if not symbol:
+            return apology("Must Give Valid Symbol")
+
+        
+
     # When submitted via POST, use lookup function for  stock symbol and display results
         # lookup takes stock symbol and returns stock quote
         # if lookup successful, function returns dictionary with name,price,symbol
