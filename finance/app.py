@@ -175,16 +175,9 @@ def register():
 
         hash = generate_password_hash(password)
 
-        db.execute
+        db.execute("INSERT INTO users (username, hash) VALUES(?,?)",
+                   
 
-        # create a new template for registraion from templates folder
-        # borrow from login.html
-        # HTML <input name= "password".../>
-        # python request.form.get("password")
-        # prompt user for username, password,and confirmation
-            # confirm (if field is blank return apology)
-            # if password and confirmation dont match return an apology
-            # if username is taken return apology
             # database should use generate_password_hash to generate password
     # when form is submitted via POST, check for possible errors and insert the new user in users table
         # use db.execute
