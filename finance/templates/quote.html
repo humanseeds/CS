@@ -13,10 +13,10 @@
     <button class="btn btn-primary" type="submit">Get Quote</button>
 </form>
 
-{% if stock %}
-    <h3>Name: {{ sotck.name }}<h3>
-    </h3>Symbol: {{ stock.symbol }}</h3>
-    <p>Price: {{ stock.price }}</p>
+{% if quote %}
+    <h3>Name: {{ quote.name }}<h3>
+    </h3>Symbol: {{ quote.symbol }}</h3>
+    <p>Price: {{ quote.price }}</p>
 
 {% endif %}
 {% endblock %}

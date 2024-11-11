@@ -139,17 +139,15 @@ def logout():
 def quote():
     """Get stock quote."""
     # when request via GET, display stock quote
-    if request.method == "GET":
-       return render_template("quote.html")
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        quote = lookup(symbol)
+        if not quote:
+            return apology("Must Give Valid Symbol")
+        return render_template("quote.html", quote=quote)
     else:
-      symbol = request.form.get("symbol")
-      if not symbol:
-         return apology("Must Give Valid Symbol")
+        return render_template("quote.html")
 
-      stock = lookup(symbol)
-      if stock is None:
-          return apology("Symbol is Invalid")
-      return render_template("quote.html", stock=stock)
 
     # When submitted via POST, use lookup function for  stock symbol and display results
         # lookup takes stock symbol and returns stock quote
