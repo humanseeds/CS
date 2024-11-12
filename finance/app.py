@@ -58,8 +58,8 @@ def index():
 def buy():
     """Buy shares of stock"""
     # When request via GET, display buy stock form
-        if request.method == "GET"
-            return render_template("buy.html")
+    if request.method == "GET":
+        return render_template("buy.html")
         # user input name is symbol. render apology if input blank or does not exist per lookup
         # user input shares as text field whose name is shares. render apology if input is not positive int
         # submit user input via post or buy
@@ -69,15 +69,15 @@ def buy():
         # decide table names and fields UNIQUE or non-UNIQUE
         # CREATE TABLE to add new tables
         # run SQL statement on DB to purchase stock. is enough cash. if not return apology
-          SELECT cash FROM users WHERE ID = ?
+         ##SELECT cash FROM users WHERE ID = ?
         # update cash to reflect purchase
-        UPDATE users SET cash = cash - (stock sharees x price) WHERE ID = ?
+        ##UPDATE users SET cash = cash - (stock sharees x price) WHERE ID = ?
     # When for submit via POST, purchase the stock so long as user can afford it
 
     # buying more of the same stock
-    INSERT INTO portfolio (id, symbol, shares)
-        VALUES (?, ?, ?) ON DUPLICATE KEY
-                UPDATE shares = shares + VALUES(shares)
+    ##INSERT INTO portfolio (id, symbol, shares)
+       # #VALUES (?, ?, ?) ON DUPLICATE KEY
+               ## UPDATE shares = shares + VALUES(shares)
     return apology("TODO")
 
 
