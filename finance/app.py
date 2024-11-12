@@ -58,6 +58,8 @@ def index():
 def buy():
     """Buy shares of stock"""
     # When request via GET, display buy stock form
+        if request.method == "GET"
+            
         # user input name is symbol. render apology if input blank or does not exist per lookup
         # user input shares as text field whose name is shares. render apology if input is not positive int
         # submit user input via post or buy
