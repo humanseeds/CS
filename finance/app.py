@@ -69,9 +69,13 @@ def buy():
         # run SQL statement on DB to purchase stock. is enough cash. if not return apology
           SELECT cash FROM users WHERE ID = ?
         # update cash to reflect purchase
-        UPDATE users SET cs = cash - ? WHERE ID = ?
+        UPDATE users SET cash = cash - (stock sharees x price) WHERE ID = ?
     # When for submit via POST, purchase the stock so long as user can afford it
 
+    # buying more of the same stock
+    INSERT INTO portfolio (id, symbol, shares)
+        VALUES (?, ?, ?) ON DUPLICATE KEY
+                UPDATE shares = shares + VALUES(shares)
     return apology("TODO")
 
 
