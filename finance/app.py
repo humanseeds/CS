@@ -67,9 +67,9 @@ def buy():
         # decide table names and fields UNIQUE or non-UNIQUE
         # CREATE TABLE to add new tables
         # run SQL statement on DB to purchase stock. is enough cash. if not return apology
-          SELECT cash FROM users WHERE id = 1
+          SELECT cash FROM users WHERE ID = ?
         # update cash to reflect purchase
-
+        UPDATE users SET cs = cash - ? WHERE ID = ?
     # When for submit via POST, purchase the stock so long as user can afford it
 
     return apology("TODO")
