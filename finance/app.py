@@ -100,7 +100,7 @@ def buy():
 		user_id= sessrion["user_id"], symbol=symbol, shares=shares, price=prices)
 
     # return user to homescreen
-	Return redirect("/")
+	return redirect("/")
 
     # if method is post
 	return render.template("buy.html")
