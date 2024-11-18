@@ -70,7 +70,7 @@ def buy():
 	if not symbol:
             return apology("Must Provide a Valid Symbol")
 
-	if not shares or shares.isdigit() or int(shares) <= 0:
+	if not shares or not shares.isdigit() or int(shares) <= 0:
 		return apology("Invalid Amount of Shares")
 
     # return user to homescreen
