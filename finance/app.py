@@ -67,9 +67,9 @@ def buy():
 
     # require user input number of shares in textfield name is shares or render apology if not positive int
 	if not symbol:
-            return apology("Must Give Valid Symbol")
+            return apology("Must Provide a Valid Symbol")
 
-	elif not shares or shares.isdigit() or int(shares) <= 0
+	if  not shares or shares.isdigit() or int(shares) <= 0
 		return apology("Invalid Amount of Shares")
 
     # return user to homescreen
@@ -77,7 +77,7 @@ def buy():
 
     # call the lookup function to find the sotck price
     quote = lookup(symbol.upper))
-    if quote == NONE:
+    if not quote:
 		return apology("Symbol Not Found")
 
     #calculate purchase
