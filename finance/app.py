@@ -37,12 +37,12 @@ def index():
     """Show portfolio of stocks"""
     # Display HTML table with the following. use lookup, SELECT GROUP BY HAVING SUM or WHERE
     # looping templates
-        #python- return render_template("hello.html",
+        # python- return render_template("hello.html",
             # contact=[{"name":"  ", "  ": "  "},
-                        #{"name": "  ", "  ": "  "}]
-         #jinja- {% for contact in contacts %}
-                    #<p>{{ contact.name}} live in {{contact.house}}</p>
-                #{% endfor %}
+                        # {"name": "  ", "  ": "  "}]
+         # jinja- {% for contact in contacts %}
+                    # <p>{{ contact.name}} live in {{contact.house}}</p>
+                # {% endfor %}
             # all stocks owned
             # number of shares per stock
             # current price of each stock
@@ -60,7 +60,6 @@ def buy():
     # When request via GET, display buy stock form
     if request.method == "GET":
         return render_template("buy.html")
-
 
     # require stocks symbol implemented name as symbol for lookup or return an apology
     symbol = request.form.get("symbol")
@@ -101,8 +100,6 @@ def buy():
     # return user to homescreen
 	return redirect("/")
 
-    # if method is post
-	return render.template("buy.html")
 
 
 @app.route("/history")
