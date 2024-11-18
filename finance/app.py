@@ -63,8 +63,8 @@ def buy():
 
     # require stocks symbol implemented name as symbol for lookup or return an apology
     symbol = request.form.get("symbol")
-	shares = request.form.get("shares")
-    
+	shares = int(request.form.get("shares"))
+
 
     # require user input number of shares in textfield name is shares or render apology if not positive int
 	if not symbol:
@@ -73,7 +73,6 @@ def buy():
 	if not shares or not shares.isdigit() or int(shares) <= 0:
 		return apology("Invalid Amount of Shares")
 
-    shares = int(shares)
 
     # return user to homescreen
 	Return render_template("home.html")
