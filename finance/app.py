@@ -63,7 +63,7 @@ def buy():
 
     # require stocks symbol implemented name as symbol for lookup or return an apology
     symbol = request.form.get("symbol")
-	shares = request.form.get("shares")
+	shares = int(request.form.get("shares"))
 
 
     # require user input number of shares in textfield name is shares or render apology if not positive int
