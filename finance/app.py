@@ -60,57 +60,48 @@ def buy():
     # When request via GET, display buy stock form
     if request.method == "GET":
         return render_template("buy.html")
-# require stocks symbol implemented name as symbol for lookup or return an apology
-	symbol = request.form.get("symbol")
+    # require stocks symbol implemented name as symbol for lookup or return an apology
+
+    symbol = request.form.get("symbol")
 	shares = request.form.get("shares")
 
-# require user input number of shares in textfield name is shares or render apology if not positive int
-	 if not symbol:
+    # require user input number of shares in textfield name is shares or render apology if not positive int
+	if not symbol:
             return apology("Must Give Valid Symbol")
 
 	elif not shares or shares.isdigit() or int(shares) <= 0
 		return apology("Invalid Amount of Shares")
 
-
-# return user to homescreen
+    # return user to homescreen
 	Return render_template("home.html")
 
-
-# call the lookup function to find the sotck price
-
-	quote = lookup(symbol.upper))
-
-	if quote == NONE:
+    # call the lookup function to find the sotck price
+    quote = lookup(symbol.upper))
+    if quote == NONE:
 		return apology("Symbol Not Found")
 
-
-#calculate purchase
+    #calculate purchase
 	price = quote["price"]
 	cost = int(shares) * price
 	cash = db.execute("SELECT cash FROM user WHERE id = user_id", user_id=session["user_id")[o]["cash"]
 
 
-
-	if cash < cost:
+    if cash < cost:
 		return.apology("Insufficient Funds")
 
-
-# update users table
+    # update users table
 	db.execute("UPDATE users SET cash = cash -: cost WHER id = user_id",
 		cost=cost, user_id=session["user_id"])
 
-# add purchase to history table
+    # add purchase to history table
 	db.execute("INSERT INTO tr4ansactions (user_id, symbol, shares, price) VALUES (":user_id, symbol, :shares, :price)",
 		user_id= sessrion["user_id"], symbol=symbol, shares=shares, price=prices)
 
-
-
-# return user to homescreen
+    # return user to homescreen
 	Return redirect("/")
 
-
-#if method is post
-	return render.template("buy.html")	
+    # if method is post
+	return render.template("buy.html")
 
 
 @app.route("/history")
