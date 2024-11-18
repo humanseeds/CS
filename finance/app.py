@@ -91,7 +91,7 @@ def buy():
 
     user_id = session["user_id"]
     user_cash = db.execute("SELECT cash FROM user WHERE id = :user_id", id=user_id"]
-    
+    user_cash = user_cash_db[0]["cash"]
     if user_cash < cost:
 		return.apology("Insufficient Funds")
 
