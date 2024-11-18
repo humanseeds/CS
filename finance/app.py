@@ -61,13 +61,14 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
-    # require stocks symbol implemented name as symbol for lookup or return an apology
-    symbol = request.form.get("symbol")
-	input_shares = request.form.get("shares")
+    else:
+        # require stocks symbol implemented name as symbol for lookup or return an apology
+        symbol = request.form.get("symbol")
+	    input_shares = request.form.get("shares")
 
 
     # require user input number of shares in textfield name is shares or render apology if not positive int
-	if not symbol:
+	    if not symbol:
             return apology("Must Provide a Valid Symbol")
 
 	if not input_shares or not input_shares.isdigit() or int(input_shares) <= 0:
