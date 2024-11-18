@@ -81,6 +81,7 @@ def buy():
     if not quote:
 		return apology("Symbol Not Found")
 
+
     #calculate purchase
 	price = quote["price"]
     cost = shares * price
