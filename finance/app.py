@@ -86,7 +86,7 @@ def buy():
 
 
     #calculate purchase
-	price = quote["price"]
+	price = stock["price"]
     cost = shares * price
 
 
