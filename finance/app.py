@@ -73,6 +73,7 @@ def buy():
 	if not shares or not shares.isdigit() or int(shares) <= 0:
 		return apology("Invalid Amount of Shares")
 
+    shares = int(shares)
     
     # return user to homescreen
 	Return render_template("home.html")
