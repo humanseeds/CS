@@ -74,7 +74,7 @@ def buy():
 		return apology("Invalid Amount of Shares")
 
     shares = int(shares)
-    
+
     # return user to homescreen
 	Return render_template("home.html")
 
@@ -93,12 +93,17 @@ def buy():
 		return.apology("Insufficient Funds")
 
     # update users table
-	db.execute("UPDATE users SET cash = cash -: cost WHER id = user_id",
-		cost=cost, user_id=session["user_id"])
+	db.execute("UPDATE users SET cash = cash - :cost WHER id = :user_id",
+		cost=cost,
+        user_id=session["user_id"])
 
     # add purchase to history table
-	db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (":user_id, symbol, :shares, :price)",
-		user_id= sessrion["user_id"], symbol=symbol, shares=shares, price=prices)
+	db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (":user_id, :symbol, :shares, :price)",
+		user_id= session["user_id"],
+        symbol=symbol,
+        shares=shares,
+        price=prices
+        )
 
     # return user to homescreen
 	return redirect("/")
