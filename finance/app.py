@@ -78,7 +78,7 @@ def buy():
 	Return render_template("home.html")
 
     # call the lookup function to find the sotck price
-    quote = lookup(symbol.upper))
+    quote = lookup(symbol.upper())
     if not quote:
 		return apology("Symbol Not Found")
 
