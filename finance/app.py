@@ -85,11 +85,11 @@ def buy():
 		return apology("Symbol Not Found")
 
 
-    #calculate purchase
+    # calculate purchase
 	    price = stock["price"]
         cost = shares * price
 
-
+    # determine if user has sufficient funds for the purchase order
         user_cash = db.execute("SELECT cash FROM user WHERE id = :user_id", user_id=session,[user_id][0]["cash"]
         if user_cash < cost:
 		    return.apology("Insufficient Funds")
