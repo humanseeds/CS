@@ -84,7 +84,7 @@ def buy():
 
     #calculate purchase
 	price = quote["price"]
-	cost = shares * price
+    cost = shares * price
 
     user_cash = db.execute("SELECT cash FROM user WHERE id = user_id", user_id=session["user_id")[o]["cash"]
     if user_cash < cost:
