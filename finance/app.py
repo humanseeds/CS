@@ -76,9 +76,9 @@ def buy():
     # return user to homescreen
 	Return render_template("home.html")
 
-    # call the lookup function to find the sotck price
-    quote = lookup(symbol.upper())
-    if not quote:
+    # call the lookup function to find the stock price
+    stock = lookup(symbol.upper())
+    if not stock:
 		return apology("Symbol Not Found")
 
 
