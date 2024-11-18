@@ -72,7 +72,7 @@ def buy():
             return apology("Must Provide a Valid Symbol")
 
 	    if not input_shares or not input_shares.isdigit() or int(input_shares) <= 0:
-		return apology("Invalid Amount of Shares")
+		    return apology("Invalid Amount of Shares")
 
      # convert amount of shares to an integer
         shares = int(input_shares)
