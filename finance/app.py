@@ -73,7 +73,7 @@ def buy():
 	if not shares or not shares.isdigit() or int(shares) <= 0:
 		return apology("Invalid Amount of Shares")
 
-    # convert input
+    # convert amount of shares to an integer
     shares = int(input_shares)
 
     # return user to homescreen
