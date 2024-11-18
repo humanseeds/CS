@@ -61,7 +61,6 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
-    if request.method == "POST":
         # require stocks symbol implemented name as symbol for lookup or return an apology
         symbol = request.form.get("symbol")
 	    input_shares = request.form.get("shares")
@@ -71,42 +70,42 @@ def buy():
 	    if not symbol:
             return apology("Must Provide a Valid Symbol")
 
-	if not input_shares or not input_shares.isdigit() or int(input_shares) <= 0:
+	    if not input_shares or not input_shares.isdigit() or int(input_shares) <= 0:
 		return apology("Invalid Amount of Shares")
 
-    # convert amount of shares to an integer
-    shares = int(input_shares)
+     # convert amount of shares to an integer
+        shares = int(input_shares)
 
     # return user to homescreen
-	Return render_template("home.html")
+	    Return render_template("home.html")
 
     # call the lookup function to find the stock price
-    stock = lookup(symbol.upper())
-    if not stock:
+        stock = lookup(symbol.upper())
+        if not stock:
 		return apology("Symbol Not Found")
 
 
     #calculate purchase
-	price = stock["price"]
-    cost = shares * price
+	    price = stock["price"]
+        cost = shares * price
 
 
-    user_cash = db.execute("SELECT cash FROM user WHERE id = :user_id", user_id=session,[user_id][0]["cash"]
-    if user_cash < cost:
-		return.apology("Insufficient Funds")
+        user_cash = db.execute("SELECT cash FROM user WHERE id = :user_id", user_id=session,[user_id][0]["cash"]
+        if user_cash < cost:
+		    return.apology("Insufficient Funds")
 
     # update users table
-	db.execute("UPDATE users SET cash = cash - :cost WHER id = :user_id",
-		cost=cost,
-        user_id=session["user_id"])
+	    db.execute("UPDATE users SET cash = cash - :cost WHER id = :user_id",
+		    cost=cost,
+            user_id=session["user_id"])
 
     # add purchase to history table
-	db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (":user_id, :symbol, :shares, :price)",
-		user_id= session["user_id"],
-        symbol=symbol,
-        shares=shares,
-        price=prices
-        )
+	    db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (":user_id, :symbol, :shares, :price)",
+		    user_id= session["user_id"],
+            symbol=symbol,
+            shares=shares,
+            price=prices
+            )
 
     # return user to homescreen
 	return redirect("/")
