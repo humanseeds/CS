@@ -60,25 +60,57 @@ def buy():
     # When request via GET, display buy stock form
     if request.method == "GET":
         return render_template("buy.html")
-        # user input name is symbol. render apology if input blank or does not exist per lookup
-        # user input shares as text field whose name is shares. render apology if input is not positive int
-        # submit user input via post or buy
-        # redirect user to homepage upon purchase
-    # lookup stock price, SELECT cash user has in users
-    # add new tables to finance.db to track purchaase.
-        # decide table names and fields UNIQUE or non-UNIQUE
-        # CREATE TABLE to add new tables
-        # run SQL statement on DB to purchase stock. is enough cash. if not return apology
-         ##SELECT cash FROM users WHERE ID = ?
-        # update cash to reflect purchase
-        ##UPDATE users SET cash = cash - (stock sharees x price) WHERE ID = ?
-    # When for submit via POST, purchase the stock so long as user can afford it
+# require stocks symbol implemented name as symbol for lookup or return an apology
+	symbol = request.form.get("symbol")
+	shares = request.form.get("shares")
 
-    # buying more of the same stock
-    ##INSERT INTO portfolio (id, symbol, shares)
-       # #VALUES (?, ?, ?) ON DUPLICATE KEY
-               ## UPDATE shares = shares + VALUES(shares)
-    return apology("TODO")
+# require user input number of shares in textfield name is shares or render apology if not positive int
+	 if not symbol:
+            return apology("Must Give Valid Symbol")
+
+	elif not shares or shares.isdigit() or int(shares) <= 0
+		return apology("Invalid Amount of Shares")
+
+
+# return user to homescreen
+	Return render_template("home.html")
+
+
+# call the lookup function to find the sotck price
+
+	quote = lookup(symbol.upper))
+
+	if quote == NONE:
+		return apology("Symbol Not Found")
+
+
+#calculate purchase
+	price = quote["price"]
+	cost = int(shares) * price
+	cash = db.execute("SELECT cash FROM user WHERE id = user_id", user_id=session["user_id")[o]["cash"]
+
+
+
+	if cash < cost:
+		return.apology("Insufficient Funds")
+
+
+# update users table
+	db.execute("UPDATE users SET cash = cash -: cost WHER id = user_id",
+		cost=cost, user_id=session["user_id"])
+
+# add purchase to history table
+	db.execute("INSERT INTO tr4ansactions (user_id, symbol, shares, price) VALUES (":user_id, symbol, :shares, :price)",
+		user_id= sessrion["user_id"], symbol=symbol, shares=shares, price=prices)
+
+
+
+# return user to homescreen
+	Return redirect("/")
+
+
+#if method is post
+	return render.template("buy.html")	
 
 
 @app.route("/history")
