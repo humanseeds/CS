@@ -99,7 +99,7 @@ def buy():
             user_id=session["user_id"])
 
     # add purchase to history table
-	    db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (":user_id, :symbol, :shares, :price)",
+	    db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (:user_id, :symbol, :shares, :price)",
 		    user_id=session["user_id"],
             symbol=symbol,
             shares=shares,
