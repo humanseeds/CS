@@ -105,7 +105,7 @@ def buy():
             )
 
     # Flash a message confirming the purchase order
-        flash(f "Congratulations! Purchase of {shares} of {symbol} for {usd(cost)} complete")
+         flash(f "Congratulations! Purchase of {shares} of {symbol} for {usd(cost)} complete")
 
     # return user to homescreen
 	return redirect("/")
