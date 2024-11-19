@@ -89,12 +89,12 @@ def buy():
 
     # determine if user has sufficient funds for the purchase order
         cash = db.execute("SELECT cash FROM user WHERE id = :user_id",
-            user_id=session,[user_id][0]["cash"]
+            user_id=session,[user_id])[0]["cash"]
         if cash < cost:
 		    return.apology("Insufficient Funds")
 
     # update users table
-	    db.execute("UPDATE users SET cash = cash - :cost WHER id = :user_id",
+	    db.execute("UPDATE users SET cash = cash - :cost WHERE id = :user_id",
 		    cost=cost,
             user_id=session["user_id"])
 
