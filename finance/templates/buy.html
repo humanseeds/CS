@@ -5,19 +5,18 @@
 {% endblock %}
 
 {% block main %}
+<h1>Buy</h1>
 <form action="/Buy" method="POST">
     <div class="mb-3">
         <input autocomplete="on" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
     </div>
+    <div class="mb-3">
+        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Shares" type="number">
+    </div
     <button class="btn btn-primary" type="submit">Buy</button>
 </form>
 
 
-<h1>BUY</h1>
-    <h3>Name: {{ name }}</h3>
-    <h3>Price: {{ price }}</h3>
-    <h3>Symbol: {{ symbol }}</h3>
-   <button class="btn btn-primary" type="submit">Buy</button>
 
 
 
