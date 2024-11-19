@@ -74,9 +74,6 @@ def buy():
 		    return apology("Invalid Amount of Shares")
 
 
-    # return user to homescreen
-	    Return render_template("home.html")
-
     # call the lookup function to find the stock price
         stock = lookup(symbol.upper())
         if not stock:
