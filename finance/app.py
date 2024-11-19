@@ -62,7 +62,7 @@ def buy():
         return render_template("buy.html")
 
     # require user input number of shares in textfield name is shares or render apology if not positive int
-     if not symbol:
+    if not symbol:
             return apology("Must Provide a Valid Symbol")
         if not input_shares or not input_shares.isdigit() or int(input_shares) <= 0:
 		    return apology("Invalid Amount of Shares")
