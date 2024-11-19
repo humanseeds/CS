@@ -118,7 +118,7 @@ def history():
     """Show history of transactions"""
     # display html table with history of all transactioins. one row per buy or sell
     # each row contains stock name, bought or sold, purchase of sale price, number of shares and date and time
-    #alter table for buy to minimize redundancies
+    # alter table for buy to minimize redundancies
     return apology("TODO")
 
 
