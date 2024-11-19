@@ -80,12 +80,13 @@ def buy():
     # call the lookup function to find the stock price
         stock = lookup(symbol.upper())
         if not stock:
-		return apology("Symbol Not Found")
+		    return apology("Symbol Not Found")
 
 
     # calculate purchase
 	    price = stock["price"]
-        cost = int(shares) * price
+        shares = int(input_shares)
+        cost = shares * price
 
     # determine if user has sufficient funds for the purchase order
         cash = db.execute("SELECT cash FROM users WHERE id = :user_id",
