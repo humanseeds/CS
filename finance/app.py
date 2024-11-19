@@ -68,20 +68,20 @@ def buy():
 
 
     # require user input number of shares in textfield name is shares or render apology if not positive int
-	    if not symbol:
+        if not symbol:
             return apology("Must Provide a Valid Symbol")
         if not input_shares or not input_shares.isdigit() or int(input_shares) <= 0:
-		    return apology("Invalid Amount of Shares")
+            return apology("Invalid Amount of Shares")
 
 
     # call the lookup function to find the stock price
         stock = lookup(symbol.upper())
         if not stock:
-		    return apology("Symbol Not Found")
+            return apology("Symbol Not Found")
 
 
     # calculate purchase
-	    price = stock["price"]
+        price = stock["price"]
         shares = int(input_shares)
         cost = shares * price
 
