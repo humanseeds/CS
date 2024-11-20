@@ -41,6 +41,7 @@ def index():
                         WHERE user_id = : user_id GROUP BY symbol AS total_shares > 0",
                         user_id=session["user_id"])
 
+
     cash_balance = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
 
 
