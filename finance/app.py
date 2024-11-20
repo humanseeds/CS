@@ -219,13 +219,12 @@ def register():
         hash = generate_password_hash(password)
 
         try:
-            new_user = db.execute("INSERT INTO users (username, hash) VALUES(?,?)", username, hash)
+            new_user = db.execute("INSERT INTO users (username, hash) VALUES(?,?)", (username, hash))
         except:
             return apology("Username Already Exists")
 
 
-        session["user_id"] = rows[0]["id"]
-
+        session["user_id"] = new_user
 
         return redirect("/")
 
