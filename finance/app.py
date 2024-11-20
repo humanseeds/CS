@@ -35,20 +35,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    # Display HTML table with the following. use lookup, SELECT GROUP BY HAVING SUM or WHERE
-    # looping templates
-        # python- return render_template("hello.html",
-            # contact=[{"name":"  ", "  ": "  "},
-                        # {"name": "  ", "  ": "  "}]
-         # jinja- {% for contact in contacts %}
-                    # <p>{{ contact.name}} live in {{contact.house}}</p>
-                # {% endfor %}
-            # all stocks owned
-            # number of shares per stock
-            # current price of each stock
-         # total value of each holding
-    # Display users cash balance
-    # display total value of stocks and cash together
+    user_id = session["user_id"]
 
     return apology("TODO")
 
