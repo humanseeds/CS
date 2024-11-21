@@ -42,9 +42,20 @@ def index():
                         user_id=session["user_id"])
 
 
-    cash_balance = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
+    cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
 
+    total_value =cash
+    grand_total = cash
 
+    for stock in stocks:
+        quote = lookup(stock["symbol"])
+        stock["name"] = quote["name"]
+        stock["price"] = quote["price"]
+        stock["value"] = stock["price"] * stock["total_shares"]
+        total_value += stock["value"]
+        grand_total += stock["value"]
+
+    return render_template("index.html", stocks=stocks, cash=cash, total_value=total_value, grand_total=grand_total)
 
 
 
