@@ -59,6 +59,7 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
+
     else:
          # require stocks symbol implemented name as symbol for lookup or return an apology
         symbol = request.form.get("symbol")
