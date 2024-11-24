@@ -35,10 +35,10 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    # Query the database for user's stocks and calculate total value directly in SQL
     stocks = db.execute("""
         SELECT
             symbol,
+            (SELECT name FROM stocks WHERE symbol = transactions.symbol LIMIT 1) AS name,
             SUM(shares) AS total_shares,
             (SELECT price FROM stocks WHERE symbol = transactions.symbol LIMIT 1) AS price,
             SUM(shares) * (SELECT price FROM stocks WHERE symbol = transactions.symbol LIMIT 1) AS total_value
@@ -56,7 +56,6 @@ def index():
 
     # Render the index page with calculated values
     return render_template("index.html", stocks=stocks, cash=cash, grand_total=grand_total)
-
 
 
 
