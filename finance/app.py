@@ -35,41 +35,33 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-      # Get the user_id from the session
-    user_id = session["user_id"]
+    @app.route("/")
+@login_required
+def index():
+    """Show portfolio of stocks"""
 
-    # Query transactions for the user's stocks
-    transactions = db.execute("""
-        SELECT symbol, SUM(shares) AS shares
+    # Query the database for user's stocks and calculate total value directly in SQL
+    stocks = db.execute("""
+        SELECT
+            symbol,
+            SUM(shares) AS total_shares,
+            (SELECT price FROM stocks WHERE symbol = transactions.symbol LIMIT 1) AS price,
+            SUM(shares) * (SELECT price FROM stocks WHERE symbol = transactions.symbol LIMIT 1) AS total_value
         FROM transactions
-        WHERE user_id = ?
+        WHERE user_id = :user_id
         GROUP BY symbol
-        HAVING shares > 0
-    """, user_id)
+        HAVING total_shares > 0
+    """, user_id=session["user_id"])
 
-    # Query user's cash balance
-    cash_query = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    cash = cash_query[0]["cash"] if cash_query else 0
+    # Query for user's available cash
+    cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
 
-    # Enrich stocks with current price and name
-    stocks = []
-    for transaction in transactions:
-        quote = lookup(transaction["symbol"])  # Assume lookup() fetches stock details
-        if quote:
-            stocks.append({
-                "symbol": transaction["symbol"],
-                "name": quote["name"],
-                "shares": transaction["shares"],
-                "price": quote["price"],
-                "value": transaction["shares"] * quote["price"]
-            })
+    # Calculate grand total directly
+    grand_total = cash + sum(stock["total_value"] for stock in stocks)
 
-    # Calculate total portfolio value (cash + stocks)
-    total_value = cash + sum(stock["value"] for stock in stocks)
+    # Render the index page with calculated values
+    return render_template("index.html", stocks=stocks, cash=cash, grand_total=grand_total)
 
-
-   # Render the index.html with updated stocks and cash
-    return render_template("index.html", stocks=stocks, cash=cash, total_value=total_value)
 
 
 
