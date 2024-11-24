@@ -67,7 +67,12 @@ def index():
     # Calculate total portfolio value (cash + stocks)
     total_value = cash + sum(stock["value"] for stock in stocks)
 
-    # Render the index.html with updated stocks and cash
+
+    print("Stocks:", stocks)
+    print("Cash:", cash)
+    print("Total Value:", total_value)
+
+   # Render the index.html with updated stocks and cash
     return render_template("index.html", stocks=stocks, cash=cash, total_value=total_value)
 
 
