@@ -35,13 +35,10 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+
+    # Query the database for user's stocks
     stocks = db.execute("""
-        SELECT
-            symbol,
-            (SELECT name FROM stocks WHERE symbol = transactions.symbol LIMIT 1) AS name,
-            SUM(shares) AS total_shares,
-            (SELECT price FROM stocks WHERE symbol = transactions.symbol LIMIT 1) AS price,
-            SUM(shares) * (SELECT price FROM stocks WHERE symbol = transactions.symbol LIMIT 1) AS total_value
+        SELECT symbol, SUM(shares) AS total_shares
         FROM transactions
         WHERE user_id = :user_id
         GROUP BY symbol
@@ -51,11 +48,19 @@ def index():
     # Query for user's available cash
     cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
 
-    # Calculate grand total directly
-    grand_total = cash + sum(stock["total_value"] for stock in stocks)
+    # Initialize total value
+    total_value = cash
 
-    # Render the index page with calculated values
-    return render_template("index.html", stocks=stocks, cash=cash, grand_total=grand_total)
+    # Update stocks data with additional details
+    for stock in stocks:
+        quote = lookup(stock["symbol"])
+        stock["name"] = quote["name"]
+        stock["price"] = quote["price"]
+        stock["value"] = stock["price"] * stock["total_shares"]
+        total_value += stock["value"]
+
+    # Render the index page with all calculated values
+    return render_template("index.html", stocks=stocks, cash=cash, total_value=total_value)
 
 
 
