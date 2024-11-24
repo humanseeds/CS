@@ -35,11 +35,6 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    @app.route("/")
-@login_required
-def index():
-    """Show portfolio of stocks"""
-
     # Query the database for user's stocks and calculate total value directly in SQL
     stocks = db.execute("""
         SELECT
