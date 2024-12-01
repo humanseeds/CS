@@ -13,7 +13,7 @@
       <th>Name</th>
       <th>Shares</th>
       <th>Price</th>
-      <th>stock_value</th>
+      <th>Stock Value</th>
     </tr>
   </thead>
   <tbody>
@@ -31,9 +31,9 @@
       <td>{{ cash | usd }}</td>
     </tr>
     <tr>
-      <td colspan="4">Grand Total</td>
-      <td>{{ grand_total | usd }}</td>
+      <td colspan="4">Total Value</td>
+      <td>{{ total_value | usd }}</td>
     </tr>
   </tbody>
 </table>
-{% endblock %}                         
+{% endblock %}

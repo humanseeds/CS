@@ -70,12 +70,12 @@ def index():
     cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=user_id)[0]["cash"]
 
     # Calculate the grand total (cash + stocks)
-    grand_total = cash + sum(stock["value"] for stock in stocks)
+    total_value = cash + sum(stock["value"] for stock in stocks)
 
 
 
     # Render the index.html with stock data, cash, and grand total
-    return render_template("index.html", stocks=stocks, cash=cash, grand_total=grand_total)
+    return render_template("index.html", stocks=stocks, cash=cash, total_value=total_value)
 
 
 
