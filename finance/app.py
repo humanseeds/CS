@@ -73,9 +73,6 @@ def index():
     grand_total = cash + sum(stock["value"] for stock in stocks)
 
 
-    print("Stocks list:", stocks)
-    print("Cash balance:", cash)
-    print("Total portfolio value:", total_value)
 
     # Render the index.html with stock data, cash, and grand total
     return render_template("index.html", stocks=stocks, cash=cash, grand_total=grand_total)
