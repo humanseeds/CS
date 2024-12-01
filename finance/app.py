@@ -75,7 +75,7 @@ def index():
 
 
     # Render the index.html with stock data, cash, and grand total
-    return render_template("index.html", stocks=stocks, cash=cash, grand_total=grand_total)
+    return render_template("Index.html", stocks=stocks, cash=cash, grand_total=grand_total)
 
 
 
