@@ -277,6 +277,7 @@ def register():
 def sell():
     """Sell shares of stock"""
     # When requested via GET, display form to sell stock
+    if request.method="GET"
         # display form implemented as select
         # name is symbol
         #render apology user doesnt ownt the stock or selects the wrong stock
