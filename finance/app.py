@@ -235,7 +235,7 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-        #check is username,password, and confirmation are valid
+        # check is username,password, and confirmation are valid
         if not username:
             return apology("Input Valid Username")
         if not password:
@@ -247,15 +247,15 @@ def register():
             return apology("Passwords Must Match")
         # hash user password for security
         hash = generate_password_hash(password)
-        #
+        # insert new user into sql new user table, return error if name exists
         try:
             new_user = db.execute("INSERT INTO users (username, hash) VALUES(?,?)", (username, hash))
         except:
             return apology("Username Already Exists")
 
-
+        # store user ID session to automically log them in
         session["user_id"] = new_user
-
+        # redirect user to home page if registration was successful
         return redirect("/")
 
 
