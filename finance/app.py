@@ -50,7 +50,7 @@ def index():
     # make a list to store the stock data
     stocks = []
 
-    # Loop through each stock and enrich it with name, price, and value
+    # Loop through transactions and 
     for transaction in transactions:
         symbol = transaction["symbol"]
         total_shares = transaction["total_shares"]
