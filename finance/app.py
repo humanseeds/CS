@@ -285,9 +285,10 @@ def sell():
         # render apology user doesnt ownt the stock or selects the wrong stock
 
         # require number of shares as text field whose name is shares. render apology if integer is negative
-    
+
     #submit via POST to SELL
     else:
+
     # when submitted via POST, check for errors and sell specified number of shares and updates users cash
 
     # redirect to homepage upoin completion
