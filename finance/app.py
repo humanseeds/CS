@@ -295,7 +295,10 @@ def sell():
         # require number of shares as text field whose name is shares. render apology if integer is negative
 
     #submit via POST to SELL
-    else:
+    else: if request.method =="POST":
+        #
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares") 
 
     # when submitted via POST, check for errors and sell specified number of shares and updates users cash
 
