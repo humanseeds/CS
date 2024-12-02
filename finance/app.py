@@ -207,15 +207,15 @@ def quote():
     # when request via GET, display stock quote
     if request.method == "POST":
         symbol = request.form.get("symbol")
-
+        # return apology if stock symbol is invalid
         if not symbol:
             return apology("Must Give Valid Symbol")
-
+        # use lookup function to return stock symbol quote
         quote = lookup(symbol)
-
+        # return apology if symbol is not found
         if not quote:
             return apology("Invalid Symbol")
-
+        # redirect to quote.html when the stock is found
         return render_template("quote.html", quote=quote)
 
 
