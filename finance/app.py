@@ -286,6 +286,7 @@ def sell():
             GROUP BY symbol
             HAVING total_shares > 0
             """ user_id=session["user_id"])
+        return render_template("sell.html", stocks=stocks)
 
 
         # render apology user doesnt ownt the stock or selects the wrong stock
