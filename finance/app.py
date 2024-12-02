@@ -229,7 +229,7 @@ def register():
     # when request via GET, display registration page
     if request.method == "GET":
         return render_template("register.html")
-
+    # 
     else:
         username = request.form.get("username")
         password = request.form.get("password")
