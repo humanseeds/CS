@@ -35,10 +35,10 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    # get logged in users data
+    user_id = session["user_id"]
 
-    user_id = session["user_id"]  # Get logged-in user's ID
-
-    # Query the database for user's stock portfolio
+    # search the database for user's stock portfolio
     transactions = db.execute("""
         SELECT symbol, SUM(shares) AS total_shares
         FROM transactions
@@ -47,7 +47,7 @@ def index():
         HAVING total_shares > 0
     """, user_id=user_id)
 
-    # Prepare a list to store enriched stock data
+    # make a list to store the stock data
     stocks = []
 
     # Loop through each stock and enrich it with name, price, and value
