@@ -286,7 +286,7 @@ def sell():
             GROUP BY symbol
             HAVING total_shares > 0
             """ user_id=session["user_id"])
-        #
+        # pss available stock to the html template
         return render_template("sell.html", stocks=stocks)
 
 
