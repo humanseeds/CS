@@ -229,22 +229,23 @@ def register():
     # when request via GET, user is visting the registration page
     if request.method == "GET":
         return render_template("register.html")
-    # if request is POST from form submission, process registration 
+    # if request is POST from form submission, process registration
     else:
+        # retrieve data from registratioin form
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-
+        #check is username,password, and confirmation are valid
         if not username:
             return apology("Input Valid Username")
         if not password:
             return apology("Input Valid Password")
         if not confirmation:
             return apology("Must Confirm Password")
-
+        # return error message  if not valid
         if password != confirmation:
             return apology("Passwords Must Match")
-
+        # hash user password for security
         hash = generate_password_hash(password)
 
         try:
