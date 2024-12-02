@@ -204,21 +204,25 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    # when request via GET, display stock quote
+    # when request via POST, display stock quote
     if request.method == "POST":
         symbol = request.form.get("symbol")
+
         # return apology if stock symbol is invalid
         if not symbol:
             return apology("Must Give Valid Symbol")
+
         # use lookup function to return stock symbol quote
         quote = lookup(symbol)
+
         # return apology if symbol is not found
         if not quote:
             return apology("Invalid Symbol")
-        # redirect to quote.html when the stock is found
+
+        # render the quote.html when the stock info is found
         return render_template("quote.html", quote=quote)
 
-
+    # for Get request, diisplay the quote form
     return render_template("quote.html")
 
 
@@ -229,12 +233,15 @@ def register():
     # when request via GET, user is visting the registration page
     if request.method == "GET":
         return render_template("register.html")
+
     # if request is POST from form submission, process registration
     else:
+
         # retrieve data from registratioin form
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
+
         # check is username,password, and confirmation are valid
         if not username:
             return apology("Input Valid Username")
@@ -242,11 +249,14 @@ def register():
             return apology("Input Valid Password")
         if not confirmation:
             return apology("Must Confirm Password")
+
         # return error message  if not valid
         if password != confirmation:
             return apology("Passwords Must Match")
+
         # hash user password for security
         hash = generate_password_hash(password)
+
         # insert new user into sql new user table, return error if name exists
         try:
             new_user = db.execute("INSERT INTO users (username, hash) VALUES(?,?)", (username, hash))
@@ -255,6 +265,7 @@ def register():
 
         # store user ID session to automically log them in
         session["user_id"] = new_user
+
         # redirect user to home page if registration was successful
         return redirect("/")
 
