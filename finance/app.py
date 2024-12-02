@@ -50,12 +50,12 @@ def index():
     # make a list to store the stock data
     stocks = []
 
-    # Loop through transactions and 
+    # Loop through transactions and
     for transaction in transactions:
         symbol = transaction["symbol"]
         total_shares = transaction["total_shares"]
 
-        # Use lookup() to fetch stock name and price
+        # Use lookup() to find the  stock name,symbol,total shares, price and value
         stock_data = lookup(symbol)
         if stock_data:
             stocks.append({
@@ -66,10 +66,10 @@ def index():
                 "value": total_shares * stock_data["price"]
             })
 
-    # Query the user's cash balance
+    # search for the user's cash balance
     cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=user_id)[0]["cash"]
 
-    # Calculate the grand total (cash + stocks)
+    # Calculate the total value (cash + stocks)
     total_value = cash + sum(stock["value"] for stock in stocks)
 
 
