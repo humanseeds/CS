@@ -278,7 +278,7 @@ def sell():
     """Sell shares of stock"""
     # When requested via GET, display form to sell stock
     if request.method == "GET":
-        # search databse for availbe stocks to sell
+        # search databse for available stocks to sell
         stocks = db.execute("""
             SELECT symbol, SUM(shares) AS total_shares
             FROM transactions
@@ -286,6 +286,7 @@ def sell():
             GROUP BY symbol
             HAVING total_shares > 0
             """ user_id=session["user_id"])
+        #
         return render_template("sell.html", stocks=stocks)
 
 
