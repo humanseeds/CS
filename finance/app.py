@@ -50,12 +50,12 @@ def index():
     # make a list to store the stock data
     stocks = []
 
-    # Loop through transactions and
+    # Loop through transactions and find the symbols and amount of shares
     for transaction in transactions:
         symbol = transaction["symbol"]
         total_shares = transaction["total_shares"]
 
-        # Use lookup() to find the  stock name,symbol,total shares, price and value
+        # Use the lookup function to find the  real time stock name,symbol,total shares, price and value
         stock_data = lookup(symbol)
         if stock_data:
             stocks.append({
