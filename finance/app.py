@@ -291,7 +291,7 @@ def sell():
 
     # when submitted via POST, check for errors and sell specified number of shares and updates users cash
 
-    # redirect to homepage upoin completion
+    # redirect to homepage upon completion
     return apology("TODO")
 
 
