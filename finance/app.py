@@ -247,7 +247,7 @@ def register():
             return apology("Passwords Must Match")
         # hash user password for security
         hash = generate_password_hash(password)
-
+        #
         try:
             new_user = db.execute("INSERT INTO users (username, hash) VALUES(?,?)", (username, hash))
         except:
