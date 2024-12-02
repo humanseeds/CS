@@ -279,6 +279,7 @@ def sell():
     # When requested via GET, display form to sell stock
     if request.method == "GET":
         # display form implemented as select
+        
         # name is symbol
         # render apology user doesnt ownt the stock or selects the wrong stock
         # require number of shares as text field whose name is shares. render apology if integer is negative
