@@ -72,6 +72,7 @@ def index():
     # Calculate the total value (cash + stocks)
     total_value = cash + sum(stock["value"] for stock in stocks)
 
+
     # Render the index.html with stock data, cash, and grand total
     return render_template("index.html", stocks=stocks, cash=cash, total_value=total_value)
 
