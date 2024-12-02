@@ -278,9 +278,15 @@ def sell():
     """Sell shares of stock"""
     # When requested via GET, display form to sell stock
     if request.method == "GET":
-        # display form implemented as select
-
-        # name is symbol
+        # search databse for availbe stocks to sell
+        available_stocks = db.execute("""
+            SELECT symbol, SUM(shares) AS total_shares
+            FROM transactions
+            WHERE user_id = :user_id
+            GROUP BY symbol
+            HAVING total_shares > 0
+            """ user_id=session["user_id"])
+        
 
         # render apology user doesnt ownt the stock or selects the wrong stock
 
