@@ -300,12 +300,15 @@ def sell():
         symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
 
-        # validate a proper symbol
+        # make sure the stock symbol is valid and return an apology if not
         if not symbol:
-            return apology("Must provide stock symbol"):
+            return apology("Must provide stock symbol")
+
+        # validate the number of shares is positive
         elif not shares or not shares.isdigit() or int(shares) <=0:
             return apology("Must provide a positive amount of shares")
-        else:
+
+        # convert shares to int
             shares = int(shares)
 
     return apology("TODO")
