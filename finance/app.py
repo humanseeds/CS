@@ -296,9 +296,11 @@ def sell():
 
     #submit via POST to SELL
     if request.method =="POST":
-        #
+        # get the stock symbol and shares from the form
         symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
+
+        # validate a proper symbol
         if not symbol:
             return apology("Must provide stock symbol"):
         elif not shares or not shares.isdigit() or int(shares) <=0:
