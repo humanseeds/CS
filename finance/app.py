@@ -85,7 +85,7 @@ def buy():
         return render_template("buy.html")
 
     else:
-         # require stocks symbol implemented name as symbol for lookup or return an apology
+        # require stocks symbol implemented name as symbol for lookup or return an apology
         symbol = request.form.get("symbol")
         input_shares = request.form.get("shares")
 
@@ -107,22 +107,22 @@ def buy():
 
     # determine if user has sufficient funds for the purchase order
         cash = db.execute("SELECT cash FROM users WHERE id = :user_id",
-            user_id=session["user_id"])[0]["cash"]
+                          user_id=session["user_id"])[0]["cash"]
         if cash < cost:
             return apology("Insufficient Funds")
 
     # update users table
         db.execute("UPDATE users SET cash = cash - :cost WHERE id = :user_id",
-		    cost=cost,
-            user_id=session["user_id"])
+                   cost=cost,
+                   user_id=session["user_id"])
 
     # add purchase to history table
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (:user_id, :symbol, :shares, :price)",
-		    user_id=session["user_id"],
-            symbol=symbol,
-            shares=shares,
-            price=price
-            )
+                   user_id=session["user_id"],
+                   symbol=symbol,
+                   shares=shares,
+                   price=price
+                   )
 
     # Flash a message confirming the purchase order
         flash(f"Congratulations! Purchase of {shares} of {symbol} for {usd(cost)} complete")
@@ -270,69 +270,66 @@ def sell():
     # When requested via GET, display form to sell stock
     if request.method == "GET":
 
-        # search databse for available stocks to sell
+        # Search database for available stocks to sell
         stocks = db.execute("""
             SELECT symbol, SUM(shares) AS total_shares
             FROM transactions
             WHERE user_id = :user_id
             GROUP BY symbol
             HAVING total_shares > 0
-            """, user_id=session["user_id"])
+        """, user_id=session["user_id"])
 
-        # pass available stock to the html template
+        # Pass available stock to the HTML template
         return render_template("sell.html", stocks=stocks)
 
-    # submit via POST to SELL
+    # Submit via POST to SELL
     if request.method == "POST":
-        # get the stock symbol and shares from the form
+        # Get the stock symbol and shares from the form
         symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
 
-        # make sure the stock symbol is valid and return an apology if not
+        # Make sure the stock symbol is valid and return an apology if not
         if not symbol:
             return apology("Must provide stock symbol")
 
-        # validate the number of shares is positive
+        # Validate the number of shares is positive
         elif not shares or not shares.isdigit() or int(shares) <= 0:
             return apology("Must provide a positive amount of shares")
 
-        # convert shares to int
+        # Convert shares to int
         shares = int(shares)
 
-        # query how many shares of each stock the current logged in user has
+        # Query how many shares of each stock the current logged-in user has
         user_shares = db.execute("""
             SELECT SUM(shares) AS total_shares
             FROM transactions
             WHERE user_id = :user_id
             AND symbol = :symbol
             GROUP BY symbol
-            """,
-            user_id=session["user_id"],
-            symbol=symbol)
+        """, user_id=session["user_id"], symbol=symbol)
 
         if not user_shares or user_shares[0]["total_shares"] < shares:
             return apology("Not enough shares for sell order")
 
-        # get the current stock price of the symbol and find the total value
+        # Get the current stock price of the symbol and find the total value
         stock_price = lookup(symbol)
         sale_value = stock_price["price"] * shares
 
-        # record the sale into the database
-       db.execute("""
-           INSERT INTO transactions(user_id, symbol, shares, price)
-           VALUES (:user_id, :symbol, :shares, :price)""",
-           user_id=session["user_id"]
-           
-           symbol=symbol,
-           shares=shares
-           price=stock_price["price"]
+        # Record the sale into the database
+        db.execute("""
+            INSERT INTO transactions(user_id, symbol, shares, price)
+            VALUES (:user_id, :symbol, :shares, :price)
+        """, user_id=session["user_id"], symbol=symbol, shares=-shares, price=stock_price["price"])
 
-        # update users cash total
-        db.execute("UPDATE users SET cash = cash + :sale_value WHERE id = :user_id",
-                   sale_value=sale_value,
-                   user_id=session["user_id"])
+        # Update user's cash total
+        db.execute("""
+            UPDATE users SET cash = cash + :sale_value WHERE id = :user_id
+        """, sale_value=sale_value, user_id=session["user_id"])
 
         return redirect("/")
+
+    return apology("TODO")
+
     return apology("TODO")
 
 
