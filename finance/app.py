@@ -310,7 +310,13 @@ def sell():
         shares = int(shares)
 
         #check if user owns enoguh shares
-        user_shares = db.execute("""SELECT SUM(shares) AS total_shares FROM transactions)
+        user_shares = db.execute("""
+            SELECT SUM(shares) AS total_shares
+            FROM transactions
+            WHERE user_id = "user_id
+            AND symbol = :symbol
+            GROUP BY symbol
+            """ )
 
 
 
