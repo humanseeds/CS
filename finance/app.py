@@ -309,7 +309,7 @@ def sell():
         # convert shares to int
         shares = int(shares)
 
-        #check if user owns enough shares
+        # query how many shares of each stock the current logged in user has
         user_shares = db.execute("""
             SELECT SUM(shares) AS total_shares
             FROM transactions
@@ -320,6 +320,8 @@ def sell():
             user_id=session["user_id"],
             symbol=symbol)
 
+        if not user_shares or user_shares[0]["total_shares"] < shares:
+            return apology("Not enough shares for sell order")
 
 
     return apology("TODO")
