@@ -340,6 +340,8 @@ def sell():
         db.execute("UPDATE users SET cash = cash + :sale_value WHERE id = :user_id",
                    sale_value=sale_value,
                    user_id=session["user_id"])
+
+        return redirect("/")
     return apology("TODO")
 
 
