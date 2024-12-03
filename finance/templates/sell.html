@@ -8,8 +8,9 @@
     <h1>Sell</h1>
     <form action="/sell" method="POST">
         <div class="mb-3">
-            <label for="symbol" class="form-label">Select Stock to Sell:</label>
-            <select name="symbol" id="symbol" class="form-control mx-auto w-auto">
+            <input autocomplete="on" autofocus class="form-control mx-auto w-auto"
+                   id="shares" name="shares" placeholder="Stock Symbol"
+                   type="symbol" min="1" required>
                 {% for symbol in symbols %}
                     <option value="{{ symbol }}">{{ symbol }}</option>
                 {% endfor %}
