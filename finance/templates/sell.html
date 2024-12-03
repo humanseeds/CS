@@ -10,7 +10,7 @@
 <h1>Sell</h1>
 <form action="/sell" method="POST">
     <select name="symbol">
-        {% for stock in available_stocks %}
+        {% for symbol in symbols %}
             <option value="{{ stock['symbol'] }}">{{ stock['symbol'] }}</option>
         {% endfor %}
      </select>
