@@ -323,6 +323,9 @@ def sell():
         if not user_shares or user_shares[0]["total_shares"] < shares:
             return apology("Not enough shares for sell order")
 
+        # get the current stock prive
+        
+
 
     return apology("TODO")
 
