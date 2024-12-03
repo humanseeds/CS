@@ -7,22 +7,25 @@
 {% block main %}
     <h1>Sell</h1>
     <form action="/sell" method="POST">
+
+        <!-- Dropdown for Stock Symbol -->
         <div class="mb-3">
-            <input autocomplete="on" autofocus class="form-control mx-auto w-auto"
-                   id="shares" name="shares" placeholder="Stock Symbol"
-                   type="symbol" min="1" required>
+            <select id="symbol" name="symbol" class="form-control mx-auto w-auto">
+                <option value="" disabled selected>Select a stock</option>
                 {% for symbol in symbols %}
                     <option value="{{ symbol }}">{{ symbol }}</option>
                 {% endfor %}
             </select>
         </div>
 
+        <!-- Input for Number of Shares -->
         <div class="mb-3">
             <input autocomplete="on" autofocus class="form-control mx-auto w-auto"
                    id="shares" name="shares" placeholder="Number of Shares"
                    type="number" min="1" required>
         </div>
 
+        <!-- Submit Button -->
         <button class="btn btn-primary" type="submit">Sell</button>
     </form>
 {% endblock %}
