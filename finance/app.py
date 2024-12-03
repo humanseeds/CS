@@ -72,11 +72,8 @@ def index():
     # Calculate the total value (cash + stocks)
     total_value = cash + sum(stock["value"] for stock in stocks)
 
-
     # Render the index.html with stock data, cash, and grand total
     return render_template("index.html", stocks=stocks, cash=cash, total_value=total_value)
-
-
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -87,12 +84,10 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
-
     else:
          # require stocks symbol implemented name as symbol for lookup or return an apology
         symbol = request.form.get("symbol")
         input_shares = request.form.get("shares")
-
 
     # require user input number of shares in textfield name is shares or render apology if not positive int
         if not symbol:
@@ -100,12 +95,10 @@ def buy():
         if not input_shares or not input_shares.isdigit() or int(input_shares) <= 0:
             return apology("Invalid Amount of Shares")
 
-
     # call the lookup function to find the stock price
         stock = lookup(symbol.upper())
         if not stock:
             return apology("Symbol Not Found")
-
 
     # calculate purchase
         price = stock["price"]
@@ -136,7 +129,6 @@ def buy():
 
     # return user to homescreen
         return redirect("/")
-
 
 
 @app.route("/history")
@@ -225,7 +217,6 @@ def quote():
     return render_template("quote.html")
 
 
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
@@ -258,7 +249,8 @@ def register():
 
         # insert new user into sql new user table, return error if name exists
         try:
-            new_user = db.execute("INSERT INTO users (username, hash) VALUES(?,?)", (username, hash))
+            new_user = db.execute(
+                "INSERT INTO users (username, hash) VALUES(?,?)", (username, hash))
         except:
             return apology("Username Already Exists")
 
@@ -267,7 +259,6 @@ def register():
 
         # redirect user to home page if registration was successful
         return redirect("/")
-
 
     return apology("TODO")
 
@@ -291,8 +282,7 @@ def sell():
         # pass available stock to the html template
         return render_template("sell.html", stocks=stocks)
 
-
-    #submit via POST to SELL
+    # submit via POST to SELL
     if request.method == "POST":
         # get the stock symbol and shares from the form
         symbol = request.form.get("symbol").upper()
@@ -303,7 +293,7 @@ def sell():
             return apology("Must provide stock symbol")
 
         # validate the number of shares is positive
-        elif not shares or not shares.isdigit() or int(shares) <=0:
+        elif not shares or not shares.isdigit() or int(shares) <= 0:
             return apology("Must provide a positive amount of shares")
 
         # convert shares to int
