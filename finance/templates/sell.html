@@ -9,19 +9,16 @@
 
 <h1>Sell</h1>
 <form action="/sell" method="POST">
-    <div class="mb-3">
-        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
-    </div>
-    <div class="mb-3">
+    <select name="symbol">
+        {% for stock in available_stocks %}
+            <option value="{{ stock['symbol'] }}">{{ stock['symbol'] }}</option>
+        {% endfor %}
+     </select>
+     s="mb-3">
         <input autocomplete="on" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Number of Shares" type="number">
     </div>
     <button class="btn btn-primary" type="submit">Sell</button>
 </form>
-<select name="symbol">
-   {% for stock in available_stocks %}
-       <option value="{{ stock['symbol'] }}">{{ stock['symbol'] }}</option>
-   {% endfor %}
-</select>
 
 {% endblock %}
 
