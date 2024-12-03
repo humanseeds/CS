@@ -313,21 +313,24 @@ def sell():
 
         # Get the current stock price of the symbol and find the total value
         stock_price = lookup(symbol)
-        sale_value = stock_price["price"] * shares
+        # Get the current stock price of the symbol
+        stock_price = lookup(symbol)
 
         # Record the sale into the database
         db.execute("""
             INSERT INTO transactions(user_id, symbol, shares, price)
             VALUES (:user_id, :symbol, :shares, :price)
-        """, user_id=session["user_id"], symbol=symbol, shares=-shares, price=stock_price["price"])
+            """, user_id=session["user_id"], symbol=symbol, shares=-shares, price=stock_price["price"])
 
-        # Update user's cash total
+        # Update user's cash total, calculate sale value directly in the SQL query
         db.execute("""
-            UPDATE users SET cash = cash + :sale_value,timestamp = CURRENT_TIMESTAMP
+            UPDATE users
+            SET cash = cash + (:shares * :price), timestamp = CURRENT_TIMESTAMP
             WHERE id = :user_id
-        """, sale_value=sale_value, user_id=session["user_id"])
+            """, shares=-shares, price=stock_price["price"], user_id=session["user_id"])
 
-        return redirect("/")
+    return redirect("/")
+
 
     return apology("TODO")
 
