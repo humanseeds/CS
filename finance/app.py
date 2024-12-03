@@ -307,8 +307,9 @@ def sell():
             return apology("Must provide a positive amount of shares")
 
         # convert shares to int
-            shares = int(shares)
+        shares = int(shares)
 
+        #check if user owns enoguh shares
     return apology("TODO")
 
 
