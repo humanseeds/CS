@@ -314,9 +314,6 @@ def sell():
         # Get the current stock price of the symbol and find the total value
         stock_price = lookup(symbol)
 
-        # Get the current stock price of the symbol
-        stock_price = lookup(symbol)
-
         # Record the sale into the database
         db.execute("""
             INSERT INTO transactions(user_id, symbol, shares, price)
