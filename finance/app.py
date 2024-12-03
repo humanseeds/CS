@@ -295,10 +295,16 @@ def sell():
         # require number of shares as text field whose name is shares. render apology if integer is negative
 
     #submit via POST to SELL
-    else: if request.method =="POST":
+    if request.method =="POST":
         #
-        symbol = request.form.get("symbol")
+        symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
+        if not symbol:
+            return apology("Must provide stock symbol"):
+        elif not shares or not shares.isdigit() or int(shares) <=0:
+            return apology("Must provide a positive amount of shares")
+        else:
+            shares = int(shares)
 
     return apology("TODO")
 
