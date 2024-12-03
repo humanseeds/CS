@@ -11,7 +11,7 @@
         <!-- Dropdown for Stock Symbol -->
         <div class="mb-3">
             <select id="symbol" name="symbol" class="form-control mx-auto w-auto">
-                <option value="" disabled selected>Select a stock</option>
+                <option value="" disabled selected>Select stock</option>
                 {% for symbol in symbols %}
                     <option value="{{ symbol }}">{{ symbol }}</option>
                 {% endfor %}
