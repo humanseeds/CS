@@ -329,7 +329,7 @@ def sell():
 
         # record the sale into the database
        db.execute("""
-                  INSERT INTO transactions(user_id, symbol,shares,price)
+                  INSERT INTO transactions(user_id, symbol, shares, price)
                   VALUES (:user_id, :symbol, :shares, :price)""",
                   user_id=session["user_id"]
                   symbol=symbol,
