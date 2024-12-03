@@ -323,10 +323,13 @@ def sell():
         if not user_shares or user_shares[0]["total_shares"] < shares:
             return apology("Not enough shares for sell order")
 
-        # get the current stock prive
+        # get the current stock price of the symbol and find the total value
         stock_price = lookup(symbol)
         sale_value = stock_price["price"] * shares
 
+        # record the sale into the database
+       db.execute("""
+                  INSERT INTO transactions)
 
     return apology("TODO")
 
