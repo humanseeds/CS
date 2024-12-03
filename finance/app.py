@@ -309,7 +309,7 @@ def sell():
         # convert shares to int
         shares = int(shares)
 
-        #check if user owns enoguh shares
+        #check if user owns enough shares
         user_shares = db.execute("""
             SELECT SUM(shares) AS total_shares
             FROM transactions
