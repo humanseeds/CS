@@ -329,12 +329,12 @@ def sell():
 
         # record the sale into the database
        db.execute("""
-                  INSERT INTO transactions(user_id, symbol, shares, price)
-                  VALUES (:user_id, :symbol, :shares, :price)""",
-                  user_id=session["user_id"]
-                  symbol=symbol,
-                  shares=shares
-                  price=stock_price["price"]
+           INSERT INTO transactions(user_id, symbol, shares, price)
+           VALUES (:user_id, :symbol, :shares, :price)""",
+           user_id=session["user_id"]
+           symbol=symbol,
+           shares=shares
+           price=stock_price["price"]
 
         # update users cash total
         db.execute("UPDATE users SET cash = cash + :sale_value WHERE id = :user_id",
