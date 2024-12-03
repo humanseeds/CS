@@ -313,10 +313,12 @@ def sell():
         user_shares = db.execute("""
             SELECT SUM(shares) AS total_shares
             FROM transactions
-            WHERE user_id = "user_id
+            WHERE user_id = :user_id
             AND symbol = :symbol
             GROUP BY symbol
-            """ )
+            """,
+            user_id=session["user_id"],
+            symbol=symbol)
 
 
 
