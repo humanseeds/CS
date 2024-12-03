@@ -324,7 +324,7 @@ def sell():
             return apology("Not enough shares for sell order")
 
         # get the current stock prive
-        stock_price = lookupup(symbol)
+        stock_price = lookup(symbol)
         sale_value = stock_price["price"] * shares
 
 
