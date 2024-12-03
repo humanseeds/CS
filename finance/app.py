@@ -286,14 +286,14 @@ def sell():
             WHERE user_id = :user_id
             GROUP BY symbol
             HAVING total_shares > 0
-            """ user_id=session["user_id"])
+            """, user_id=session["user_id"])
 
         # pass available stock to the html template
         return render_template("sell.html", stocks=stocks)
 
 
     #submit via POST to SELL
-    if request.method =="POST":
+    if request.method == "POST":
         # get the stock symbol and shares from the form
         symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
