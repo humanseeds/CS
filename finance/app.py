@@ -290,7 +290,7 @@ def sell():
         return render_template("sell.html", stocks=stocks)
 
 
-        # render apology user doesnt ownt the stock or selects the wrong stock
+        # render apology user doesnt own the stock or selects the wrong stock
 
         # require number of shares as text field whose name is shares. render apology if integer is negative
 
@@ -298,11 +298,8 @@ def sell():
     else: if request.method =="POST":
         #
         symbol = request.form.get("symbol")
-        shares = request.form.get("shares") 
+        shares = request.form.get("shares")
 
-    # when submitted via POST, check for errors and sell specified number of shares and updates users cash
-
-    # redirect to homepage upon completion
     return apology("TODO")
 
 
