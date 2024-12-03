@@ -255,7 +255,7 @@ def register():
             return apology("Username Already Exists")
 
         # store user ID session to automically log them in
-        session["user_id"] = new_user
+        session["user_id"] = new_user[0]["id"]
 
         # redirect user to home page if registration was successful
         return redirect("/")
