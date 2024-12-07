@@ -61,10 +61,13 @@ document.addEventListener("DOMContentLoaded", function(){
             // loop from 1 until the total amount of shares for the stock
             for (let i = 1, i <= totalShares, i++){
 
-                // create an option for each share that can be sold,
+                // create an option for each share that can be sold, start at
                 const option = documnet.createElement("option");
+
+                // store number of shares
                 option.value = i;
-                option.textContent = i;
+
+                // 
                 sharesSelect.appendChild(option);
             }
         }
