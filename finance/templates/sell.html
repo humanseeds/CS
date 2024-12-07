@@ -33,8 +33,17 @@
  up to the amount of apple instead of tesla shares. -->
 <script>
 document.addEventListener("DOMContentLoaded", function()){
-   const symbolSelect = document.getElementById("symbol");
-   const symbolSelect = document.getElementById("shares");
+    const symbolSelect = document.getElementById("symbol");
+    const symbolSelect = document.getElementById("shares");
+
+    const stockShares = {};
+
+    {% for stock in stocks %}
+        stockShares["{{ stock['symbol'] }}"] = {{ stock['total_shares'] }};
+    {% endfor %}
+
+    symbolSelect.addEventListener("change", function())
+
 }
 
 
