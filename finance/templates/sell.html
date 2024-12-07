@@ -54,9 +54,11 @@ document.addEventListener("DOMContentLoaded", function(){
         sharesSelect.innerHTML = "";
 
         // populates the shares dropdown with appropriate amount of shares per stock option
-        // ensure number of shares is positive
+        // ensure valid stock and number of shares is positive
         if (selectedSymbol && stockShares[selectedSymbol] > 0){
             const totalShares = stockShares[selectedSymbol];
+
+            // 
             for (let i = 1, i <= totalShares, i++){
                 const option = documnet.createElement("option");
                 option.value = 1;
