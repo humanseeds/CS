@@ -32,19 +32,36 @@
  their mind after selecting tesla, and decideds to sell apple instea, the dropdown will change to limit
  up to the amount of apple instead of tesla shares. -->
 <script>
-document.addEventListener("DOMContentLoaded", function()){
+
+// create event listeners for symbols and shares drop downs
+document.addEventListener("DOMContentLoaded", function(){
     const symbolSelect = document.getElementById("symbol");
     const symbolSelect = document.getElementById("shares");
 
+    // create a map to store symbol and its available shares
     const stockShares = {};
 
+    // loop through each stock and shares to store in map
     {% for stock in stocks %}
         stockShares["{{ stock['symbol'] }}"] = {{ stock['total_shares'] }};
     {% endfor %}
 
-    symbolSelect.addEventListener("change", function())
+    // 
+    symbolSelect.addEventListener("change", function(){
+        const selectedSymbol = symbolSelect.value;
+        sharesSelect.innerHTML = "";
 
-}
+        if (selectedSymbol && stockShares[selectedSymbol] > 0){
+            const totalShares = stockShares[selectedSymbol];
+            for (let i = 1, i <= totalShares, i++){
+                const option = documnet.createElement("option");
+                option.value = 1;
+                option.textContent = i;
+                sharesSelect.appendChild(option);
+            }
+        }
+    });
+});
 
 
 </script>
