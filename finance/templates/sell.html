@@ -47,11 +47,11 @@ document.addEventListener("DOMContentLoaded", function(){
     {% endfor %}
 
     // this function is called whenever the symbol category changes
-    symbolSelect.addEventListener("change", function(){
-        const selectedSymbol = symbolSelect.value;
+    function updatedSharesDropdown(selectedSymbol){
 
         // this clears existing options in shares when change function is activated
         sharesSelect.innerHTML = "";
+        const totalShares = stockShares[selectedSymbol];
 
         // populates the shares dropdown with appropriate amount of shares per stock option
         // ensure valid stock and number of shares is positive
