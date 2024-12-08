@@ -55,8 +55,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         // populates the shares dropdown with appropriate amount of shares per stock option
         // ensure valid stock and number of shares is positive
-        if (selectedSymbol && stockShares[selectedSymbol] > 0){
-            const totalShares = stockShares[selectedSymbol];
+        if (totalShares > 0){
 
             // loop from 1 until the total amount of shares for the stock
             for (let i = 1; i <= totalShares; i++){
@@ -70,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 // add option element to the dropdown menu
                 sharesSelect.appendChild(option);
             }
+        } 
         }
     });
 });
