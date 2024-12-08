@@ -26,56 +26,37 @@
     </form>
 
 <script>
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
+    // Get references to the stock symbol and shares dropdowns
     const symbolSelect = document.getElementById("symbol");
     const sharesSelect = document.getElementById("shares");
 
-    // create a map to store symbol and its available shares
+    // Initialize a map to store stock symbols and their available shares
     const stockShares = {};
 
-    // loop through each stock and shares to store in map
+    // Loop through each available stock and store its shares in the map
     {% for stock in stocks %}
         stockShares["{{ stock['symbol'] }}"] = {{ stock['total_shares'] }};
     {% endfor %}
 
-    // function to update shares dropdown based on selected stock symbol
-    function updateSharesDropdown(selectedSymbol) {
-        // clear existing options
-        sharesSelect.innerHTML = "";
-        const totalShares = stockShares[selectedSymbol];
+    // This function is called when the stock symbol changes
+    symbolSelect.addEventListener("change", function () {
+        const selectedSymbol = symbolSelect.value;
 
-        if (totalShares > 0) {
-            // add options to the dropdown for shares
+        // Clear the existing options in the shares dropdown
+        sharesSelect.innerHTML = "";
+
+        // Add options for the selected stock, based on the number of shares
+        if (selectedSymbol && stockShares[selectedSymbol] > 0) {
+            const totalShares = stockShares[selectedSymbol];
             for (let i = 1; i <= totalShares; i++) {
                 const option = document.createElement("option");
                 option.value = i;
                 option.textContent = i;
                 sharesSelect.appendChild(option);
             }
-        } else {
-            // add a placeholder if no shares available for the selected stock
-            const option = document.createElement("option");
-            option.value = "";
-            option.textContent = "No shares available";
-            sharesSelect.appendChild(option);
-        }
-    }
-
-    // handle stock symbol change event
-    symbolSelect.addEventListener("change", function(){
-        const selectedSymbol = symbolSelect.value;
-        if (selectedSymbol) {
-            updateSharesDropdown(selectedSymbol);
-        } else {
-            // clear the shares dropdown if no stock selected
-            sharesSelect.innerHTML = "<option value=''>Select number of shares</option>";
         }
     });
-
-    // initialize dropdown when page loads (if a stock is selected by default)
-    if (symbolSelect.value) {
-        updateSharesDropdown(symbolSelect.value);
-    }
 });
 </script>
 
