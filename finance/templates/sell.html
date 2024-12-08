@@ -26,15 +26,6 @@
     </form>
 
 <script>
-
-<!-- This is my personal touch. Some simple javascript to limit the dropdown menu for shares.
- Shares dropdown will be updated to only allow up to the amount of shares owned of the individual stock
- for the user. Example, 9 shares of tesla stock, the dropwdown menu is limited to 9. If the user changes
- their mind after selecting tesla, and decideds to sell apple instea, the dropdown will change to limit
- up to the amount of apple instead of tesla shares. -->
-<script>
-
-// create event listeners for symbols and shares drop downs
 document.addEventListener("DOMContentLoaded", function(){
     const symbolSelect = document.getElementById("symbol");
     const sharesSelect = document.getElementById("shares");
@@ -47,32 +38,45 @@ document.addEventListener("DOMContentLoaded", function(){
         stockShares["{{ stock['symbol'] }}"] = {{ stock['total_shares'] }};
     {% endfor %}
 
-    // this function is called whenever the symbol category changes
-    symbolSelect.addEventListener("change", function(){
-        const selectedSymbol = symbolSelect.value;
-
-        // this clears existing options in shares when change function is activated
+    // function to update shares dropdown based on selected stock symbol
+    function updateSharesDropdown(selectedSymbol) {
+        // clear existing options
         sharesSelect.innerHTML = "";
+        const totalShares = stockShares[selectedSymbol];
 
-        // populates the shares dropdown with appropriate amount of shares per stock option
-        // ensure valid stock and number of shares is positive
-        if (selectedSymbol && stockShares[selectedSymbol] > 0){
-            const totalShares = stockShares[selectedSymbol];
-
-            // loop from 1 until the total amount of shares for the stock
-            for (let i = 1; i <= totalShares; i++){
-
-                // create an option for each share that can be sold, start at
+        if (totalShares > 0) {
+            // add options to the dropdown for shares
+            for (let i = 1; i <= totalShares; i++) {
                 const option = document.createElement("option");
-
-                // store number of shares as option
                 option.value = i;
                 option.textContent = i;
-                // add option element to the dropdown menu
                 sharesSelect.appendChild(option);
             }
+        } else {
+            // add a placeholder if no shares available for the selected stock
+            const option = document.createElement("option");
+            option.value = "";
+            option.textContent = "No shares available";
+            sharesSelect.appendChild(option);
+        }
+    }
+
+    // handle stock symbol change event
+    symbolSelect.addEventListener("change", function(){
+        const selectedSymbol = symbolSelect.value;
+        if (selectedSymbol) {
+            updateSharesDropdown(selectedSymbol);
+        } else {
+            // clear the shares dropdown if no stock selected
+            sharesSelect.innerHTML = "<option value=''>Select number of shares</option>";
         }
     });
+
+    // initialize dropdown when page loads (if a stock is selected by default)
+    if (symbolSelect.value) {
+        updateSharesDropdown(symbolSelect.value);
+    }
 });
 </script>
+
 {% endblock %}
