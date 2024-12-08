@@ -27,41 +27,52 @@
 
 <script>
 
-/*This is my personal touch. the shares dropdown will be limited to the shares based on the individual
-stock. if the user changes which stock the have the dropdown menu will change. this way the user can not
-select too many shares*/
-document.addEventListener("DOMContentLoaded", function () {
-    // Get references to the stock symbol and shares dropdowns
+<!-- This is my personal touch. Some simple javascript to limit the dropdown menu for shares.
+ Shares dropdown will be updated to only allow up to the amount of shares owned of the individual stock
+ for the user. Example, 9 shares of tesla stock, the dropwdown menu is limited to 9. If the user changes
+ their mind after selecting tesla, and decideds to sell apple instea, the dropdown will change to limit
+ up to the amount of apple instead of tesla shares. -->
+<script>
+
+// create event listeners for symbols and shares drop downs
+document.addEventListener("DOMContentLoaded", function(){
     const symbolSelect = document.getElementById("symbol");
     const sharesSelect = document.getElementById("shares");
 
-    // Initialize a map to store stock symbols and their available shares
+    // create a map to store symbol and its available shares
     const stockShares = {};
 
-    // Loop through each available stock and store its shares in the map
+    // loop through each stock and shares to store in map
     {% for stock in stocks %}
         stockShares["{{ stock['symbol'] }}"] = {{ stock['total_shares'] }};
     {% endfor %}
 
-    // This function is called when the stock symbol changes
-    symbolSelect.addEventListener("change", function () {
+    // this function is called whenever the symbol category changes
+    symbolSelect.addEventListener("change", function(){
         const selectedSymbol = symbolSelect.value;
 
-        // Clear the existing options in the shares dropdown
+        // this clears existing options in shares when change function is activated
         sharesSelect.innerHTML = "";
 
-        // Add options for the selected stock, based on the number of shares
-        if (selectedSymbol && stockShares[selectedSymbol] > 0) {
+        // populates the shares dropdown with appropriate amount of shares per stock option
+        // ensure valid stock and number of shares is positive
+        if (selectedSymbol && stockShares[selectedSymbol] > 0){
             const totalShares = stockShares[selectedSymbol];
-            for (let i = 1; i <= totalShares; i++) {
+
+            // loop from 1 until the total amount of shares for the stock
+            for (let i = 1; i <= totalShares; i++){
+
+                // create an option for each share that can be sold, start at
                 const option = document.createElement("option");
+
+                // store number of shares as option
                 option.value = i;
                 option.textContent = i;
+                // add option element to the dropdown menu
                 sharesSelect.appendChild(option);
             }
         }
     });
 });
 </script>
-
 {% endblock %}
