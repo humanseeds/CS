@@ -135,9 +135,12 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    # display html table with history of all transactioins. one row per buy or sell
-    # each row contains stock name, bought or sold, purchase of sale price, number of shares and date and time
-    # alter table for buy to minimize redundancies
+    # search databse for all of users transaction and but them in decending order
+    transactions = db.execute(
+        "SELECT * FROM transactions WHERE user_id = :user_id ORDER BY timestamp DESC", user_id=session["user_id"])
+
+    return render_template("history.html", transactions=transactions)
+
     return apology("TODO")
 
 
@@ -329,8 +332,4 @@ def sell():
 
     return redirect("/")
 
-
     return apology("TODO")
-
-
-
