@@ -74,7 +74,10 @@ document.addEventListener("DOMContentLoaded", function(){
             const selectedSymbol = symbolSelect.value;
             if (selectedSymbol){
                 updateSharesDropdown(selectedSymbol);
-                } 
+                } else {
+            // clear the shares dropdown if no stock selected
+            sharesSelect.innerHTML = "<option value=''>Select number of shares</option>";
+        }
         }
     });
 });
