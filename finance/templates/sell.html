@@ -26,44 +26,41 @@
     </form>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const symbolSelect = document.getElementById("symbol");
-            const sharesSelect = document.getElementById("shares");
 
-            // Create a map to store the stock shares
-            const stockShares = {};
-            {% for stock in stocks %}
-                stockShares["{{ stock['symbol'] }}"] = {{ stock['total_shares'] }};
-            {% endfor %}
 
-            // Function to update the shares dropdown based on selected stock
-            function updateSharesDropdown() {
-                const selectedSymbol = symbolSelect.value;
-                sharesSelect.innerHTML = "<option value='' disabled selected>Select shares</option>";
+document.addEventListener("DOMContentLoaded", function () {
+    // Get references to the stock symbol and shares dropdowns
+    const symbolSelect = document.getElementById("symbol");
+    const sharesSelect = document.getElementById("shares");
 
-                if (selectedSymbol && stockShares[selectedSymbol]) {
-                    for (let i = 1; i <= stockShares[selectedSymbol]; i++) {
-                        const option = document.createElement("option");
-                        option.value = i;
-                        option.textContent = i;
-                        sharesSelect.appendChild(option);
-                    }
-                } else {
-                    const option = document.createElement("option");
-                    option.value = "";
-                    option.textContent = "No shares available";
-                    sharesSelect.appendChild(option);
-                }
+    // Initialize a map to store stock symbols and their available shares
+    const stockShares = {};
+
+    // Loop through each available stock and store its shares in the map
+    {% for stock in stocks %}
+        stockShares["{{ stock['symbol'] }}"] = {{ stock['total_shares'] }};
+    {% endfor %}
+
+    // This function is called when the stock symbol changes
+    symbolSelect.addEventListener("change", function () {
+        const selectedSymbol = symbolSelect.value;
+
+        // Clear the existing options in the shares dropdown
+        sharesSelect.innerHTML = "";
+
+        // Add options for the selected stock, based on the number of shares
+        if (selectedSymbol && stockShares[selectedSymbol] > 0) {
+            const totalShares = stockShares[selectedSymbol];
+            for (let i = 1; i <= totalShares; i++) {
+                const option = document.createElement("option");
+                option.value = i;
+                option.textContent = i;
+                sharesSelect.appendChild(option);
             }
+        }
+    });
+});
 
-            // Call updateSharesDropdown on symbol change
-            symbolSelect.addEventListener("change", updateSharesDropdown);
-
-            // Initialize the shares dropdown on page load if a symbol is already selected
-            if (symbolSelect.value) {
-                updateSharesDropdown();
-            }
-        });
         </script>
 
 
