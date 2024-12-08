@@ -1,14 +1,44 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    History
+  Portfolio
 {% endblock %}
 
 {% block main %}
-
-
-
-
-
-
+<h1>Portfolio</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Name</th>
+      <th>Shares</th>
+      <th>Price</th>
+      <th>Stock Value</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for stock in stocks %}
+    <tr>
+      <td>{{ stock.symbol }}</td>
+      <td>{{ stock.name }}</td>
+      <td>{{ stock.total_shares }}</td>
+      <td>{{ stock.price | usd }}</td>
+      <td>{{ stock.value | usd }}</td>
+      <thd>{{ stock.time }}</thd>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="right">Cash</td>
+      <td>{{ cash | usd }}</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="right">Total Value</td>
+      <td>{{ total_value | usd }}</td>
+    </tr>
+  </tbody>
+</table>
 {% endblock %}

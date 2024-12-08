@@ -334,7 +334,3 @@ def sell():
 
 
 
-
-# NEW FEATURE
-    # create new features not listed i.e change password, add cash to account,
-    # or add more stocks or shares already owned viaw index
