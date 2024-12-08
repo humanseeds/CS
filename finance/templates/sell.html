@@ -69,7 +69,12 @@ document.addEventListener("DOMContentLoaded", function(){
                 // add option element to the dropdown menu
                 sharesSelect.appendChild(option);
             }
-        } 
+        }
+        symbolSelect.addEventLister("change",function(){
+            const selectedSymbol = symbolSelect.value;
+            if (selectedSymbol){
+                updateSharesDropdown(selectedSymbol);
+                } 
         }
     });
 });
