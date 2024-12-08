@@ -26,16 +26,6 @@
       <td>{{ transaction.timestamp }}</td>
     </tr>
     {% endfor %}
-      <td colspan="5">&nbsp;</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="right">Cash</td>
-      <td>{{ cash | usd }}</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="right">Total Value</td>
-      <td>{{ total_value | usd }}</td>
-    </tr>
   </tbody>
 </table>
 {% endblock %}
