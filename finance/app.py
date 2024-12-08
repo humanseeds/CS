@@ -322,12 +322,12 @@ def sell():
             VALUES (:user_id, :symbol, :shares, :price)
             """, user_id=session["user_id"], symbol=symbol, shares=-shares, price=stock_price["price"])
 
-        # Update user's cash total, calculate sale value directly in the SQL query
+        # Update user's cash total, without modifying the timestamp column
         db.execute("""
             UPDATE users
-            SET cash = cash + (:shares * :price), timestamp = CURRENT_TIMESTAMP
+            SET cash = cash + (:shares * :price)
             WHERE id = :user_id
-            """, shares=-shares, price=stock_price["price"], user_id=session["user_id"])
+        """, shares=-shares, price=stock_price["price"], user_id=session["user_id"])
 
     return redirect("/")
 
