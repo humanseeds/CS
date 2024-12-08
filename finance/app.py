@@ -141,7 +141,6 @@ def history():
 
     return render_template("history.html", transactions=transactions)
 
-    return apology("TODO")
 
 
 @app.route("/login", methods=["GET", "POST"])
