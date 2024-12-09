@@ -135,7 +135,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    # search databse for all of users transaction and but them in decending order
+    # search databse for all of users transaction and put them in decending order
     transactions = db.execute(
         "SELECT * FROM transactions WHERE user_id = :user_id ORDER BY timestamp DESC", user_id=session["user_id"])
 
@@ -152,6 +152,7 @@ def login():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
+
         # Ensure username was submitted
         if not request.form.get("username"):
             return apology("must provide username", 403)
@@ -330,4 +331,3 @@ def sell():
 
     return redirect("/")
 
-    
