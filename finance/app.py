@@ -237,13 +237,13 @@ def register():
 
         # check is username,password, and confirmation are valid
         if not username:
-            return apology("Input Valid Username", 400)
+            return apology("Input Valid Username")
         if not password:
-            return apology("Input Valid Password", 400)
+            return apology("Input Valid Password")
         if not confirmation:
-            return apology("Must Confirm Password", 400)
+            return apology("Must Confirm Password")
         if password != confirmation:
-            return apology("Passwords Must Match", 400)
+            return apology("Passwords Must Match")
 
 
         # return error message  if not valid
