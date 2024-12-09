@@ -237,11 +237,11 @@ def register():
 
         # check is username,password, and confirmation are valid
         if not username:
-            return apology("Input Valid Username")
+            return render_template("register.html", error="Please provide a username.")
         if not password:
-            return apology("Input Valid Password")
-        if not confirmation:
-            return apology("Must Confirm Password")
+            return render_template("register.html", error="Please provide a password.")
+        if password != confirmation:
+            return render_template("register.html", error="Passwords must match.")
 
         # return error message  if not valid
         if password != confirmation:
