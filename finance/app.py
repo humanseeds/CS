@@ -247,9 +247,6 @@ def register():
             return apology("Must Confirm Password")
         if password != confirmation:
             return apology("Passwords Must Match")
-
-
-        # return error message  if not valid
         if password != confirmation:
             return apology("Passwords Must Match")
 
