@@ -84,7 +84,7 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
-    else:
+    if request.methor == "POST:
         # require stocks symbol implemented name as symbol for lookup or return an apology
         symbol = request.form.get("symbol")
         input_shares = request.form.get("shares")
@@ -179,7 +179,7 @@ def login():
         return redirect("/")
 
     # If request via GET redirect
-    else:
+    if request.method == "GET":
         return render_template("login.html")
 
 
@@ -228,7 +228,7 @@ def register():
         return render_template("register.html")
 
     # if request is POST from form submission, process registration
-    else:
+    if request.method == "POST":
 
         # retrieve data from registratioin form
         username = request.form.get("username")
