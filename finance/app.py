@@ -251,7 +251,7 @@ def register():
             return apology("Passwords Must Match")
 
         # check if username is already taken
-        existing_user = db.execute("SELECT * FROM users WHERE username =?",(username,))
+        existing_user = db.execute("SELECT * FROM users WHERE username = ?",username,)
 
         # return apology if username is already taken
         if existing_user:
@@ -263,7 +263,7 @@ def register():
         # insert new user into sql new user table, return error if name exists
         try:
             new_user = db.execute(
-                "INSERT INTO users (username, hash) VALUES(?,?)", (username, hash))
+                "INSERT INTO users (username, hash) VALUES(?,?)", username, hash)
         except:
             return apology("Username Already Exists")
 
