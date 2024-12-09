@@ -213,6 +213,9 @@ def quote():
         if not quote:
             return apology("Invalid Symbol")
 
+        # format price
+        quote["price"] = f'{quote['price']:.2f}"
+
         # render the quote.html when the stock info is found
         return render_template("quote.html", quote=quote)
 
