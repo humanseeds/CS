@@ -286,6 +286,7 @@ def sell():
 
     # Submit via POST to SELL
     if request.method == "POST":
+
         # Get the stock symbol and shares from the form
         symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
@@ -301,7 +302,7 @@ def sell():
         # Convert shares to int
         shares = int(shares)
 
-        # Query how many shares of each stock the current logged-in user has
+        # search DB for how many shares of each stock the current user has
         user_shares = db.execute("""
             SELECT SUM(shares) AS total_shares
             FROM transactions
@@ -322,7 +323,7 @@ def sell():
             VALUES (:user_id, :symbol, :shares, :price)
             """, user_id=session["user_id"], symbol=symbol, shares=-shares, price=stock_price["price"])
 
-        # Update user's cash total, without modifying the timestamp column
+        # Update user's cash total
         db.execute("""
             UPDATE users
             SET cash = cash + (:shares * :price)
