@@ -84,7 +84,7 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
-    if request.methor == "POST:
+    if request.method == "POST":
         # require stocks symbol implemented name as symbol for lookup or return an apology
         symbol = request.form.get("symbol")
         input_shares = request.form.get("shares")
