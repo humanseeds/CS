@@ -251,7 +251,7 @@ def register():
             return apology("Passwords Must Match")
 
         # check if username is already taken
-        existing_user = db.execute("SELECT * FROM users WHERE username = ?",username,)
+        existing_user = db.execute("SELECT * FROM users WHERE username = ?", (username,))
 
         # return apology if username is already taken
         if existing_user:
@@ -268,7 +268,7 @@ def register():
             return apology("Username Already Exists")
 
         # store user ID session to automically log them in
-        session["user_id"] = new_user[0]["id"]
+        session["user_id"] = new_user
 
         # redirect user to home page if registration was successful
         return redirect("/")
