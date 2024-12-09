@@ -247,6 +247,13 @@ def register():
         if password != confirmation:
             return apology("Passwords Must Match")
 
+        # check if username is already taken
+        existing_user = db.execute("SELECT * FROM users WHERE username =?",(username,))
+
+        # return apology if username is already taken
+        if existing_user:
+            return apology("Username Already Exists)
+
         # hash user password for security
         hash = generate_password_hash(password)
 
