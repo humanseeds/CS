@@ -252,7 +252,7 @@ def register():
 
         # return apology if username is already taken
         if existing_user:
-            return apology("Username Already Exists)
+            return apology("Username Already Exists")
 
         # hash user password for security
         hash = generate_password_hash(password)
