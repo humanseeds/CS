@@ -262,7 +262,6 @@ def register():
         # redirect user to home page if registration was successful
         return redirect("/")
 
-    return apology("TODO")
 
 
 @app.route("/sell", methods=["GET", "POST"])
@@ -331,4 +330,4 @@ def sell():
 
     return redirect("/")
 
-    return apology("TODO")
+    
