@@ -18,28 +18,37 @@
         <div class="mb-3">
             <label for="maxShares">Total Available Shares:</label>
             <input type="text" class="form-control mx-auto w-auto" id="maxShares readonly
-                    placeholder="Select Stock to view maximum available shares"
-                >
+                        placeholder=" Select Stock to view maximum available shares">
 
+            </div>
+
+
+
+
+
+
+             <div class="mb-3">
+        <label for="">Number of Shares to be Sold</label>
+        </input type="number" class="form-control mx-auto w-auto" name="shares id=" shares min="1" required>
         </div>
 
+       <button class="btn btn-primary" type="submit">Sell</button>
+     </form>
+
+
+     <script>
+        document.getElementById("symbol").addEventListener("change", function () {
+            // Get the selected option
+            const selectedOption = this.options[this.selectedIndex];
+
+            // Extract the max shares from the data attribute
+            const maxShares = selectedOption.dataset.shares || "";
+
+            // Update the maxShares box
+            document.getElementById("maxShares").value = maxShares;
+        });
+    </script>
 
 
 
-
-
-        <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="shares" name="shares" required>
-                <option value="">Number of Shares to be Sold</option>
-            </input>
-        </div>
-
-        <button class="btn btn-primary" type="submit">Sell</button>
-    </form>
-
-
-
-
-
-
-{% endblock %}
+        {% endblock %}
