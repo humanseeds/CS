@@ -59,44 +59,20 @@ shares of a selected stock and present the total value of the sale so the user k
 exactly how much the will make on the transaction */
 
 //create event listeners for symbol, shares, and value
-document.addEventListener("DOMContentLoaded", function(){
-    const symbolSelect = document.getElementById("symbol");
-    const maxSharesInput = document.getElementById("maxShares");
-    const totalValueInput = document.getElementById("totalPrice");
 
-    // create a map to store the data
-    const stockData = {};
+document.getElementById("symbol").addEventListener("change", function () {
+    const selectedOption = this.options[this.selectedIndex];
 
-    // loop through the data to store in the map
-    {% for stock in stocks %}
-        stockData["{{ stock['symbol'] }}"] = {
-            totalShares: {{ stock['total_shares'] }},
-            price: {{ stock['price_per_share'] }}
-        };
-    {% endfor %}
+    // Get the maxShares from the data attribute
+    const maxShares = selectedOption.dataset.shares || "";
 
-    // listen for symbol dropdown changes
-    symbolSelect.addEventListener("change", function(){
-        const selectedSymbol = symbolSelect.value;
+    // Update maxShares input
+    document.getElementById("maxShares").value = maxShares;
 
-        //clear max shares and total value initially
-        maxSharesInput.value = "";
-        totalValueInput.value = "";
-
-        //update values when a stock is selected
-        if (selectedSymbol in stockData) {
-            const stock = stockData[selectedSymbol];
-            const maxShares = stock.totalShares;
-            const price = stock.price;
-
-            // update max shares
-            maxSharesInput.value = maxShares;
-
-            // calculate and update total value of the sale
-            const totalValue = maxShares * price;
-            totalValueInput.value = `$${totalValue.toFixed(2)}`;
-        }
-    });
+    // Calculate and update the total value of the sale
+    const price = selectedOption.dataset.price || 0;
+    const totalValue = maxShares * price;
+    document.getElementById("totalPrice").value = "$" + totalValue.toFixed(2);
 });
 </script>
 
