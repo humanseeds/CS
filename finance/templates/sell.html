@@ -5,13 +5,6 @@
 
 {% block main %}
     <h1>Sell</h1>
-    <style>
-        .centered-input {
-            text-align: center; /* Horizontally centers the text */
-            vertical-align: middle; /* Helps with vertical alignment */
-        }
-    </style>
-
     <form action="/sell" method="POST">
         <div class="mb-3">
             <!--  -->
@@ -30,7 +23,7 @@
             <label for="maxShares" >Total Available Shares:</label>
             <input
                 type="text"
-                class="form-control mx-auto w-auto"
+                class="form-control mx-auto w-auto centered-input"
                 id="maxShares"
                 readonly
                 placeholder="Select stock to view">
