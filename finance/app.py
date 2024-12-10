@@ -318,6 +318,11 @@ def sell():
         if not user_shares or user_shares[0]["total_shares"] < shares:
             return apology("Not enough shares for sell order")
 
+        if shares > user_shares[0]["total_shares"]:
+            flash("You don't own enough shares to sell that amount.", "error")
+            return redirect("/sell")
+
+
         stock_price = lookup(symbol)
 
         # Record the sale into the database
