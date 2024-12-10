@@ -81,10 +81,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
         //clear max shares and total value initially
         maxSharesInput.value = "":
-        totalValueInput = "";
+        totalValueInput.value = "";
 
         //update values when a stock is selected
-        if (selectedSymbol in stockData){
+        if (selectedSymbol in stockData) {
             const stock = stockData[selectedSymbol];
             const maxShares = stock.totalShares;
             const price = stock.price;
