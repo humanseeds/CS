@@ -40,8 +40,17 @@
                 min="1"
                 required>
         </div>
-          <button class="btn btn-primary" type="submit">Sell</button>
-    </form>
+             <div class="mb-3 text-center">
+            <label for="totalPrice" class="form-label d-block">Total Sale Value:</label>
+            <input
+                type="text"
+                class="form-control mx-auto w-auto"
+                id="totalPrice"
+                readonly
+                placeholder="Select stock and number of shares">
+        </div>
+        <button class="btn btn-primary" type="submit">Sell</button>
+        </form>
 
     <script>
         // Update maxShares box when stock selection changes
