@@ -1,5 +1,4 @@
 {% extends "layout.html" %}
-
 {% block title %}
     Sell
 {% endblock %}
@@ -12,9 +11,7 @@
             <select class="form-control mx-auto w-auto" name="symbol" id="symbol" required>
                 <option value="">Select a stock</option>
                 {% for stock in stocks %}
-                    <option value="{{ stock['symbol'] }}"
-                            data-shares="{{ stock['total_shares'] }}"
-                            data-price="{{ stock['price_per_share'] }}">
+                    <option value="{{ stock['symbol'] }}" data-shares="{{ stock['total_shares'] }}">
                         {{ stock['symbol'] }}
                     </option>
                 {% endfor %}
@@ -26,7 +23,7 @@
             <label for="maxShares" >Total Available Shares:</label>
             <input
                 type="text"
-                class="form-control mx-auto  w-auto centered-input"
+                class="form-control mx-auto w-auto"
                 id="maxShares"
                 readonly
                 placeholder="Select stock to view">
@@ -43,45 +40,21 @@
                 min="1"
                 required>
         </div>
-             <div class="mb-3 text-center">
-            <label for="totalPrice" class="form-label d-block">Total Sale Value:</label>
-            <input
-                type="text"
-                class="form-control mx-auto w-auto"
-                id="totalPrice"
-                readonly
-                placeholder="Select stock and number of shares">
-        </div>
+
         <button class="btn btn-primary" type="submit">Sell</button>
-      </form>
+    </form>
 
     <script>
-        // Event listener for stock selection
+        // Update maxShares box when stock selection changes
         document.getElementById("symbol").addEventListener("change", function () {
+            // Get the selected option
             const selectedOption = this.options[this.selectedIndex];
 
-            // Get the maxShares and price from the data attributes
+            // Extract the max shares from the data attribute
             const maxShares = selectedOption.dataset.shares || "";
-            const price = selectedOption.dataset.price || 0;
 
-            // Update maxShares input
+            // Update the maxShares box
             document.getElementById("maxShares").value = maxShares;
-
-            // Calculate and update the total value of the sale based on maxShares
-            const totalValue = maxShares * price;
-            document.getElementById("totalPrice").value = "$" + totalValue.toFixed(2);
-        });
-
-        // Event listener for number of shares input
-        document.getElementById("shares").addEventListener("input", function () {
-            const selectedOption = document.getElementById("symbol").options[document.getElementById("symbol").selectedIndex];
-            const price = selectedOption.dataset.price || 0;
-            const shares = this.value || 0;
-
-            // Calculate and update the total value of the sale based on shares input
-            const totalValue = shares * price;
-            document.getElementById("totalPrice").value = "$" + totalValue.toFixed(2);
         });
     </script>
-
-{% endblock %}
+{% endblock %}  
