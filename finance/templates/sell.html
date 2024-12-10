@@ -16,9 +16,9 @@
         </div>
 
         <div class="mb-3">
-            <select class="form-control mx-auto w-auto" id="shares" name="shares" required>
+            <input class="form-control mx-auto w-auto" id="shares" name="shares" required>
                 <option value="">Select number of shares</option>
-            </select>
+            </input>
         </div>
 
         <button class="btn btn-primary" type="submit">Sell</button>
@@ -37,7 +37,7 @@
 // create event listeners for symbols and shares drop downs
 document.addEventListener("DOMContentLoaded", function(){
     const symbolSelect = document.getElementById("symbol");
-    const sharesSelect = document.getElementById("shares");
+    const sharesInput = document.getElementById("shares");
 
     // create a map to store symbol and its available shares
     const stockShares = {};
@@ -49,10 +49,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
     // this function is called whenever the symbol category changes
     symbolSelect.addEventListener("change", function(){
-        const selectedSymbol = symbolSelect.value;
+        const selectedSymbol = symbolInput.value;
 
         // this clears existing options in shares when change function is activated
-        sharesSelect.innerHTML = "";
+        sharesInput.innerHTML = "";
 
         // populates the shares dropdown with appropriate amount of shares per stock option
         // ensure valid stock and number of shares is positive
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 option.value = i;
                 option.textContent = i;
                 // add option element to the dropdown menu
-                sharesSelect.appendChild(option);
+                sharesInput.appendChild(option);
             }
         }
     });
