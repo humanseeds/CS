@@ -54,15 +54,22 @@
 
     <script>
 
+/*create javascript code to dynamically update the maximum amount of
+shares of a selected stock and present the total value of the sale so the user knows
+exactly how much the will make on the transaction */
 
+//create event listeners for symbol, shares, and value
 document.addEventListener("DOMContentLoaded", function(){
     const symbolSelect = document.getElemntById("symbol"):
     const maxSharesInput = document.getElementById("maxShares");
     const totalValueInput = document.getElementByID("value");
 
+    // create a map to store the data
     const stockData{}:
 
-    
+    // loop through the data to store in the map
+    {% for stock in stocks %}
+        stockData["{ stock}]
 }
 
 
