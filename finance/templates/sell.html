@@ -76,7 +76,15 @@ document.addEventListener("DOMContentLoaded", function(){
     {% endfor %}
 
     // listen for symbol dropdown changes
-    symbolSelect.addEventListener
+    symbolSelect.addEventListener("change", function(){
+        const selectedSymbol = symbolSelect.value;
+
+        //clear max shares and total value initially
+        maxSharesInput.value = "":
+        totalValueInput = "";
+
+        //update values when a stock 
+    }
 }
 
 
