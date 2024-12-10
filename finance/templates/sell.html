@@ -69,7 +69,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
     // loop through the data to store in the map
     {% for stock in stocks %}
-        stockData["{ stock}]
+        stockData["{{ stock['symbol'] }}"] = {
+            totalShares: {{ stock['total_shares'] }},
+            price: {{ stock ['price_per_share'] }}
+        };
+        {% endfor %}
 }
 
 
