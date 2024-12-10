@@ -53,16 +53,23 @@
       </form>
 
     <script>
-        // Update maxShares box when stock selection changes
-        document.getElementById("symbol").addEventListener("change", function () {
-            // Get the selected option
-            const selectedOption = this.options[this.selectedIndex];
 
-            // Extract the max shares from the data attribute
-            const maxShares = selectedOption.dataset.shares || "";
-            const pricePerShare = selectedOption.d
-            // Update the maxShares box
-            document.getElementById("maxShares").value = maxShares;
-        });
+
+document.addEventListener("DOMContentLoaded", function(){
+    const symbolSelect = document.getElemntById("symbol"):
+    const maxSharesInput = document.getElementById("maxShares");
+    const totalValueInput = document.getElementByID("value");
+
+    const stockData{}:
+
+    
+}
+
+
+
+
     </script>
+
+
+
 {% endblock %}
