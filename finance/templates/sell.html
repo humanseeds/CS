@@ -71,9 +71,9 @@ document.addEventListener("DOMContentLoaded", function(){
     {% for stock in stocks %}
         stockData["{{ stock['symbol'] }}"] = {
             totalShares: {{ stock['total_shares'] }},
-            price: {{ stock ['price_per_share'] }}
+            price: {{ stock['price_per_share'] }}
         };
-        {% endfor %}
+    {% endfor %}
 }
 
 
