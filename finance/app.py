@@ -339,7 +339,7 @@ def sell():
         # Update user's cash total
         db.execute("""
             UPDATE users
-            SET cash = cash + (:shares * :price)
+            SET cash = cash + (:total_value)
             WHERE id = :user_id
         """, shares=-shares, price=stock_price["price"], user_id=session["user_id"])
 
