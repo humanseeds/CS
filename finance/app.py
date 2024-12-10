@@ -282,9 +282,7 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    # When requested via GET, display form to sell stock
     if request.method == "GET":
-
         # Search database for available stocks to sell
         stocks = db.execute("""
             SELECT symbol, SUM(shares) AS total_shares
@@ -297,25 +295,18 @@ def sell():
         # Pass available stock to the HTML template
         return render_template("sell.html", stocks=stocks)
 
-    # Submit via POST to SELL
     if request.method == "POST":
-
-        # Get the stock symbol and shares from the form
         symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
 
-        # Make sure the stock symbol is valid and return an apology if not
         if not symbol:
             return apology("Must provide stock symbol")
 
-        # Validate the number of shares is positive
         elif not shares or not shares.isdigit() or int(shares) <= 0:
             return apology("Must provide a positive amount of shares")
 
-        # Convert shares to int
         shares = int(shares)
 
-        # search DB for how many shares of each stock the current user has
         user_shares = db.execute("""
             SELECT SUM(shares) AS total_shares
             FROM transactions
@@ -327,22 +318,21 @@ def sell():
         if not user_shares or user_shares[0]["total_shares"] < shares:
             return apology("Not enough shares for sell order")
 
-        # Get the current stock price of the symbol and find the total value
         stock_price = lookup(symbol)
 
         # Record the sale into the database
         db.execute("""
             INSERT INTO transactions(user_id, symbol, shares, price)
             VALUES (:user_id, :symbol, :shares, :price)
-            """, user_id=session["user_id"], symbol=symbol, shares=-shares, price=stock_price["price"])
+        """, user_id=session["user_id"], symbol=symbol, shares=-shares, price=stock_price["price"])
 
-        # Update user's cash total
+        # Calculate total value and update user's cash total
+        total_value = shares * stock_price["price"]
         db.execute("""
             UPDATE users
-            SET cash = cash + (:shares * price)
+            SET cash = cash + :total_value
             WHERE id = :user_id
-        """, shares=shares, price=stock_price["price"], user_id=session["user_id"])
+        """, total_value=total_value, user_id=session["user_id"])
 
-        flash(f"Congratulations! Your sale of {shares} of {symbol} for {usd(shares * stock_price['price'])} is complete")
-    return redirect("/")
-
+        flash(f"Congratulations! Your sale of {shares} of {symbol} for {usd(total_value)} is complete")
+        return redirect("/")
