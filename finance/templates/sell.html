@@ -60,12 +60,12 @@ exactly how much the will make on the transaction */
 
 //create event listeners for symbol, shares, and value
 document.addEventListener("DOMContentLoaded", function(){
-    const symbolSelect = document.getElemntById("symbol");
+    const symbolSelect = document.getElementById("symbol");
     const maxSharesInput = document.getElementById("maxShares");
-    const totalValueInput = document.getElementByID("totalPrice");
+    const totalValueInput = document.getElementById("totalPrice");
 
     // create a map to store the data
-    const stockData{};
+    const stockData = {};
 
     // loop through the data to store in the map
     {% for stock in stocks %}
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function(){
         const selectedSymbol = symbolSelect.value;
 
         //clear max shares and total value initially
-        maxSharesInput.value = "":
+        maxSharesInput.value = "";
         totalValueInput.value = "";
 
         //update values when a stock is selected
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
             // calculate and update total value of the sale
             const totalValue = maxShares * price;
-            totalValueInput.value = '{{ usd(totalValue)}}';
+            totalValueInput.value = `$${totalValue.toFixed(2)}`;
         }
     });
 });
