@@ -343,5 +343,6 @@ def sell():
             WHERE id = :user_id
         """, shares=-shares, price=stock_price["price"], user_id=session["user_id"])
 
+        flash(f"Congratulations! Your sale of {shares} of {symbol} for {usd(cost)} complete")
     return redirect("/")
 
