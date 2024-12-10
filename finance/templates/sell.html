@@ -86,14 +86,18 @@ document.addEventListener("DOMContentLoaded", function(){
         //update values when a stock is selected
         if (selectedSymbol in stockData){
             const stock = stockData[selectedSymbol];
-            const masShares = stock.totalShares;
+            const maxShares = stock.totalShares;
             const price = stock.price;
 
             // update max shares
-            maxSharesInput.value = 
+            maxSharesInput.value = maxShares;
+
+            // calculate and update total value of the sale
+            const totalValue = maxShares * price;
+            totalValueInput.value = '{{ usd(totalValue)}}':
         }
-    }
-}
+    });
+});
 
 
 
