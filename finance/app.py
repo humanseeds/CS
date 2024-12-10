@@ -142,7 +142,6 @@ def history():
     return render_template("history.html", transactions=transactions)
 
 
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
@@ -277,7 +276,6 @@ def register():
         return redirect("/")
 
 
-
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
@@ -294,19 +292,22 @@ def sell():
 
         # Pass available stock to the HTML template
         return render_template("sell.html", stocks=stocks)
-
+    # if request via post
     if request.method == "POST":
         symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
 
+        # check if valid symbol and amount of shares
         if not symbol:
             return apology("Must provide stock symbol")
 
         elif not shares or not shares.isdigit() or int(shares) <= 0:
             return apology("Must provide a positive amount of shares")
 
+        # create a variable for the amount of shares user wants to sell
         shares = int(shares)
 
+        # find how many shares of each stock the user has
         user_shares = db.execute("""
             SELECT SUM(shares) AS total_shares
             FROM transactions
@@ -315,14 +316,16 @@ def sell():
             GROUP BY symbol
         """, user_id=session["user_id"], symbol=symbol)
 
+        # make sure the user has enough shares to sell and the number is positive/not zero
         if not user_shares or user_shares[0]["total_shares"] < shares:
             return apology("Not enough shares for sell order")
 
+        # make sure the user is not trying to sell more shares than they own
         if shares > user_shares[0]["total_shares"]:
             flash("You don't own enough shares to sell that amount.", "error")
             return redirect("/sell")
 
-
+        # look up the price of the stock symbol selected
         stock_price = lookup(symbol)
 
         # Record the sale into the database
@@ -339,5 +342,6 @@ def sell():
             WHERE id = :user_id
         """, total_value=total_value, user_id=session["user_id"])
 
-        flash(f"Congratulations! Your sale of {shares} of {symbol} for {usd(total_value)} is complete")
+        flash(
+            f"Congratulations! Your sale of {shares} of {symbol} for {usd(total_value)} is complete")
         return redirect("/")
