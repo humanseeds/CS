@@ -83,7 +83,15 @@ document.addEventListener("DOMContentLoaded", function(){
         maxSharesInput.value = "":
         totalValueInput = "";
 
-        //update values when a stock 
+        //update values when a stock is selected
+        if (selectedSymbol in stockData){
+            const stock = stockData[selectedSymbol];
+            const masShares = stock.totalShares;
+            const price = stock.price;
+
+            // update max shares
+            maxSharesInput.value = 
+        }
     }
 }
 
