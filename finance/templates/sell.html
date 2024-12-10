@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+
 {% block title %}
     Sell
 {% endblock %}
@@ -11,7 +12,9 @@
             <select class="form-control mx-auto w-auto" name="symbol" id="symbol" required>
                 <option value="">Select a stock</option>
                 {% for stock in stocks %}
-                    <option value="{{ stock['symbol'] }}" data-shares="{{ stock['total_shares'] }}">
+                    <option value="{{ stock['symbol'] }}"
+                            data-shares="{{ stock['total_shares'] }}"
+                            data-price="{{ stock['price_per_share'] }}">
                         {{ stock['symbol'] }}
                     </option>
                 {% endfor %}
@@ -53,27 +56,32 @@
       </form>
 
     <script>
+        // Event listener for stock selection
+        document.getElementById("symbol").addEventListener("change", function () {
+            const selectedOption = this.options[this.selectedIndex];
 
-/*create javascript code to dynamically update the maximum amount of
-shares of a selected stock and present the total value of the sale so the user knows
-exactly how much the will make on the transaction */
+            // Get the maxShares and price from the data attributes
+            const maxShares = selectedOption.dataset.shares || "";
+            const price = selectedOption.dataset.price || 0;
 
-//create event listeners for symbol, shares, and value
+            // Update maxShares input
+            document.getElementById("maxShares").value = maxShares;
 
-document.getElementById("symbol").addEventListener("change", function () {
-    const selectedOption = this.options[this.selectedIndex];
+            // Calculate and update the total value of the sale based on maxShares
+            const totalValue = maxShares * price;
+            document.getElementById("totalPrice").value = "$" + totalValue.toFixed(2);
+        });
 
-    // Get the maxShares from the data attribute
-    const maxShares = selectedOption.dataset.shares || "";
+        // Event listener for number of shares input
+        document.getElementById("shares").addEventListener("input", function () {
+            const selectedOption = document.getElementById("symbol").options[document.getElementById("symbol").selectedIndex];
+            const price = selectedOption.dataset.price || 0;
+            const shares = this.value || 0;
 
-    // Update maxShares input
-    document.getElementById("maxShares").value = maxShares;
-
-    // Calculate and update the total value of the sale
-    const price = selectedOption.dataset.price || 0;
-    const totalValue = maxShares * price;
-    document.getElementById("totalPrice").value = "$" + totalValue.toFixed(2);
-});
-</script>
+            // Calculate and update the total value of the sale based on shares input
+            const totalValue = shares * price;
+            document.getElementById("totalPrice").value = "$" + totalValue.toFixed(2);
+        });
+    </script>
 
 {% endblock %}
