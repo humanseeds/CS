@@ -21,7 +21,7 @@
                 <option value="">Select number of shares</option>
             </select>
 
-            <!-- -->
+            <!-- I am keeping this section hidden. the explanation is written out below-->
             <input typer="hidden" id="shares" name="shares" value="">
 
         </div>
@@ -48,7 +48,7 @@
 document.addEventListener("DOMContentLoaded", function(){
     const symbolSelect = document.getElementById("symbol");
     const sharesSelect = document.getElementById("shares");
-
+    const sharesInput = document.getElementByID("shares");
     // create a map to store symbol and its available shares
     const stockShares = {};
 
