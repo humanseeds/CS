@@ -341,7 +341,7 @@ def sell():
             UPDATE users
             SET cash = cash + (:total_value)
             WHERE id = :user_id
-        """, shares=-shares, price=stock_price["price"], user_id=session["user_id"])
+        """, total_value=shares, price=stock_price["price"], user_id=session["user_id"])
 
         flash(f"Congratulations! Your sale of {shares} of {symbol} for {usd(shares * stock_price['price'])} is complete")
     return redirect("/")
