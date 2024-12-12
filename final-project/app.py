@@ -5,3 +5,9 @@ import os
 
 # configure app
 app= Flask(__name__)
+
+# folder config for image uploads
+UPLOAD_Folder = 'saved-uploads'
+ALLOWED-EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+
+
