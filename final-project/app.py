@@ -11,6 +11,11 @@ UPLOAD_FOLDER = 'saved-uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 
+# determine if proper file type is used
+def proper_file(filename):
+    if filename.type(".png') 
+
+
 
 # render the file upload
 @app.route('/')
