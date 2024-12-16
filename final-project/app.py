@@ -13,7 +13,9 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 # determine if proper file type is used
 def proper_file(filename):
-    if filename.type(".png') 
+    if filename.type('.png') or filename.type('jpg') or filename.type('jpeg') or filename.type('gif'):
+        return True
+    return False
 
 
 
