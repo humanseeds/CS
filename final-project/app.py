@@ -12,5 +12,21 @@ ALLOWED-EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 
 
+#render the file upload
 @app.route('/')
 def index():
+    return render_template('upload.html')
+
+
+
+
+@app.route('/uplad'. methods=['POST'])
+    def upload_image():
+
+
+
+
+
+
+
+
