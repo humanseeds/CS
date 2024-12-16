@@ -11,3 +11,6 @@ UPLOAD_Folder = 'saved-uploads'
 ALLOWED-EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 
+
+@app.route('/')
+def index():
