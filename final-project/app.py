@@ -28,7 +28,5 @@ def index():
 # display the uploaded or the converted image
 @app.route('/image/<filename>')
 def show_image(filename):
+    return render_template('result.html', filename=filename)
 
-
-
-#h
