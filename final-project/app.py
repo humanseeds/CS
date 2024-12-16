@@ -7,8 +7,8 @@ from helpers import helper
 app= Flask(__name__)
 
 # folder config for image uploads
-UPLOAD_Folder = 'saved-uploads'
-ALLOWED-EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+UPLOAD_FOLDER = 'saved-uploads'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 
 
@@ -19,15 +19,16 @@ def index():
 
 
 
-#
-@app.route('/uplad'. methods=['POST'])
+# handle image uploading
+@app.route('/upload', methods=['POST'])
     def upload_image():
 
 
 
-#
+# display the uploaded or the converted image
 @app.route('/image/<filename>')
 def show_image(filename):
 
 
 
+#h
