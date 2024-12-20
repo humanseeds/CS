@@ -19,10 +19,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # determine if proper file type is used
 def proper_file(filename):
-    if filename.type('.png') or filename.type('jpg') or filename.type('jpeg') or filename.type('gif'):
-        return True
-    return False
-
+    if filename.lower().endswith(('png', 'jpg', jpeg', 'gif'))
 
 
 # render the file upload
