@@ -11,6 +11,11 @@ UPLOAD_FOLDER = 'saved-uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 
+# check if the upload folder exsists
+os.mdirs(UPLOAD_FOLDER, exists_ok=True)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+
 # determine if proper file type is used
 def proper_file(filename):
     if filename.type('.png') or filename.type('jpg') or filename.type('jpeg') or filename.type('gif'):
