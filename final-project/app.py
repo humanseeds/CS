@@ -19,7 +19,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # determine if proper file type is used
 def proper_file(filename):
-    if filename.lower().endswith(('png', 'jpg', 'jpeg', 'gif'))
+    if filename.lower().endswith(('png', 'jpg', 'jpeg', 'gif')):
         return True
     return False
 
@@ -38,7 +38,7 @@ def upload_image():
        filename =secure_filename(file.filename)
        file.svce(os.path.join(app.config['UPLOAD_FOLDER'], filename))
        return redirect(url_for('show_image', filename=filename))
-
+    return "Invalid file type. Please upload a valid image format."
 
 # display the uploaded or the converted image
 @app.route('/image/<filename>')
