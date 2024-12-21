@@ -34,9 +34,7 @@ def index():
 def upload_image():
     file = request.files['file']
     if file and proper_file(file.filename):
-        filename = secure_filename(file.filename)
-        file.save(os.path.join)
-
+       filename
 
 # display the uploaded or the converted image
 @app.route('/image/<filename>')
