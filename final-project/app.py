@@ -40,6 +40,7 @@ def upload_image():
        return redirect(url_for('show_image', filename=filename))
     return "Invalid file type. Please upload a valid image format."
 
+
 # display the uploaded or the converted image
 @app.route('/image/<filename>')
 def show_image(filename):
