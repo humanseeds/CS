@@ -65,10 +65,10 @@ def upload_image():
 @app.route('/image/<filename>')
 def show_results(filename):
     # get the filename from url
-    filename = request.args.get('filename')
+    image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
     # flash error if not filename
-    if not filename:
+    if not os.path.exists(image_path):
         flash("no file uploaded!")
         return render_template('uploa.html')
 
