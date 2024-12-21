@@ -82,5 +82,5 @@ def show_results(filename):
     return render_template('results.html', filename=filename, ascii_filter=ascii_filter)
 
 
-    return render_template('results.html', filename=filename)
+
 
