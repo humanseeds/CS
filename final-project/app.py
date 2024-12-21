@@ -36,7 +36,7 @@ def upload_image():
     file = request.files['file']
     if file and proper_file(file.filename):
        filename =secure_filename(file.filename)
-       file.svce(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+       file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
        return redirect(url_for('show_image', filename=filename))
     return "Invalid file type. Please upload a valid image format."
 
