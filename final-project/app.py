@@ -33,11 +33,9 @@ def index():
 
 
 # handle image uploading
-@app.route('/uploads/<filename>')
-def uploaded_image(filename):
-    # if the user posts and image
-    if request.method == 'POST':
-
+@app.route('/upload', methods=['POST'])
+def upload_image(filename):
+   
         # get the uploaded image from the form
         uploaded_image = request.files.get('image')
 
