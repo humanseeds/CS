@@ -1,81 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results - ASCII Art</title>
-    <style>
-        body {
-            background-color: #2f4f4f; /* Slate Grey background */
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
 
-        h1 {
-            margin-top: 20px;
-        }
+# check if the upload folder exsists
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-        .image-container {
-            margin: 20px auto;
-        }
 
-        .ascii-art-container {
-            margin-top: 30px;
-            font-family: "Courier New", Courier, monospace;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            margin-bottom: 50px;
-        }
+# determine if proper file type is used
+def proper_file(filename):
+    if filename.lower().endswith(('png', 'jpg', 'jpeg', 'gif')):
+        return True
+    return False
 
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .button-container {
-            margin-top: 30px;
-        }
-
-        .upload-again {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .upload-again:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Results: Your ASCII Art</h1>
-
-    <div class="image-container">
-        <h2>Original Image</h2>
-        <img src="{{ url_for('uploaded_image', filename=filename) }}" alt="Uploaded Image" style="max-width: 80%; height: auto;">
+# render the file upload
+@app.route('/')
+def index():
+    return render_template('upload.html')
 
 
 
-    </div>
+# handle image uploading
+@app.route('/upload', methods=['POST'])
+def upload_image():
+    # if the user posts and image
+    if request.method == 'POST':
 
-    <div class="ascii-art-container">
-        <h2>ASCII Art</h2>
-        <!-- The ASCII art will be generated here when available -->
-        <pre>{{ ascii_filter }}</pre>
-    </div>
+        # get the uploaded image from the form
+        uploaded_image = request.files.get('image')
 
-    <div class="button-container">
-        <a href="{{ url_for('index') }}">
-            <button class="upload-again">Upload Another Image</button>
-        </a>
-    </div>
+        # check if file was uploaded and has a valid name
+        if uploaded_image and proper_file(uploaded_image.filename):
 
-</body>
-</html>
+            # create a secure filename
+            filename = secure_filename(uploaded_image.filename)
+
+            # save the uuploaded image to uploads folder
+            uploaded_image.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+            # redirect the the results page with the filename
+            return redirect(url_for('show_results', filename=filename))
+
+        # handle an error in image file type and redirect
+        flash("Invalid file type")
+        return redirect(request.url)
+
+    # handle GET request if user bookmarks page
+    return render_template('upload.html')
+
+
+
+# display the uploaded or the converted image
+@app.route('/image/<filename>')
+def show_results(filename):
+    # get the path to the uploaded image
+    image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+
+    # flash error if not filename
+    if not os.path.exists(image_path):
+        flash("no file uploaded!")
+        return render_template('upload.html')
+
+    # process the image to ASCII art
+    #ascii_filter =convert_image_to_ascii(image_path)
+
+    # render the results on the page
+    return render_template('results.html', filename=filename)#, ascii_filter=ascii_filter)
 
