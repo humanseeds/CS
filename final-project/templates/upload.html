@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <title>Upload Image for ASCII Art</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+            }
+
+            .container {
+                text-align: center;
+                padding: 20px;
+                background-color: white;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            form input[type="file"] {
+                margin: 20px 0;
+            }
+
+            .button {
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            .button:hover {
+                background-color: #45a049;
+            }
+        </style>
     </head>
-<body>
-    <h1>Upload your Image</h1>
-
-   
-
-
-</body>
-
-
-
-
-    </html>
+    <body>
+        <div class="container">
+            <h1>Upload your Image</h1>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" accept="image/*" required>
+                <br>
+                <button type="submit" class="button">Upload Image</button>
+            </form>
+        </div>
+    </body>
+</html>
