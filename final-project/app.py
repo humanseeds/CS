@@ -8,7 +8,7 @@ from helpers import helper
 app= Flask(__name__)
 
 # folder config for image uploads
-UPLOAD_FOLDER = 'saved-uploads'
+UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 
