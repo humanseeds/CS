@@ -51,7 +51,7 @@ def upload_image():
             uploaded_image.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
             # redirect the the results page with the filename
-            return redirect(url_for('results', filename=filename))
+            return redirect(url_for('show_results', filename=filename))
 
         # handle an error in image file type and redirect
         flash("Invalid file type")
