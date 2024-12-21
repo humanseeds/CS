@@ -42,7 +42,7 @@ def upload_image():
         uploaded_image = request.files.get('image')
 
         # check if file was uploaded and has a valid name
-        if uploaded_image and uploaded_image.filename:
+        if uploaded_image and proper_file(uploaded_image.filename):
 
             # create a secure filename
             filename = secure_filename(uploaded_image.filename)
