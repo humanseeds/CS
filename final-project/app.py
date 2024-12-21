@@ -32,7 +32,10 @@ def index():
 # handle image uploading
 @app.route('/upload', methods=['POST'])
 def upload_image():
-
+    file = request.files['file']
+    if file andproper_file(file.filename):
+        filename = secure_filename(file.filename)
+        file.save(os.path.join)
 
 
 # display the uploaded or the converted image
