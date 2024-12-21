@@ -13,7 +13,8 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 
 # check if the upload folder exsists
-os.makedirs(UPLOAD_FOLDER, exists_ok=True)
+if not os.path.esists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
