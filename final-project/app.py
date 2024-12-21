@@ -35,7 +35,7 @@ def index():
 # handle image uploading
 @app.route('/upload', methods=['POST'])
 def upload_image(filename):
-   
+
         # get the uploaded image from the form
         uploaded_image = request.files.get('image')
 
@@ -54,10 +54,6 @@ def upload_image(filename):
         # handle an error in image file type and redirect
         flash("Invalid file type")
         return redirect(request.url)
-
-    # handle GET request if user bookmarks page
-    return render_template('upload.html')
-
 
 
 # display the uploaded or the converted image
