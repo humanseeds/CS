@@ -56,8 +56,6 @@ def upload_image():
         flash("Invalid file type")
         return redirect(request.url)
 
-    # render the upload page if
-    return render_template('upload.html')
 
 # display the uploaded or the converted image
 @app.route('/image/<filename>')
