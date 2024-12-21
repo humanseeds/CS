@@ -36,7 +36,7 @@ def upload_image():
     if file and proper_file(file.filename):
        filename =secure_filename(file.filename)
        file.sace(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-       return redirect
+       return redirect(url_for('show_image', filename=filename))
 
 # display the uploaded or the converted image
 @app.route('/image/<filename>')
