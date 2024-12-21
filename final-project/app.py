@@ -65,16 +65,13 @@ def upload_image():
 # display the uploaded or the converted image
 @app.route('/image/<filename>')
 def show_results(filename):
-    # get the filename from url
+    # get the path to the uploaded image
     image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
     # flash error if not filename
     if not os.path.exists(image_path):
         flash("no file uploaded!")
         return render_template('upload.html')
-
-    # get the path to the uploaded image
-    image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
     # process the image to ASCII art
     ascii_filter =convert_image_to_ascii(image_path)
