@@ -38,7 +38,7 @@ def upload_image():
     if request.method == 'POST':
 
         # get the uploaded image from the form
-        file = request.files['image']
+              
 
         # check if file was uploaded and has a valid name
         if file and file.filename:
@@ -62,6 +62,6 @@ def upload_image():
 
 # display the uploaded or the converted image
 @app.route('/image/<filename>')
-def show_image(filename):
+def show_results(image_name):
     return render_template('results.html', filename=filename)
 
