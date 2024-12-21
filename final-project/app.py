@@ -38,7 +38,7 @@ def upload_image():
     if request.method == 'POST':
 
         # get the uploaded image from the form
-        
+        image = request.files.get('image')
 
         # check if file was uploaded and has a valid name
         if file and file.filename:
