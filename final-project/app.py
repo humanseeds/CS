@@ -38,16 +38,16 @@ def upload_image():
     if request.method == 'POST':
 
         # get the uploaded image from the form
-        image = request.files.get('image')
+        uploaded_image = request.files.get('image')
 
         # check if file was uploaded and has a valid name
-        if file and file.filename:
+        if uploaded_image and uploaded_image.filename:
 
             # create a secure filename
-            filename = secure_filename(file.filename)
+            filename = secure_filename(uploaded_image.filename)
 
             # save the uuploaded image to uploads folder
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            uploaded_image.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
             # redirect the the results page with the filename
             return redirect(url_for('results', filename=filename))
