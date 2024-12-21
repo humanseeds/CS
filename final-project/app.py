@@ -33,8 +33,8 @@ def index():
 
 
 # handle image uploading
-@app.route('/upload', methods=['POST'])
-def upload_image():
+@app.route('/uploads/<filename>')
+def uploaded_image(filename):
     # if the user posts and image
     if request.method == 'POST':
 
