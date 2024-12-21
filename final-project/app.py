@@ -33,7 +33,7 @@ def index():
 @app.route('/upload', methods=['POST'])
 def upload_image():
     file = request.files['file']
-    if file andproper_file(file.filename):
+    if file and proper_file(file.filename):
         filename = secure_filename(file.filename)
         file.save(os.path.join)
 
