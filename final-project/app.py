@@ -70,7 +70,7 @@ def show_results(filename):
     # flash error if not filename
     if not filename:
         flash("no file uploaded!")
-        return render_template('upload.html')
+        return render_template('uploa.html')
 
     # get the path to the uploaded image
     image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
