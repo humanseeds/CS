@@ -74,7 +74,7 @@ def show_results(filename):
         return render_template('upload.html')
 
     # process the image to ASCII art
-    ascii_filter =convert_image_to_ascii(image_path)
+    #ascii_filter =convert_image_to_ascii(image_path)
 
     # render the results on the page
     return render_template('results.html', filename=filename, ascii_filter=ascii_filter)
