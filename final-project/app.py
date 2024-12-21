@@ -63,7 +63,7 @@ def upload_image():
 
 # display the uploaded or the converted image
 @app.route('/image/<filename>')
-def show_results(image_name):
+def show_results(filename):
     # get the filename from url
     filename = request.args.get('filename')
 
