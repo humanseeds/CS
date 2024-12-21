@@ -6,6 +6,7 @@ from helpers import helper
 
 # configure app
 app= Flask(__name__)
+app.secret_key = os.urandom(24)
 
 # folder config for image uploads
 UPLOAD_FOLDER = 'uploads'
