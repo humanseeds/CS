@@ -57,7 +57,8 @@
     <h1>Results: Your ASCII Art</h1>
 
     <div class="image-container">
-        <h2>Original Image</h2>
+        <h2>Original Image</h2><img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image" style="max-width: 80%; height: auto;">
+
         <img src="{{ url_for('static', filename=f'uploads/{filename}') }}" alt="Uploaded Image" style="max-width: 80%; height: auto;">
 
     </div>
