@@ -34,13 +34,30 @@ def index():
 # handle image uploading
 @app.route('/upload', methods=['POST'])
 def upload_image():
-    file = request.files['file']
-    if file and proper_file(file.filename):
-       filename =secure_filename(file.filename)
-       file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-       return redirect(url_for('show_image', filename=filename))
-    return "Invalid file type. Please upload a valid image format."
+    # if the user posts and image
+    if request.method == 'POST':
 
+        # get the uploaded image from the form
+        file = request.files['image']
+
+        # check if file was uploaded and has a valid name
+        if file and file.filename:
+
+            # create a secure filename
+            filename = secure_filename(file.filename)
+
+            # save the uuploaded image to uploads folder
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+            # redirect the the results page with the filename
+            return redirect(url_for('results', filename=filename))
+
+        # handle an error in image file type and redirect
+        flash("Invalid file type")
+        return redirect(request.url)
+
+    # render the upload page if
+    return render_template('upload.html')
 
 # display the uploaded or the converted image
 @app.route('/image/<filename>')
