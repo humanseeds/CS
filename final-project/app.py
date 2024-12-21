@@ -55,8 +55,10 @@ def upload_image():
         # handle an error in image file type and redirect
         flash("Invalid file type")
         return redirect(request.url)
-    if request.method = "GET':
-        
+
+    # handle GET request if user bookmarks page
+    return render_template('upload.html')
+
 
 # display the uploaded or the converted image
 @app.route('/image/<filename>')
