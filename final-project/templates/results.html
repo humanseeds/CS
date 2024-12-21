@@ -58,7 +58,7 @@
 
     <div class="image-container">
         <h2>Original Image</h2>
-        <img src="{{ image_url }}" alt="Uploaded Image">
+        <img src="{{ url_for('show_results', filename=filename) }}" alt="Uploaded Image">
     </div>
 
     <div class="ascii-art-container">
@@ -68,7 +68,7 @@
     </div>
 
     <div class="button-container">
-        <a href="{{ url_for('upload_image') }}">
+        <a href="{{ url_for('index') }}">
             <button class="upload-again">Upload Another Image</button>
         </a>
     </div>
