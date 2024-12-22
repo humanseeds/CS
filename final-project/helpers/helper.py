@@ -45,3 +45,6 @@ def Gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
             row += ascii_chars[brightness // scale]
         ascii_art.append(row)
     return "|n".join(ascii_art)
+
+
+def apply_filter
