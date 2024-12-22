@@ -29,7 +29,7 @@ def apply_sobel(image_path):
     return sobel_image
 
 
-# this function converts the grayscale to asci charctera
+# this function converts the grayscale to asci chars
 def Gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     width, height = grayscale_image.size
 
