@@ -30,4 +30,4 @@ def apply_sobel(image_path):
 
 
 # this function converts the grayscale to asci charctera
-
+def Gray_to_ascii(grayscale_image, ascii_chars)
