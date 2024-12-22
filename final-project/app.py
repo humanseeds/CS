@@ -56,6 +56,12 @@ def upload_image():
         return redirect(request.url)
 
 
+@app.route('/uploads/<filename>')
+def uploaded_image(filename):
+     return send_file(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+
+
 # display the uploaded or the converted image
 @app.route('/image/<filename>')
 def show_results(filename):
