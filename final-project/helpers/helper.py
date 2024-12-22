@@ -2,6 +2,9 @@ import math
 import os
 from PIL import Image, ImageFilter
 
+
+#function to create a copy of the original uploaded image to augment with filters
+
 #resize the image while keep the same aspect ratio
 def resize_image(image, new_width):
     width, height = image.size
@@ -48,7 +51,7 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
 
 
 def apply_filter(image_path):
-    
+
     image = Image.open(image_path)
     image_copy = image.copy()
     grayscale_image = convert_to_grayscale(image.path)
