@@ -45,7 +45,7 @@ def upload_image():
             # create a secure filename
             filename = secure_filename(uploaded_image.filename)
 
-            # save the uuploaded image to uploads folder
+            # save the uploaded image to uploads folder
             uploaded_image.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
             # redirect the the results page with the filename
