@@ -37,10 +37,10 @@ def Gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     scale = 256 // char_len
 
     ascii_art = []
-    
-    for y in range(grayscale_image.height):
+
+    for y in range(height):
         row = ""
-        for x in range(grayscale_image.width):
-            brightness + grayscale_image.getpixel((x,y))
-            row+= ascii_chars[brightness // scale]
+        for x in range(width):
+            brightness = grayscale_image.getpixel((x,y))
+            row += ascii_chars[brightness // scale]
         ascii_art.append(row)
