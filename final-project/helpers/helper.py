@@ -8,13 +8,13 @@ def copy_image(image_path, upload_folder):
     # open the original image
     original_image = Image.open(image_path)
 
-    #create path for the copied image
+    # create a path for the copied image
     copy_image_path = os.path.join(upload_folder, 'copy_' + os.path.basename(image_path))
 
     # save the copy of the image
-    original_image,save(copy_image_path)
+    original_image.save(copy_image_path)
 
-    
+    # return athe path to the copied image
     return copy_image_path
 
 
