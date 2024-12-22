@@ -3,6 +3,10 @@ import os
 from PIL import Image, ImageFilter
 
 
+
+
+
+
 def convert_to_grayscale(image_path):
     image = Image.open(image_path)
     grayscale_image = image.convert("L")
