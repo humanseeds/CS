@@ -48,6 +48,7 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
 
 
 def apply_filter(image_path):
+    
     image = Image.open(image_path)
     image_copy = image.copy()
     grayscale_image = convert_to_grayscale(image.path)
