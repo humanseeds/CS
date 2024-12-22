@@ -41,5 +41,5 @@ def Gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
         row = ""
         for x in range(grayscale_image.wdith):
             brightness + grayscale_image.pixel((x,y))
-            row+= ascii_chards[brightness // scale]
+            row+= ascii_chars[brightness // scale]
         ascii_art.append(row)
