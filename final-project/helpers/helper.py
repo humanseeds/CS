@@ -3,7 +3,7 @@ import os
 from PIL import Image, ImageFilter
 
 
-#function to create a copy of the original uploaded image to augment with filters
+# function to create a copy of the original uploaded image to augment with filters
 def copy_image(image_path, upload_folder):
     # open the original image
     original_image = Image.open(image_path)
@@ -39,12 +39,15 @@ def resize_image(image, new_width):
 
 
 
+
 # this function converts the image to grayscale
 # from here we can use the pixel intensity to apply asci charcters
 def convert_to_grayscale(image_path):
     image = Image.open(image_path)
     grayscale_image = image.convert("L")
     return grayscale_image
+
+
 
 
 # this function applies the sobel operator for edge detection and direction
@@ -54,6 +57,8 @@ def apply_sobel(image_path):
     grayscale_image = image.convert("L")
     sobel_image = grayscale_image.filter(ImageFilter.Find_EDGES)
     return sobel_image
+
+
 
 
 # this function converts the grayscale to asci chars
@@ -74,10 +79,12 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     return "|n".join(ascii_art)
 
 
+
+
 def apply_filter(image_path):
 
     image = Image.open(image_path)
-    image_copy = image.copy()
+
     grayscale_image = convert_to_grayscale(image.path)
     ascii_art = gray_to_ascii(grayscale_image)
     filtered_image_path = os.path.join(app.config['UPLOAD_FOLDER'],"filtered_' + os.path.basename(image_path))
