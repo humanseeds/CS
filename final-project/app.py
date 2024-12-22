@@ -53,6 +53,8 @@ def upload_image():
 
         # handle an error in image file type and redirect
         flash("Invalid file type")
+
+        
         return redirect(request.url)
 
 
