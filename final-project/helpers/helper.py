@@ -36,7 +36,7 @@ def Gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     char_len = len(ascii_chars)
     scale = 256 // char_len
 
-    ascci_art = []
+    ascii_art = []
     for y in range(grayscale_image.height):
         row = ""
         for x in range(grayscale_image.wdith):
