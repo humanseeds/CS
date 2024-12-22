@@ -31,15 +31,16 @@ def apply_sobel(image_path):
 
 # this function converts the grayscale to asci charctera
 def Gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
-    width, height =grayscale_image.size
+    width, height = grayscale_image.size
 
     char_len = len(ascii_chars)
     scale = 256 // char_len
 
     ascii_art = []
+    
     for y in range(grayscale_image.height):
         row = ""
-        for x in range(grayscale_image.wdith):
-            brightness + grayscale_image.pixel((x,y))
+        for x in range(grayscale_image.width):
+            brightness + grayscale_image.getpixel((x,y))
             row+= ascii_chars[brightness // scale]
         ascii_art.append(row)
