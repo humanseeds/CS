@@ -4,6 +4,19 @@ from PIL import Image, ImageFilter
 
 
 #function to create a copy of the original uploaded image to augment with filters
+def copy_image(image_path, upload_folder):
+    # open the original image
+    original_image = Image.open(image_path)
+
+    #create path for the copied image
+    copy_image_path = os.path.join(upload_folder, 'copy_' + os.path.basename(image_path))
+
+    # save the copy of the image
+    original_image,save(copy_image_path)
+
+    
+    return copy_image_path
+
 
 #resize the image while keep the same aspect ratio
 def resize_image(image, new_width):
