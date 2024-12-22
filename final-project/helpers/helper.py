@@ -30,7 +30,7 @@ def apply_sobel(image_path):
 
 
 # this function converts the grayscale to asci chars
-def Gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
+def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     width, height = grayscale_image.size
 
     char_len = len(ascii_chars)
@@ -47,4 +47,9 @@ def Gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     return "|n".join(ascii_art)
 
 
-def apply_filter
+def apply_filter(image_path):
+    image = Image.open(image.path)
+    image_copy = image.copy()
+    grayscale_image = convert_to_grayscale(image.path)
+    ascii_art = gray_to_ascii(grayscale_image)
+    filtered_image_path = os.path.join(app.config['UPLOAD_FOLDER'], )
