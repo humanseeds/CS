@@ -43,8 +43,13 @@ def resize_image(image, new_width):
 # this function converts the image to grayscale
 # from here we can use the pixel intensity to apply asci charcters
 def convert_to_grayscale(image_path):
+    # open the image
     image = Image.open(image_path)
+
+    # convert to grayscale
     grayscale_image = image.convert("L")
+
+    # return the grayscaled image
     return grayscale_image
 
 
@@ -53,9 +58,14 @@ def convert_to_grayscale(image_path):
 # this function applies the sobel operator for edge detection and direction
 # this will give our edges more definition
 def apply_sobel(image_path):
+    # open the image
     image = Image.open(image_path)
+    # 
     grayscale_image = image.convert("L")
+
     sobel_image = grayscale_image.filter(ImageFilter.Find_EDGES)
+
+    # return the sober image
     return sobel_image
 
 
