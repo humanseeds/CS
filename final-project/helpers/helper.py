@@ -78,7 +78,7 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
             ascii_char = ascii_chars[brightness // scale]
             row += ascii_char
 
-            ascii_art.append(row)
+        ascii_art.append(row)
     return "\n".join(ascii_art)
 
 
