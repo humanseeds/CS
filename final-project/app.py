@@ -74,10 +74,9 @@ def serve_ascii(filename):
 def show_results(filename):
     # get the path to the uploaded image
     original_image = url_for('uploaded_image', filename=filename)
-    
 
-    ascii_file_path = request.args.get('ascii_file')
-    ascii_art = None
+
+    ascii_art, ascii_file_path = helper.process_image(image_path, app.config['UPLOAD_FOLDER']
     if ascii_file_path:
         with open(ascii_file_path,'r') as file:
                 ascii_art = file.read()
