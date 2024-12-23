@@ -73,12 +73,12 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     # loop through the height of the greyscale image
     for y in range(height):
         row = ""
-    for x in range(width):
-          brightness = grayscale_image.getpixel((x, y))
-          ascii_char = ascii_chars[brightness // scale]
-          row += ascii_char
+        for x in range(width):
+            brightness = grayscale_image.getpixel((x, y))
+            ascii_char = ascii_chars[brightness // scale]
+            row += ascii_char
 
-          ascii_art.append(row)
+            ascii_art.append(row)
     return "\n".join(ascii_art)
 
 
@@ -96,7 +96,7 @@ def apply_filter(original_image_path, upload_folder):
 
 
     #
-    ascii_filename = f"ascii_{os.path.basyename(original_image_path)}.txt"
+    ascii_filename = f"ascii_{os.path.basename(original_image_path)}.txt"
     ascii_file_path = os.path.join(upload_folder, ascii_filename)
 
     with open(ascii_file_path, "w") as file:
