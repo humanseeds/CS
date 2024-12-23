@@ -63,7 +63,7 @@
 
     <div class="ascii-art-container">
         <h2>ASCII Art</h2>
-        <!-- The ASCII art will be generated here when available -->
+        <img src="{{ url_for('uploaded_image', filename=filtered_image) }}" alt="Filtered Image">
         <pre>{{ ascii_filter }}</pre>
     </div>
 

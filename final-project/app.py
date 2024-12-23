@@ -68,29 +68,27 @@ def uploaded_image(filename):
 @app.route('/image/<filename>')
 def show_results(filename):
     # get the path to the uploaded image
-    image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    original_image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    filtered_image_path = os.path.join(app.config['UPLOAD_FOLDER'], f"filtered_{filename}")
 
     # flash error if not filename
-    if not os.path.exists(image_path):
+    if not os.path.exists(original_image_path):
         flash("no file uploaded!")
         return render_template('upload.html')
 
-    # process the image to ASCII art
-    #ascii_filter =convert_image_to_ascii(image_path)
+    # check if the filtered image exists
+    filtered_image_exists = os.path.exists(filtered_image_path)
 
     # render the results on the page
-    return render_template('results.html', filename=filename)#, ascii_filter=ascii_filter)
+    return render_template('results.html', original_image=filename,
+                            filtered_image=f"filtered_{filename}" if filtered_image_exists else none)
 
 
 
-# 
+#
 @app.route('/apply_filter/<filename>')
 def filter_image(filename):
     # Path to the uploaded image
     original_image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
-    # Apply the filter
-    ascii_art, updated_image_path = apply_filter(original_image_path, app.config['UPLOAD_FOLDER'])
-
-    # Return ASCII art or serve the updated image as needed
-    return f"<pre>{ascii_art}</pre>"
+    #
