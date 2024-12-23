@@ -76,7 +76,7 @@ def show_results(filename):
     original_image = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
 
-    ascii_art, ascii_file_path = helper.process_image(original_image, app.config['UPLOAD_FOLDER'],filename)
+    ascii_art, ascii_file_path = helper.process_image(original_image, app.config['UPLOAD_FOLDER'],100)
     if ascii_file_path:
         with open(ascii_file_path,'r') as file:
                 ascii_art = file.read()
