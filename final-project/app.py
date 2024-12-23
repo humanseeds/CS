@@ -82,13 +82,3 @@ def show_results(filename):
 
 
 
-
-@app.route('/apply_filter/<filename>')
-def filter_image(filename):
-
-    # apply the ascii filter
-    ascii_art, ascii_file = apply_filter(original_image, app.config['UPLOAD_FOLDER'])
-
-
-    # return ascii art or redirect to the results page
-    return redirect(url_for('show_results', original_image, ascii_art=ascii_art, ascii_file=ascii_file))
