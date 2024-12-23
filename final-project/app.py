@@ -68,7 +68,7 @@ def uploaded_image(filename):
 @app.route('/image/<filename>')
 def show_results(filename):
     # get the path to the uploaded image
-    original_image = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    original_image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
     ascii_file_path = request.args.get('ascii_file')
 
@@ -78,9 +78,7 @@ def show_results(filename):
     else:
          ascii_art = None
 
-    return render_template('results.html', original_image=filename
-
-                           , ascii_art=ascii_art)
+    return render_template('results.html', original_image=filename, ascii_art=ascii_art)
 
 
 
