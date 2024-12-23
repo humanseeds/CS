@@ -78,10 +78,12 @@ def show_results(filename):
     ascii_file_path = request.args.get('ascii_file')
 
     if ascii_file_path:
-         with open(ascii_file_path, 'r') as file:
-              ascii_art = file.read()
-    else:
-         ascii_art = None
+         try:
+            with open(ascii_file_path,'r') as file:
+                ascii_art = file.read()
+            except FileNotFOundError:
+                flash("Ascii Art file not found")
+
 
     return render_template('results.html', original_image=original_image, ascii_art=ascii_art)
 
