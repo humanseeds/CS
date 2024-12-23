@@ -82,5 +82,10 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     return "\n".join(ascii_art)
 
 
-
+def save_ascii(ascii_art, original_image_path, upload_folder):
+    ascii_filename = f"ascii_{os.path.basename(original_image_path)}.txt"
+    ascii_file_path = os.path.joiin(upload_folder, ascii_filename)
+    with open(ascii_file_path, "W") as file:
+        file.write(ascii_art)
+    return ascii_file_path
 
