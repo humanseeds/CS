@@ -82,10 +82,45 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     return "\n".join(ascii_art)
 
 
+
+
+# this function saves the final ascii rendition
 def save_ascii(ascii_art, original_image_path, upload_folder):
+    # create a file for the ascii art based on the original image
     ascii_filename = f"ascii_{os.path.basename(original_image_path)}.txt"
+
+    # create a path to the file
     ascii_file_path = os.path.joiin(upload_folder, ascii_filename)
+
+    # open the file with write mode and save the ascii art
     with open(ascii_file_path, "W") as file:
         file.write(ascii_art)
+
+    # return the path of the saved ascii text file
     return ascii_file_path
 
+
+
+
+# this function pulls all of the prious functions together to create the asci art
+def process_image(image_path, upload_folder)
+    # create a working copy of the original image
+    copied_image_path = copy(image_path, upload_folder)
+
+    # open the copied image
+    copied_image = Image.open(copied_image_path)
+
+    # resize the copied image
+    resized_image = resize_image(copied_image, new_width)
+
+    # convert the copied image to grayscale
+    grayscale_image = convert_to_grayscale(resized_image)
+
+    # generate the ascii art from the grayscaled image
+    ascii_art = gray_to_ascii(grayscale_image)
+
+    # save the ascii art to a text file
+    ascii_file_path = save_ascii(ascii_art, image_path, upload_folder)
+
+    # return the ascii art final path
+    return ascii_art, ascii_file_path
