@@ -69,16 +69,16 @@ def uploaded_image(filename):
 def show_results(filename):
     # get the path to the uploaded image
     original_image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-    filtered_image_path = os.path.join(app.config['UPLOAD_FOLDER'], f"filtered_{filename}")
 
-    #
-    ascii_filename = f"ascii_{filename}.txt"
+    ascii_file_path = request.args.get('ascii_file')
 
-    # render the results on the page
-    return render_template('results.html', original_image=filename,
-                            filtered_image=f"filtered_{filename}",
-                            ascii_filename=ascii_filename)
+    if ascii_file_path:
+         with open(ascii_file_path, 'r') as file:
+              ascii_art = file.read()
+    else:
+         ascii_art = none
 
+    return render_template('results.html;, oringinal_image=filename,ascii_art=ascii_art)
 
 
 
