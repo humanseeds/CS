@@ -87,11 +87,7 @@ def save_ascii(ascii_art, original_image_path, upload_folder):
 
 # this function pulls all of the prious functions together to create the asci art
 def process_image(image_path, upload_folder, new_width):
-    # create a working copy of the original image
-    copied_image_path = copy_image(image_path, upload_folder)
-
-    # open the copied image
-    copied_image = Image.open(copied_image_path)
+    image = Image.open(image_path)
 
     # resize the copied image
     resized_image = resize_image(copied_image, new_width)
