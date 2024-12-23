@@ -23,7 +23,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def proper_file(filename):
     if filename.lower().endswith(('png', 'jpg', 'jpeg', 'gif')):
         return True
-    return False
+ 
 
 # render the file upload
 @app.route('/')
