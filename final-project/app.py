@@ -88,7 +88,22 @@ def show_results(filename):
 #
 @app.route('/apply_filter/<filename>')
 def filter_image(filename):
-    # Path to the uploaded image
+    # Path to the original image
     original_image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
-    #
+    # Ensure the original image exists
+    if not os.path.exists(original_image_path):
+        flash("Original image not found!")
+        return redirect(url_for('show_results', filename=filename))
+
+    # Apply the ASCII filter (or other filters)
+    ascii_art, filtered_image_path = apply_filter(
+        original_image_path,
+        app.config['UPLOAD_FOLDER']
+    )
+
+    # Save the filtered image
+    filtered_image_filename = f"filtered_{filename}"
+
+    # Return ASCII art or redirect to the results page
+    return redirect(url_for('show_results', filename=filename))
