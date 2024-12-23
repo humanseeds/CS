@@ -98,4 +98,4 @@ def filter_image(filename):
     filtered_filename = os.path.basename(filtered_image_path)
 
     # Return ASCII art or redirect to the results page
-    return redirect(url_for('show_results', filename=filtered_filename))
+    return redirect(url_for('show_results', ascii_art=ascii_art filtered_image=filtered_filename))
