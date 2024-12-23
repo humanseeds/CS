@@ -28,7 +28,7 @@ def resize_image(image, new_width):
     # find the aspect ratio of the image
     ratio = height / width
 
-    # set the new hieght to the aspect ratio of the width
+    # set the new height to the aspect ratio of the width
     new_height = int(new_width * ratio)
 
     # resize the image to the new dimensions
@@ -56,7 +56,7 @@ def convert_to_grayscale(image_path):
 
 
 
-# this function converts the grayscale to asci chars
+# this function converts the grayscale to ascii chars
 def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     # get the size of the grayscale image
     width, height = grayscale_image.size
@@ -64,7 +64,7 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     # determine the number of ascii characters for the map
     char_len = len(ascii_chars)
 
-    # create the ranges of pixel brightness to assign the ascii charcters to
+    # create the ranges of pixel brightness to assign the ascii characters to
     scale = 256 // char_len
 
     # create a map to store the ascii strings that represent the pixels
