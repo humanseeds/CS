@@ -70,8 +70,7 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     # create a map to store the ascii strings that represent the pixels
     ascii_art = []
 
-    # loop through each pixel in the row
-    for
+
 
     # loop through the height of the greyscale image
     for y in range(height):
