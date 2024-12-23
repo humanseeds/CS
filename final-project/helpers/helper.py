@@ -93,7 +93,7 @@ def save_ascii(ascii_art, original_image_path, upload_folder):
     ascii_file_path = os.path.join(upload_folder, ascii_filename)
 
     # open the file with write mode and save the ascii art
-    with open(ascii_file_path, "W") as file:
+    with open(ascii_file_path, "w") as file:
         file.write(ascii_art)
 
     # return the path of the saved ascii text file
@@ -103,7 +103,7 @@ def save_ascii(ascii_art, original_image_path, upload_folder):
 
 
 # this function pulls all of the prious functions together to create the asci art
-def process_image(image_path, upload_folder, new_width)
+def process_image(image_path, upload_folder, new_width):
     # create a working copy of the original image
     copied_image_path = copy_image(image_path, upload_folder)
 
