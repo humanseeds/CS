@@ -97,8 +97,10 @@ def apply_filter(original_image_path, upload_folder):
     # save the grayscale image over the copied image.
     grayscale_image.save(copied_image_path)
 
+    image_basename = os.path.splitext(os.path.basename(original_image_path))[0]
+
     #
-    ascii_filename = f"ascii_{os.path.basename(original_image_path)}.txt"
+    ascii_filename = f"ascii_{image_basename}.txt"
     ascii_file_path = os.path.join(upload_folder, ascii_filename)
 
     with open(ascii_file_path, "w") as file:
