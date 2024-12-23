@@ -75,7 +75,8 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
       for x in range(width):
           brightness = grayscale_image.getpixel((x, y))
           ascii_char = ascii_chars[brightness // scale]
-          ascii_image.putpixel(x, y)
+          
+          ascii_image.putpixel((x, y), ascii_value)
     return ascii_image
 
 
