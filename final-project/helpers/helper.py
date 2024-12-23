@@ -15,7 +15,7 @@ def copy_image(image_path, upload_folder):
     original_image.save(copy_image_path)
 
     # return athe path to the copied image
-    return copied_image
+    return copied_image_path
 
 
 
