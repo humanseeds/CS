@@ -54,7 +54,7 @@ def upload_image():
         # handle an error in image file type and redirect
         flash("Invalid file type")
 
-        
+
         return redirect(request.url)
 
 
@@ -83,4 +83,14 @@ def show_results(filename):
 
 
 
+# 
+@app.route('/apply_filter/<filename>')
+def filter_image(filename):
+    # Path to the uploaded image
+    original_image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
+    # Apply the filter
+    ascii_art, updated_image_path = apply_filter(original_image_path, app.config['UPLOAD_FOLDER'])
+
+    # Return ASCII art or serve the updated image as needed
+    return f"<pre>{ascii_art}</pre>"

@@ -104,13 +104,18 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
 
 
 
-def apply_filter(image_path):
+def apply_filter(original_image_path, upload_folder):
+    # create a copy of the original image.
+    copied_image_path = copy_image(original_image_path, upload_folder)
 
-    image = Image.open(image_path)
+    # convert the copied image to grayscale.
+    grayscale_image = convert_to_grayscale(copied_image_path)
 
-    grayscale_image = convert_to_grayscale(image.path)
+    # generate ascii art from the grayscale image.
     ascii_art = gray_to_ascii(grayscale_image)
-    filtered_image_path = os.path.join(app.config['UPLOAD_FOLDER'],"filtered_' + os.path.basename(image_path))
-    grayscale_image.save(filtered_image)
 
-    return ascii_art, filtered_image
+    # save the grayscale image over the copied image.
+    grayscale_image.save(copied_image_path)
+
+    # return the ascii art and the path to the updated (grayscale) image.
+    return ascii_art, copied_image_path
