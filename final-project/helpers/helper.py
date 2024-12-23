@@ -87,23 +87,3 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
 
 
 
-def apply_filter(original_image_path, upload_folder):
-    # create a copy of the original image.
-    copied_image_path = copy_image(original_image_path, upload_folder)
-
-    # convert the copied image to grayscale.
-    grayscale_image = convert_to_grayscale(copied_image_path)
-
-    # generate ascii art from the grayscale image.
-    ascii_art = gray_to_ascii(grayscale_image)
-
-
-    #
-    ascii_filename = f"ascii_{os.path.basename(original_image_path)}.txt"
-    ascii_file_path = os.path.join(upload_folder, ascii_filename)
-
-    with open(ascii_file_path, "w") as file:
-        file.write(ascii_art)
-
-    # return the ascii art
-    return ascii_art, ascii_file_path
