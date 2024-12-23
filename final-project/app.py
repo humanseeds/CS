@@ -71,17 +71,13 @@ def show_results(filename):
     original_image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     filtered_image_path = os.path.join(app.config['UPLOAD_FOLDER'], f"filtered_{filename}")
 
-    # flash error if not filename
-    if not os.path.exists(original_image_path):
-        flash("no file uploaded!")
-        return render_template('upload.html')
-
-    # check if the filtered image exists
-    filtered_image_exists = os.path.exists(filtered_image_path)
+    #
+    ascii_filename = f"ascii_{filename}.txt"
 
     # render the results on the page
     return render_template('results.html', original_image=filename,
-                            filtered_image=f"filtered_{filename}")
+                            filtered_image=f"filtered_{filename}",
+                            ascii_filename=ascii_filename)
 
 
 
