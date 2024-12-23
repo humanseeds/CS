@@ -78,7 +78,9 @@ def show_results(filename):
     else:
          ascii_art = None
 
-    return render_template('results.html', original_image=original_image, ascii_art=ascii_art)
+    return render_template('results.html', original_image=filename
+
+                           , ascii_art=ascii_art)
 
 
 
