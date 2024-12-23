@@ -68,7 +68,7 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     scale = 256 // char_len
 
     # create a new image with ascii charcters
-    ascii_image = image.new("RGB", (width, height))
+    ascii_image = image.new("L", (width, height))
 
     # loop through the height of the greyscale image
     for y in range(height):
