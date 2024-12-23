@@ -76,20 +76,25 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     # get the size of the grayscale image
     width, height = grayscale_image.size
 
-    # asign the length of the asci character string
+    # determine the number of ascii characters for the map
     char_len = len(ascii_chars)
 
-    # create the ranges of pixel brightness to asign the asci charcters to
+    # create the ranges of pixel brightness to asign the ascii charcters to
     scale = 256 // char_len
 
-    # create a
+    # create a list to store the accii version of each row
     ascii_art = []
 
-    # loop through the height and width
+    # loop through the height of the greyscale image
     for y in range(height):
+        # create an empty string to reoresent the current row
         row = ""
+
+        # loop over the columns of the grayscale image
         for x in range(width):
+            # get the brightness of the pixel at the current location (x,y)
             brightness = grayscale_image.getpixel((x,y))
+            # 
             row += ascii_chars[brightness // scale]
         ascii_art.append(row)
     return "|n".join(ascii_art)
