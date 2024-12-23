@@ -89,9 +89,8 @@ def filter_image(filename):
     original_image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
     # apply the ascii filter
-    ascii_art, filtered_image_path = apply_filter(original_image_path, app.config['UPLOAD_FOLDER'])
+    ascii_art, ascii_file_path = apply_filter(original_image_path, app.config['UPLOAD_FOLDER'])
 
-    filtered_filename = os.path.basename(filtered_image_path)
 
     # return ascii art or redirect to the results page
-    return redirect(url_for('show_results', ascii_art=ascii_art, filtered_image=filtered_filename))
+    return redirect(url_for('show_results', filename=filename, ascii_file=ascii_file_path))
