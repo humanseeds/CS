@@ -65,7 +65,7 @@ def uploaded_image(filename):
 
 @app.route('/uploades/<filename>')
 def serve_ascii(filename):
-     return send_from_directory(app.config["UPLOAD_FOLDER'], filename)
+     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
 
@@ -81,9 +81,8 @@ def show_results(filename):
          try:
             with open(ascii_file_path,'r') as file:
                 ascii_art = file.read()
-            except FileNotFoundError:
-                flash("Ascii Art file not found")
-
+        except FileNotFoundError:
+            flash("Ascii art not found")
 
     return render_template('results.html', original_image=original_image, ascii_art=ascii_art)
 
