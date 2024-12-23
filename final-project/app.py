@@ -81,7 +81,7 @@ def show_results(filename):
          try:
             with open(ascii_file_path,'r') as file:
                 ascii_art = file.read()
-            except FileNotFOundError:
+            except FileNotFoundError:
                 flash("Ascii Art file not found")
 
 
