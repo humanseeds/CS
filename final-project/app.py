@@ -63,6 +63,11 @@ def uploaded_image(filename):
      return send_file(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
 
+@app.route('/uploades/<filename>')
+def serve_ascii(filename):
+     return send_from_directory(app.config["UPLOAD_FOLDER'], filename)
+
+
 
 # display the uploaded or the converted image
 @app.route('/image/<filename>')
