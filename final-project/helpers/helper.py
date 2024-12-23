@@ -82,9 +82,10 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     # create the ranges of pixel brightness to asign the asci charcters to
     scale = 256 // char_len
 
-    # create a 
+    # create a
     ascii_art = []
 
+    # loop through the height and width
     for y in range(height):
         row = ""
         for x in range(width):
