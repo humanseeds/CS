@@ -76,9 +76,9 @@ def show_results(filename):
          with open(ascii_file_path, 'r') as file:
               ascii_art = file.read()
     else:
-         ascii_art = none
+         ascii_art = None
 
-    return render_template('results.html;, oringinal_image=filename,ascii_art=ascii_art)
+    return render_template('results.html;, original_image=filename,ascii_art=ascii_art)
 
 
 
