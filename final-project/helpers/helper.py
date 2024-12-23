@@ -55,21 +55,6 @@ def convert_to_grayscale(image_path):
 
 
 
-# this function applies the sobel operator for edge detection and direction
-# this will give our edges more definition
-def apply_sobel(image_path):
-    # open the image
-    image = Image.open(image_path)
-    #
-    grayscale_image = image.convert("L")
-
-    sobel_image = grayscale_image.filter(ImageFilter.Find_EDGES)
-
-    # return the sober image
-    return sobel_image
-
-
-
 
 # this function converts the grayscale to asci chars
 def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
