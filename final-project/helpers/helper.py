@@ -42,9 +42,7 @@ def resize_image(image, new_width=100):
 
 # this function converts the image to grayscale
 # from here we can use the pixel intensity to apply asci charcters
-def convert_to_grayscale(image_path):
-    # open the image
-    image = Image.open(image_path)
+def convert_to_grayscale(image):
 
     # convert to grayscale
     grayscale_image = image.convert("L")
