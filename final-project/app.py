@@ -81,8 +81,7 @@ def show_results(filename):
 
     # render the results on the page
     return render_template('results.html', original_image=filename,
-                            filtered_image=f"filtered_{filename}" if filtered_image_exists)
-
+                            filtered_image=f"filtered_{filename}")
 
 
 
