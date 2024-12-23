@@ -67,8 +67,8 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     # create the ranges of pixel brightness to asign the ascii charcters to
     scale = 256 // char_len
 
-    # create a list to store the accii version of each row
-    ascii_art = []
+    # create a new image with ascii charcters 
+    ascii_image = image.new("RGB", (width, height))
 
     # loop through the height of the greyscale image
     for y in range(height):
