@@ -67,24 +67,16 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     # create the ranges of pixel brightness to asign the ascii charcters to
     scale = 256 // char_len
 
-    # create a new image with ascii charcters 
+    # create a new image with ascii charcters
     ascii_image = image.new("RGB", (width, height))
 
     # loop through the height of the greyscale image
     for y in range(height):
-        # create an empty string to reoresent the current row
-        row = ""
-
-        # loop over the columns of the grayscale image
-        for x in range(width):
-            # get the brightness of the pixel at the current location (x,y)
-            brightness = grayscale_image.getpixel((x,y))
-            # map the brightness of the pixel to the proper asci charcter
-            row += ascii_chars[brightness // scale]
-        # append the completed row of ascii charcters to the ascci_art list
-        ascii_art.append(row)
-    # combine all of the rows into a string, seperated by newline charcters
-    return "\n".join(ascii_art)
+      for x in range(width):
+          brightness = grayscale_image.getpixel((x, y))
+          ascii_char = ascii_chars[brightness // scale]
+          ascii_image.putpixel(x, y)
+    return ascii_image
 
 
 
