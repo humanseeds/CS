@@ -96,11 +96,11 @@ def apply_filter(original_image_path, upload_folder):
 
 
     #
-    ascii_filename = f"ascii_{os.path.bsaename(original_image_path)}.txt"
+    ascii_filename = f"ascii_{os.path.basename(original_image_path)}.txt"
     ascii_file_path = os.path.join(upload_folder, ascii_filename)
 
     with open(ascii_file_path, "w") as file:
         file.write(ascii_art)
 
-    # return the ascii art 
+    # return the ascii art
     return ascii_art, ascii_file_path
