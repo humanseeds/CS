@@ -75,12 +75,14 @@ def show_results(filename):
     # get the path to the uploaded image
     original_image = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
-
+    # apply the helper functions to the image
     ascii_art, ascii_file_path = helper.process_image(original_image, app.config['UPLOAD_FOLDER'],100)
+
+    # open the ascii file
     if ascii_file_path:
         with open(ascii_file_path,'r') as file:
                 ascii_art = file.read()
-
+    # render the image
     return render_template('results.html', original_image=original_image, ascii_art=ascii_art)
 
 

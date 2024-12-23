@@ -57,8 +57,11 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     for y in range(height):
         row = ""
         for x in range(width):
+            # set the brightness from the grayscale
             brightness = grayscale_image.getpixel((x, y))
+            # ensure the brightness stays inbounds
             ascii_char = ascii_chars[min(brightness // scale, char_len - 1)]
+            
             row += ascii_char
 
         ascii_art.append(row)
@@ -87,12 +90,13 @@ def save_ascii(ascii_art, original_image_path, upload_folder):
 
 # this function pulls all of the prious functions together to create the asci art
 def process_image(image_path, upload_folder, new_width):
+    # fetch the image
     image = Image.open(image_path)
 
-    # resize the copied image
-    resized_image = resize_image(copied_image, new_width)
+    # resize the image
+    resized_image = resize_image(image, new_width)
 
-    # convert the copied image to grayscale
+    # convert the image to grayscale
     grayscale_image = convert_to_grayscale(resized_image)
 
     # generate the ascii art from the grayscaled image
