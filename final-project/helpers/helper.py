@@ -20,7 +20,7 @@ def copy_image(image_path, upload_folder):
 
 
 
-# resize the image while keep the same aspect ratio
+# resize the image while keeping the same aspect ratio
 def resize_image(image, new_width):
     # get the hieght and width of the image
     width, height = image.size
@@ -64,7 +64,7 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
     # determine the number of ascii characters for the map
     char_len = len(ascii_chars)
 
-    # create the ranges of pixel brightness to asign the ascii charcters to
+    # create the ranges of pixel brightness to assign the ascii charcters to
     scale = 256 // char_len
 
     # create a map to store the ascii strings that represent the pixels
