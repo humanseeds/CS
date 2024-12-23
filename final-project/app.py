@@ -73,7 +73,7 @@ def serve_ascii(filename):
 @app.route('/image/<filename>')
 def show_results(filename):
     # get the path to the uploaded image
-    original_image = url_for('uploaded_image', filename=filename)
+    original_image = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
 
     ascii_art, ascii_file_path = helper.process_image(image_path, app.config['UPLOAD_FOLDER']
