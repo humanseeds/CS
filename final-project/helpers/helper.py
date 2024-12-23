@@ -15,16 +15,13 @@ def copy_image(image_path, upload_folder):
     original_image.save(copy_image_path)
 
     # return athe path to the copied image
-    return copied_image_path
+    return copy_image_path
 
 
 
 
 # resize the image while keep the same aspect ratio
-def resize_image(image_path, new_width):
-    # open the copied image
-    image = image.open(image_path)
-
+def resize_image(image, new_width):
     # get the hieght and width of the image
     width, height = image.size
 
