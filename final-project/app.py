@@ -93,4 +93,4 @@ def filter_image(filename):
 
 
     # return ascii art or redirect to the results page
-    return redirect(url_for('show_results', filename=filename, ascii_art=ascii_art))
+    return redirect(url_for('show_results', filename=filename, ascii_file=ascii_file_path))
