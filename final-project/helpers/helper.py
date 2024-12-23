@@ -28,6 +28,9 @@ def resize_image(image, new_width):
     # find the aspect ratio of the image
     ratio = height / width
 
+    # find the new width
+    new_width = int(new_width)
+    
     # set the new height to the aspect ratio of the width
     new_height = int(new_width * ratio)
 
