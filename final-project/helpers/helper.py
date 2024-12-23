@@ -94,10 +94,12 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
         for x in range(width):
             # get the brightness of the pixel at the current location (x,y)
             brightness = grayscale_image.getpixel((x,y))
-            # 
+            # map the brightness of the pixel to the proper asci charcter
             row += ascii_chars[brightness // scale]
+        # append the completed row of ascii charcters to the ascci_art list
         ascii_art.append(row)
-    return "|n".join(ascii_art)
+    # combine all of the rows into a string, seperated by newline charcters
+    return "\n".join(ascii_art)
 
 
 
