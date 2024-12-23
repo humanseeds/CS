@@ -22,7 +22,7 @@ def copy_image(image_path, upload_folder):
 
 # resize the image while keeping the same aspect ratio
 def resize_image(image, new_width):
-    # get the hieght and width of the image
+    # get the height and width of the image
     width, height = image.size
 
     # find the aspect ratio of the image
