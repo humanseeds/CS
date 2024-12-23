@@ -96,7 +96,7 @@ def apply_filter(original_image_path, upload_folder):
 
 
     #
-    ascii_filename = f"ascii_{os.path.basename(original_image_path)}.txt"
+    ascii_filename = f"ascii_{os.path.basyename(original_image_path)}.txt"
     ascii_file_path = os.path.join(upload_folder, ascii_filename)
 
     with open(ascii_file_path, "w") as file:
