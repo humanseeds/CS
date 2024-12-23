@@ -68,7 +68,7 @@ def uploaded_image(filename):
 @app.route('/image/<filename>')
 def show_results(filename):
     # get the path to the uploaded image
-    original_image_path= os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    original_image= os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
     ascii_file_path = request.args.get('ascii_file')
 
@@ -78,7 +78,7 @@ def show_results(filename):
     else:
          ascii_art = None
 
-    return render_template('results.html', original_image=filename, ascii_art=ascii_art)
+    return render_template('results.html', original_image=original_image, ascii_art=ascii_art)
 
 
 
@@ -86,11 +86,11 @@ def show_results(filename):
 @app.route('/apply_filter/<filename>')
 def filter_image(filename):
     # path to the original image
-    original_image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    original_image = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
     # apply the ascii filter
-    ascii_art, ascii_file_path = apply_filter(original_image_path, app.config['UPLOAD_FOLDER'])
+    ascii_art, ascii_file = apply_filter(original_image_path, app.config['UPLOAD_FOLDER'])
 
 
     # return ascii art or redirect to the results page
-    return redirect(url_for('show_results', filename=filename, ascii_art=ascii_art, ascii_file=ascii_file_path))
+    return redirect(url_for('show_results', original_image, ascii_art=ascii_art, ascii_file=ascii_file))
