@@ -60,7 +60,7 @@ def convert_to_grayscale(image_path):
 def apply_sobel(image_path):
     # open the image
     image = Image.open(image_path)
-    # 
+    #
     grayscale_image = image.convert("L")
 
     sobel_image = grayscale_image.filter(ImageFilter.Find_EDGES)
@@ -73,11 +73,16 @@ def apply_sobel(image_path):
 
 # this function converts the grayscale to asci chars
 def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
+    # get the size of the grayscale image
     width, height = grayscale_image.size
 
+    # asign the length of the asci character string
     char_len = len(ascii_chars)
+
+    # create the ranges of pixel brightness to asign the asci charcters to
     scale = 256 // char_len
 
+    # create a 
     ascii_art = []
 
     for y in range(height):
