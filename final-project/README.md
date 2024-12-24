@@ -18,4 +18,4 @@
 
 ### Now that I have a working app and model of how the functions flow, in the future I would like to try and add sobel operator to give the images more definition. By highlighting the edges i could create a different set of ascii charcter to define the outlines of features in the images. I could use radians to determine the direction of the edges and make more detail on the images. I would also like to create user log ins, a public gallery to show off examples and even work on useing color channels
 
-### with all of that said I am extremely thankful to Harvard for allowing a non student like me to take this class, Cs50
+### with all of that said I am extremely thankful to Harvard for allowing a non student like me to take this class, Cs50 and David Malan for putting such a beuitful class together
