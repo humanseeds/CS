@@ -40,7 +40,7 @@ def convert_to_grayscale(image):
 
 
 # this function converts the grayscale to ascii chars
-def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
+def gray_to_ascii(grayscale_image, ascii_chars= ".,:;=+*%&@"):
     # get the size of the grayscale image
     width, height = grayscale_image.size
 
@@ -61,7 +61,7 @@ def gray_to_ascii(grayscale_image, ascii_chars= " .:;=+*%&@"):
             brightness = grayscale_image.getpixel((x, y))
             # ensure the brightness stays inbounds
             ascii_char = ascii_chars[min(brightness // scale, char_len - 1)]
-            
+
             row += ascii_char
 
         ascii_art.append(row)
