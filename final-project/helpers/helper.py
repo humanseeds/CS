@@ -3,8 +3,6 @@ import os
 from PIL import Image, ImageFilter
 
 
-
-
 # resize the image while keeping the same aspect ratio
 def resize_image(image, new_width=100):
     # get the height and width of the image
@@ -23,8 +21,6 @@ def resize_image(image, new_width=100):
     return resized_image
 
 
-
-
 # this function converts the image to grayscale
 # from here we can use the pixel intensity to apply asci charcters
 def convert_to_grayscale(image):
@@ -36,11 +32,8 @@ def convert_to_grayscale(image):
     return grayscale_image
 
 
-
-
-
 # this function converts the grayscale to ascii chars
-def gray_to_ascii(grayscale_image, ascii_chars= ".,:;=*+%&@"):
+def gray_to_ascii(grayscale_image, ascii_chars=".,:;=*+%&@"):
     # get the size of the grayscale image
     width, height = grayscale_image.size
 
@@ -68,8 +61,6 @@ def gray_to_ascii(grayscale_image, ascii_chars= ".,:;=*+%&@"):
     return "\n".join(ascii_art)
 
 
-
-
 # this function saves the final ascii rendition
 def save_ascii(ascii_art, original_image_path, upload_folder):
     # create a file for the ascii art based on the original image
@@ -84,8 +75,6 @@ def save_ascii(ascii_art, original_image_path, upload_folder):
 
     # return the path of the saved ascii text file
     return ascii_file_path
-
-
 
 
 # this function pulls all of the prious functions together to create the asci art

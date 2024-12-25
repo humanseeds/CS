@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results - ASCII Art</title>
-    <style>
-        body {
-            background-color: #2f4f4f; /* Slate Grey background */
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
 
-        h1 {
-            margin-top: 20px;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Results - ASCII Art</title>
+        <style>
+            body {
+                background-color: #2f4f4f;
+                /* Slate Grey background */
+                color: white;
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
 
-        .image-container {
-            margin: 20px auto;
-        }
+            h1 {
+                margin-top: 20px;
+            }
 
-        .ascii-art-container {
-            margin-top: 30px;
-            font-family: "Courier New", Courier, monospace;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            margin-bottom: 50px;
-        }
+            .image-container {
+                margin: 20px auto;
+            }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
+            .ascii-art-container {
+                margin-top: 30px;
+                font-family: "Courier New", Courier, monospace;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                margin-bottom: 50px;
+            }
 
-        .button-container {
-            margin-top: 30px;
-        }
+            img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+            }
 
-        .upload-again {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
+            .button-container {
+                margin-top: 30px;
+            }
 
-        .upload-again:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
+            .upload-again {
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+            }
 
-    <h1>Results: Your ASCII Art</h1>
+            .upload-again:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
 
-    <div class="image-container">
-        <h2>Original Image</h2>
-        <img src="{{ url_for('uploaded_image', filename=original_image.split('/')[-1]) }}" alt="Uploaded Image" />
-    </div>
+    <body>
 
-    <div class="ascii-art-container">
-        <h2>ASCII Art</h2>
-        {% if ascii_art %}
-        <pre>{{ ascii_art }}</pre>
-    {% else %}
-        <p>No ASCII art available.</p>
-    {% endif %}
-    </div>
+        <h1>Results: Your ASCII Art</h1>
 
-    <div class="button-container">
-        <a href="{{ url_for('index') }}">
-            <button class="upload-again">Upload Another Image</button>
-        </a>
-    </div>
+        <div class="image-container">
+            <h2>Original Image</h2>
+            <img src="{{ url_for('uploaded_image', filename=original_image.split('/')[-1]) }}" alt="Uploaded Image" />
+        </div>
 
-</body>
+        <div class="ascii-art-container">
+            <h2>ASCII Art</h2>
+            {% if ascii_art %}
+            <pre>{{ ascii_art }}</pre>
+            {% else %}
+                <p>No ASCII art available.</p>
+            {% endif %}
+        </div>
+
+        <div class="button-container">
+            <a href="{{ url_for('index') }}">
+                <button class="upload-again">Upload Another Image</button>
+            </a>
+        </div>
+
+    </body>
+
 </html>
-
